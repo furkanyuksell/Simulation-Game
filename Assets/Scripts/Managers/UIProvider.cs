@@ -29,8 +29,9 @@ public static class UIProvider
     {
         get{ return GetService<UIManager>();}
     }
-    public static UIButton GetUIButton
+
+    public static UITextbox GetUITextbox
     {
-        get{ return GetService<UIButton>();}
+        get{ return GetService<UITextbox>();}
     }
 }

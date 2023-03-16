@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour, IProvidable
     [SerializeField] private GameObject _mainUI;
     [SerializeField] private GameObject _multiPlayerUI;
 
+    [SerializeField] private GameObject _createLobbyUI;
 
     private void Awake() {
         UIProvider.Register(this);
@@ -22,5 +23,11 @@ public class UIManager : MonoBehaviour, IProvidable
     {
         _mainUI.SetActive(false);
         _multiPlayerUI.SetActive(true);
+    }
+
+    public void ShowCreateLobbyUI()
+    {
+        _multiPlayerUI.SetActive(false);
+        _createLobbyUI.SetActive(true);
     }
 }

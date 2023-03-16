@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIButton : MonoBehaviour, IProvidable
+public class UIButton : MonoBehaviour
 {
     [SerializeField] private Button _singleButton;
     [SerializeField] private Button _multiButton;
     [SerializeField] private Button _settingsButton;
+    [SerializeField] private Button _showCreateLobbyUI;
+    [SerializeField] private Button _findLobbyButton;
     [SerializeField] private Button _createLobbyButton;
-    [SerializeField] private Button _joinLobbyButton;
+    
     
 
 
     private void Awake() {
-        UIProvider.Register(this);
-
         _singleButton.onClick.AddListener(() => {
             Debug.Log("Single Player");
         });
@@ -28,13 +28,17 @@ public class UIButton : MonoBehaviour, IProvidable
             Debug.Log("Settings");
         });
 
+        _showCreateLobbyUI.onClick.AddListener(() => {
+            UIProvider.GetUIManager.ShowCreateLobbyUI();
+            LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox._lobbyNameInputField.text);
+        });
+
+        _findLobbyButton.onClick.AddListener(() => {
+            LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox._lobbyNameInputField.text);
+        });
+
         _createLobbyButton.onClick.AddListener(() => {
             Debug.Log("Create Lobby");
         });
-        
-        _joinLobbyButton.onClick.AddListener(() => {
-            Debug.Log("Join Lobby");
-        });
-
     }    
 }
