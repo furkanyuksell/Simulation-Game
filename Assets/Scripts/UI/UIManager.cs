@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour, IProvidable
 
     private void Awake() {
         UIProvider.Register(this);
+        _mainUI.SetActive(true);
     }
 
     public void ShowMainUI()
