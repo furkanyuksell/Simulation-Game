@@ -10,12 +10,14 @@ using UnityEngine;
 public class LobbyManager : MonoBehaviour
 {
     public static LobbyManager Instance { get; private set; }
+    public const string KEY_PLAYER_NAME = "PlayerName";
+
     private string playerName;
 
     private float heartbeatTimer;
     private float lobbyPollTimer;
-    private float refreshLobbyListTimer = 5f;
     private Lobby joinedLobby;
+    public event EventHandler<LobbyEventArgs> OnJoinedLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobbyUpdate;
     public event EventHandler<LobbyEventArgs> OnKickedFromLobby;
 
@@ -33,17 +35,13 @@ public class LobbyManager : MonoBehaviour
         Instance = this;
     }
 
-    private void CreateLobby()
-    {
-    }
-
     public async void Authenticate(string playerName)
     {
         this.playerName = playerName;
         InitializationOptions initializationOptions = new InitializationOptions();
         Debug.Log("Player Name: " + playerName);
         initializationOptions.SetProfile(playerName);
-        
+
         await UnityServices.InitializeAsync(initializationOptions);
 
         AuthenticationService.Instance.SignedIn += () =>
@@ -51,16 +49,48 @@ public class LobbyManager : MonoBehaviour
             // do nothing
             Debug.Log("Signed in! " + AuthenticationService.Instance.PlayerId);
 
-            //RefreshLobbyList();
+            RefreshLobbyList();
         };
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
     }
+
+    public async void CreateLobby(string lobbyName, int maxPlayers, bool isPrivate)
+    {
+        Player player = GetPlayer();
+
+        CreateLobbyOptions options = new CreateLobbyOptions
+        {
+            Player = player,
+            IsPrivate = isPrivate
+            /*Data = new Dictionary<string, DataObject> {
+                { KEY_GAME_MODE, new DataObject(DataObject.VisibilityOptions.Public, gameMode.ToString()) }
+            }*/
+        };
+
+        Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers, options);
+
+        joinedLobby = lobby;
+
+        OnJoinedLobby?.Invoke(this, new LobbyEventArgs { lobby = lobby });
+
+        Debug.Log("Created Lobby " + lobby.Name);
+    }
+
     void Update()
     {
         HandleLobbyHeartbeat();
         HandleLobbyPolling();
     }
+
+    private Player GetPlayer()
+    {
+        return new Player(AuthenticationService.Instance.PlayerId, null, new Dictionary<string, PlayerDataObject> {
+            { KEY_PLAYER_NAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, playerName) }
+        });
+    }
+
+
     public bool IsLobbyHost()
     {
         return joinedLobby != null && joinedLobby.HostId == AuthenticationService.Instance.PlayerId;
