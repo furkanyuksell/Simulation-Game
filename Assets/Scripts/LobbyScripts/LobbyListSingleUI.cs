@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
 public class LobbyListSingleUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private TextMeshProUGUI _lobbyNameText;
+    [SerializeField] private TextMeshProUGUI _playersText;
+    [SerializeField] private TextMeshProUGUI _isPrivate;
+
+    private Lobby lobby;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateLobby(Lobby lobby)
     {
-        
+        this.lobby = lobby;
+
+        _lobbyNameText.text = lobby.Name;
+        _playersText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
     }
 }
