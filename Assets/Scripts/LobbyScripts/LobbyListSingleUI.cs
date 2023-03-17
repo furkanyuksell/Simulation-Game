@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LobbyListSingleUI : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class LobbyListSingleUI : MonoBehaviour
 
     private Lobby lobby;
 
-    void Start()
+    private void Awake()
     {
-
+        GetComponent<Button>().onClick.AddListener(() =>
+        {
+            LobbyManager.Instance.JoinLobby(lobby);
+        });
     }
 
     public void UpdateLobby(Lobby lobby)

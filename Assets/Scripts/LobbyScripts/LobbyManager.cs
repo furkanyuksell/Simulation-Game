@@ -17,6 +17,7 @@ public class LobbyManager : MonoBehaviour
     private float heartbeatTimer;
     private float lobbyPollTimer;
     private Lobby joinedLobby;
+    public event EventHandler OnLeftLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobbyUpdate;
     public event EventHandler<LobbyEventArgs> OnKickedFromLobby;
@@ -75,6 +76,18 @@ public class LobbyManager : MonoBehaviour
         OnJoinedLobby?.Invoke(this, new LobbyEventArgs { lobby = lobby });
 
         Debug.Log("Created Lobby " + lobby.Name);
+    }
+    
+    public async void JoinLobby(Lobby lobby)
+    {
+        Player player = GetPlayer();
+
+        joinedLobby = await LobbyService.Instance.JoinLobbyByIdAsync(lobby.Id, new JoinLobbyByIdOptions
+        {
+            Player = player
+        });
+
+        OnJoinedLobby?.Invoke(this, new LobbyEventArgs { lobby = lobby });
     }
 
     void Update()
