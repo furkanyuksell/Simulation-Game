@@ -27,5 +27,6 @@ public class LobbyListSingleUI : MonoBehaviour
 
         _lobbyNameText.text = lobby.Name;
         _playersText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
+        _isPrivate.text = lobby.IsPrivate ? "Private" : "Public";
     }
 }
