@@ -16,6 +16,8 @@ public class LobbyManager : MonoBehaviour
 
     private float heartbeatTimer;
     private float lobbyPollTimer;
+    private float refreshLobbyListTimer = 5f;
+
     private Lobby joinedLobby;
     public event EventHandler OnLeftLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobby;
@@ -92,8 +94,23 @@ public class LobbyManager : MonoBehaviour
 
     void Update()
     {
+        HandleRefreshLobbyList();
         HandleLobbyHeartbeat();
         HandleLobbyPolling();
+    }
+    private void HandleRefreshLobbyList()
+    {
+        if (UnityServices.State == ServicesInitializationState.Initialized && AuthenticationService.Instance.IsSignedIn)
+        {
+            refreshLobbyListTimer -= Time.deltaTime;
+            if (refreshLobbyListTimer < 0f)
+            {
+                float refreshLobbyListTimerMax = 5f;
+                refreshLobbyListTimer = refreshLobbyListTimerMax;
+
+                RefreshLobbyList();
+            }
+        }
     }
 
     private Player GetPlayer()
