@@ -14,12 +14,17 @@ public class UIButton : MonoBehaviour
     [SerializeField] private Button _statusButton;
     [SerializeField] private Button _createLobbyButton;
 
+    [SerializeField] private Button _backButton;
+    Stack<GameObject> _backQueue = new Stack<GameObject>();
     bool isPrivateLobby = false;
     bool isSignedIn = false; // i'll fix with this later on for the sign once  
 
 
-    private void Awake()
+    private void Start()
     {
+        _backQueue.Push(UIProvider.GetUIManager._mainUI);
+        _backButton.gameObject.SetActive(false);
+
         _singleButton.onClick.AddListener(() =>
         {
             Debug.Log("Single Player");
@@ -27,7 +32,8 @@ public class UIButton : MonoBehaviour
 
         _multiButton.onClick.AddListener(() =>
         {
-            UIProvider.GetUIManager.ShowMultiPlayerUI();
+            AddToStack(UIProvider.GetUIManager._multiPlayerUI);
+            _backButton.gameObject.SetActive(true);
         });
 
         _settingsButton.onClick.AddListener(() =>
@@ -49,11 +55,20 @@ public class UIButton : MonoBehaviour
         {
             if (!isSignedIn)
                 LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox._playerName.text);
-            UIProvider.GetUIManager.ShowLobbyList();
+            AddToStack(UIProvider.GetUIManager._lobbyListUI);
             isSignedIn = true;
-
         });
 
+        _backButton.onClick.AddListener(() =>
+        {
+            if (_backQueue.Count > 1)
+            {
+                _backQueue.Pop().SetActive(false);
+                _backQueue.Peek().SetActive(true);
+                if (_backQueue.Count == 1)
+                    _backButton.gameObject.SetActive(false);
+            }
+        });
 
         _statusButton.onClick.AddListener(() =>
         {
@@ -76,11 +91,22 @@ public class UIButton : MonoBehaviour
         });
     }
 
+
+
+    private void AddToStack(GameObject gameObject)
+    {
+        _backQueue.Peek().SetActive(false);
+        _backQueue.Push(gameObject);
+        _backQueue.Peek().SetActive(true);
+    }
+
     private void ShowCreateLobbyUI()
     {
+        if(_backQueue.Peek() != UIProvider.GetUIManager._createLobbyUI)
+                AddToStack(UIProvider.GetUIManager._createLobbyUI);
         if (!isSignedIn)
             LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox._playerName.text);
-        UIProvider.GetUIManager.ShowCreateLobbyUI();
         isSignedIn = true;
+
     }
 }

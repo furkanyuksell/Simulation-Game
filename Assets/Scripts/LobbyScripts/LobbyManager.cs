@@ -77,7 +77,7 @@ public class LobbyManager : MonoBehaviour
 
         Debug.Log("Created Lobby " + lobby.Name);
     }
-    
+
     public async void JoinLobby(Lobby lobby)
     {
         Player player = GetPlayer();
@@ -155,7 +155,70 @@ public class LobbyManager : MonoBehaviour
             Debug.Log(e);
         }
     }
+    public async void UpdatePlayerName(string playerName)
+    {
+        this.playerName = playerName;
 
+        if (joinedLobby != null)
+        {
+            try
+            {
+                UpdatePlayerOptions options = new UpdatePlayerOptions();
+
+                options.Data = new Dictionary<string, PlayerDataObject>() {
+                    {
+                        KEY_PLAYER_NAME, new PlayerDataObject(
+                            visibility: PlayerDataObject.VisibilityOptions.Public,
+                            value: playerName)
+                    }
+                };
+
+                string playerId = AuthenticationService.Instance.PlayerId;
+
+                Lobby lobby = await LobbyService.Instance.UpdatePlayerAsync(joinedLobby.Id, playerId, options);
+                joinedLobby = lobby;
+                OnJoinedLobbyUpdate?.Invoke(this, new LobbyEventArgs { lobby = joinedLobby });
+            }
+            catch (LobbyServiceException e)
+            {
+                Debug.Log(e);
+            }
+        }
+    }
+
+    public async void LeaveLobby()
+    {
+        if (joinedLobby != null)
+        {
+            try
+            {
+                await LobbyService.Instance.RemovePlayerAsync(joinedLobby.Id, AuthenticationService.Instance.PlayerId);
+
+                joinedLobby = null;
+
+                OnLeftLobby?.Invoke(this, EventArgs.Empty);
+            }
+            catch (LobbyServiceException e)
+            {
+                Debug.Log(e);
+            }
+        }
+    }
+
+    public async void KickPlayer(string playerId)
+    {
+        if (IsLobbyHost())
+        {
+            try
+            {
+                await LobbyService.Instance.RemovePlayerAsync(joinedLobby.Id, playerId);
+            }
+            catch (LobbyServiceException e)
+            {
+                Debug.Log(e);
+            }
+        }
+    }
     private async void HandleLobbyHeartbeat()
     {
         if (IsLobbyHost())
