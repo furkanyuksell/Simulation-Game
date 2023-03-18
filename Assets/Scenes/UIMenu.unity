@@ -2020,7 +2020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &634487862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6344,11 +6344,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754af77414fa2ad47ae77b0965db4831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainUI: {fileID: 0}
-  MultiPlayerUI: {fileID: 0}
-  CreateLobbyUI: {fileID: 0}
-  LobbyListUI: {fileID: 0}
-  LobbyUI: {fileID: 0}
+  MainUI: {fileID: 379412501}
+  MultiPlayerUI: {fileID: 1646814205}
+  CreateLobbyUI: {fileID: 87510451}
+  LobbyListUI: {fileID: 1223261104}
+  LobbyUI: {fileID: 634487861}
 --- !u!114 &2095540465
 MonoBehaviour:
   m_ObjectHideFlags: 0
