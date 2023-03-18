@@ -119,7 +119,10 @@ public class LobbyManager : MonoBehaviour
             { KEY_PLAYER_NAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, playerName) }
         });
     }
-
+    public Lobby GetJoinedLobby()
+    {
+        return joinedLobby;
+    }
 
     public bool IsLobbyHost()
     {

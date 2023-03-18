@@ -88,6 +88,7 @@ public class UIButton : MonoBehaviour
         _createLobbyButton.onClick.AddListener(() =>
         {
             LobbyManager.Instance.CreateLobby(UIProvider.GetUITextbox._lobbyName.text, int.Parse(UIProvider.GetUITextbox._lobbyPlayerCount.text), isPrivateLobby);
+            _backQueue.Pop().SetActive(false);
         });
     }
 
