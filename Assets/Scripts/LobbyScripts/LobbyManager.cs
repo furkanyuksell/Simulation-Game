@@ -19,6 +19,7 @@ public class LobbyManager : MonoBehaviour
     private float refreshLobbyListTimer = 5f;
 
     private Lobby joinedLobby;
+    public event EventHandler OnDestroyLobby;
     public event EventHandler OnLeftLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobbyUpdate;
@@ -214,9 +215,16 @@ public class LobbyManager : MonoBehaviour
             {
                 await LobbyService.Instance.RemovePlayerAsync(joinedLobby.Id, AuthenticationService.Instance.PlayerId);
 
-                joinedLobby = null;
+                if (IsLobbyHost())
+                {
+                    joinedLobby = null;
+                    OnDestroyLobby?.Invoke(this, EventArgs.Empty);
+                }
+                else
+                {
+                    OnLeftLobby?.Invoke(this, EventArgs.Empty);
+                }
 
-                OnLeftLobby?.Invoke(this, EventArgs.Empty);
             }
             catch (LobbyServiceException e)
             {

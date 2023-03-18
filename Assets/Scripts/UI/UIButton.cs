@@ -22,7 +22,7 @@ public class UIButton : MonoBehaviour
 
     private void Start()
     {
-        _backQueue.Push(UIProvider.GetUIManager._mainUI);
+        _backQueue.Push(UIProvider.GetUIManager.MainUI);
 
         _singleButton.onClick.AddListener(() =>
         {
@@ -31,7 +31,7 @@ public class UIButton : MonoBehaviour
 
         _multiButton.onClick.AddListener(() =>
         {
-            AddToStack(UIProvider.GetUIManager._multiPlayerUI);
+            AddToStack(UIProvider.GetUIManager.MultiPlayerUI);
             _backButton.gameObject.SetActive(true);
         });
 
@@ -54,7 +54,7 @@ public class UIButton : MonoBehaviour
         {
             if (!isSignedIn)
                 LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox._playerName.text);
-            AddToStack(UIProvider.GetUIManager._lobbyListUI);
+            AddToStack(UIProvider.GetUIManager.LobbyListUI);
             isSignedIn = true;
         });
 
@@ -88,6 +88,8 @@ public class UIButton : MonoBehaviour
         {
             LobbyManager.Instance.CreateLobby(UIProvider.GetUITextbox._lobbyName.text, int.Parse(UIProvider.GetUITextbox._lobbyPlayerCount.text), isPrivateLobby);
             _backQueue.Pop().SetActive(false);
+            _backQueue.Push(UIProvider.GetUIManager.LobbyUI);
+            _backButton.gameObject.SetActive(false);
         });
     }
 
@@ -102,8 +104,8 @@ public class UIButton : MonoBehaviour
 
     private void ShowCreateLobbyUI()
     {
-        if(_backQueue.Peek() != UIProvider.GetUIManager._createLobbyUI)
-                AddToStack(UIProvider.GetUIManager._createLobbyUI);
+        if(_backQueue.Peek() != UIProvider.GetUIManager.CreateLobbyUI)
+                AddToStack(UIProvider.GetUIManager.CreateLobbyUI);
         if (!isSignedIn)
             LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox._playerName.text);
         isSignedIn = true;

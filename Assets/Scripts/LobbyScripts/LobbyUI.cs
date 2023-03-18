@@ -4,6 +4,7 @@ using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LobbyUI : MonoBehaviour
 {
@@ -12,27 +13,40 @@ public class LobbyUI : MonoBehaviour
     [SerializeField] private Transform playerSingleTemplate;
     [SerializeField] private Transform container;
     [SerializeField] private TextMeshProUGUI lobbyNameText;
-    private void Awake() {
+    [SerializeField] private Button leaveLobbyButton;
+    private void Awake()
+    {
         Instance = this;
     }
     void Start()
-    {    
+    {
         LobbyManager.Instance.OnJoinedLobby += UpdateLobby_Event;
         LobbyManager.Instance.OnJoinedLobbyUpdate += UpdateLobby_Event;
-        LobbyManager.Instance.OnLeftLobby += LobbyManager_OnLeftLobby;
-        LobbyManager.Instance.OnKickedFromLobby += LobbyManager_OnLeftLobby;
+        LobbyManager.Instance.OnDestroyLobby += LobbyManager_OnDestroyLobby;
+        LobbyManager.Instance.OnLeftLobby += LobbyManager_LeftLobby;
+        LobbyManager.Instance.OnKickedFromLobby += LobbyManager_OnDestroyLobby;
+
+        leaveLobbyButton.onClick.AddListener(() =>
+        {
+            LobbyManager.Instance.LeaveLobby();
+        });
+
         Hide();
     }
 
-    private void LobbyManager_OnLeftLobby(object sender, System.EventArgs e)
+    private void LobbyManager_OnDestroyLobby(object sender, System.EventArgs e)
     {
         ClearLobby();
         Hide();
     }
 
+    private void LobbyManager_LeftLobby(object sender, System.EventArgs e)
+    {
+        Hide();
+    }
+
     private void UpdateLobby_Event(object sender, LobbyManager.LobbyEventArgs e)
     {
-        Debug.Log("Update lobby Event Function");
         UpdateLobby();
     }
 
@@ -43,7 +57,6 @@ public class LobbyUI : MonoBehaviour
 
     private void UpdateLobby(Lobby lobby)
     {
-        Debug.Log("Update lobby");
         ClearLobby();
 
         foreach (Player player in lobby.Players)
@@ -59,7 +72,7 @@ public class LobbyUI : MonoBehaviour
 
             lobbyPlayerSingleUI.UpdatePlayer(player);
         }
-        
+
         lobbyNameText.text = lobby.Name;
 
         Show();
@@ -82,7 +95,6 @@ public class LobbyUI : MonoBehaviour
     private void Show()
     {
         gameObject.SetActive(true);
-        Debug.Log("Show lobby");
     }
 
 }

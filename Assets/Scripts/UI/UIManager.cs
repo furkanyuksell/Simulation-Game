@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour, IProvidable
 {
-    [SerializeField] public GameObject _mainUI;
-    [SerializeField] public GameObject _multiPlayerUI;
+    [SerializeField] public GameObject MainUI;
+    [SerializeField] public GameObject MultiPlayerUI;
 
-    [SerializeField] public GameObject _createLobbyUI;
-    [SerializeField] public GameObject _lobbyListUI;
-    [SerializeField] public GameObject _lobbyUI;
+    [SerializeField] public GameObject CreateLobbyUI;
+    [SerializeField] public GameObject LobbyListUI;
+    [SerializeField] public GameObject LobbyUI;
 
     private void Awake() {
         UIProvider.Register(this);
-        _mainUI.SetActive(true);
-        _lobbyUI.SetActive(true); // set start event after that its closed itself 
+        MainUI.SetActive(true);
+        LobbyUI.SetActive(true); // set start event after that its closed itself 
+        LobbyListUI.SetActive(true); // set start event after that its closed itself 
     }
 
 }
