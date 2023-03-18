@@ -23,7 +23,6 @@ public class UIButton : MonoBehaviour
     private void Start()
     {
         _backQueue.Push(UIProvider.GetUIManager._mainUI);
-        _backButton.gameObject.SetActive(false);
 
         _singleButton.onClick.AddListener(() =>
         {

@@ -2020,7 +2020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &634487862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5809,6 +5809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Backward
       objectReference: {fileID: 0}
+    - target: {fileID: 5602108152381051910, guid: 2caffe2bf86f3b748a88f6080779964f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5602108152381051911, guid: 2caffe2bf86f3b748a88f6080779964f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6090,6 +6094,7 @@ MonoBehaviour:
   _multiPlayerUI: {fileID: 1646814205}
   _createLobbyUI: {fileID: 87510451}
   _lobbyListUI: {fileID: 1223261104}
+  _lobbyUI: {fileID: 634487861}
 --- !u!114 &2095540465
 MonoBehaviour:
   m_ObjectHideFlags: 0
