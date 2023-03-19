@@ -20,9 +20,11 @@ public class UIButton : MonoBehaviour
     bool isPrivateLobby = false;
     bool isSignedIn = false; // i'll fix with this later on for the sign once  
 
-
     private void Start()
     {
+
+        LobbyManager.Instance.OnJoinedLobby += BackwardButtonEffected;
+
         _backQueue.Push(UIProvider.GetUIManager.MainUI);
 
         _singleButton.onClick.AddListener(() =>
@@ -57,6 +59,8 @@ public class UIButton : MonoBehaviour
                 LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox.PlayerName.text);
             AddToStack(UIProvider.GetUIManager.LobbyListUI);
             isSignedIn = true;
+            if (!_saveNameButton.IsActive())
+                _saveNameButton.gameObject.SetActive(true);
         });
 
         _backButton.onClick.AddListener(() =>
@@ -90,16 +94,19 @@ public class UIButton : MonoBehaviour
             LobbyManager.Instance.CreateLobby(UIProvider.GetUITextbox.LobbyName.text, int.Parse(UIProvider.GetUITextbox.LobbyPlayerCount.text), isPrivateLobby);
             _backQueue.Pop().SetActive(false);
             _backQueue.Push(UIProvider.GetUIManager.LobbyUI);
-            _backButton.gameObject.SetActive(false);
         });
-    
+
         _saveNameButton.onClick.AddListener(() =>
         {
             LobbyManager.Instance.UpdatePlayerName(UIProvider.GetUITextbox.PlayerName.text);
         });
+        _saveNameButton.gameObject.SetActive(false);
     }
 
-
+    private void BackwardButtonEffected(object sender, LobbyManager.LobbyEventArgs e)
+    {
+        _backButton.gameObject.SetActive(false);
+    }
 
     private void AddToStack(GameObject gameObject)
     {
@@ -110,11 +117,13 @@ public class UIButton : MonoBehaviour
 
     private void ShowCreateLobbyUI()
     {
-        if(_backQueue.Peek() != UIProvider.GetUIManager.CreateLobbyUI)
-                AddToStack(UIProvider.GetUIManager.CreateLobbyUI);
+        if (_backQueue.Peek() != UIProvider.GetUIManager.CreateLobbyUI)
+            AddToStack(UIProvider.GetUIManager.CreateLobbyUI);
         if (!isSignedIn)
             LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox.PlayerName.text);
         isSignedIn = true;
 
+        if (!_saveNameButton.IsActive())
+            _saveNameButton.gameObject.SetActive(true);
     }
 }

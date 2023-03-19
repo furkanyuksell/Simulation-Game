@@ -179,7 +179,6 @@ public class LobbyManager : MonoBehaviour
     public async void UpdatePlayerName(string playerName)
     {
         this.playerName = playerName;
-
         if (joinedLobby != null)
         {
             try
@@ -198,6 +197,7 @@ public class LobbyManager : MonoBehaviour
 
                 Lobby lobby = await LobbyService.Instance.UpdatePlayerAsync(joinedLobby.Id, playerId, options);
                 joinedLobby = lobby;
+
                 OnJoinedLobbyUpdate?.Invoke(this, new LobbyEventArgs { lobby = joinedLobby });
             }
             catch (LobbyServiceException e)
