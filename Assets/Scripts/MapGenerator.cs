@@ -7,7 +7,9 @@ public class MapGenerator : MonoBehaviour
     {
         NoiseMap,
         ColorMap,
-        TileMap
+        TileMap,
+        TemperatureMap,
+        HumidityMap
     };
 
     public DrawMode drawMode;
@@ -26,11 +28,14 @@ public class MapGenerator : MonoBehaviour
     public bool autoUpdate;
     [SerializeField] public TerrainType[] regions;
     [SerializeField] public Tilemap tileMap;
-    private int[,] world = new int[5,6]{ {0,0,0,0,3,6}, // 0 snow, 1 rain forest, 2 plain, 3 rock, 4 desert, 5 water,  6 cold water, 7 sand
-                                         {3,3,1,1,1,6}, // temperature increase as goes below, humidity rises as goes right
-                                         {3,2,2,1,1,5},
-                                         {2,2,2,2,2,5},
-                                         {4,4,4,4,7,5} }; 
+
+    private int[,] world = new int[6, 7]{{0,0,0,8,8,6,6}, // 0 snow,  // 5 water
+                                         {0,0,2,8,8,5,6}, // 1 rain   // 6 cold water
+                                         {0,2,2,2,7,5,5}, // 2 plain  // 7 sand 
+                                         {2,2,1,1,7,5,5}, // 3 hill   // 8 Taiga
+                                         {2,2,2,2,7,5,5}, // 3 hill   temperature increase as goes below
+                                         {4,4,4,4,4,5,5}};// 4 desert sand humidity rises as goes right
+
 
     public void GenerateMap()
     {
@@ -56,7 +61,7 @@ public class MapGenerator : MonoBehaviour
         //}
 
 
-        //MapDisplay display = FindObjectOfType<MapDisplay>();
+        MapDisplay display = FindObjectOfType<MapDisplay>();
         //if (drawMode == DrawMode.NoiseMap)
         //{
         //    display.DrawTexture(TextureGenerator.TextureFromHeightMap(noiseMap));
@@ -65,10 +70,18 @@ public class MapGenerator : MonoBehaviour
         //{
         //    display.DrawTexture(TextureGenerator.TextureFromColorMap(colorMap, mapWidth, mapHeight));
         //}
-        //else if (drawMode == DrawMode.TileMap)
-        //{
-        DrawTileMap(temperatureMap, humidityMap);
-        //}
+        if (drawMode == DrawMode.TileMap)
+        {
+            DrawTileMap(temperatureMap, humidityMap);
+        }
+        else if (drawMode == DrawMode.HumidityMap)
+        {
+            display.DrawTexture(TextureGenerator.TextureFromHeightMap(humidityMap));
+        }
+        else if (drawMode == DrawMode.TemperatureMap)
+        {
+            display.DrawTexture(TextureGenerator.TextureFromHeightMap(temperatureMap));
+        }
 
     }
 
@@ -78,9 +91,9 @@ public class MapGenerator : MonoBehaviour
         {
             for (int x = 0; x < mapWidth; x++)
             {
-                float currentTemp = tempMap[x, y] * 5 == 5 ? 4 : tempMap[x, y] * 5;
-                float currentHumidity = humidityMap[x, y] * 6 == 6 ? 5 : humidityMap[x, y] * 6;
-                tileMap.SetTile(new Vector3Int(-(mapWidth / 2) + x, -(mapHeight / 2) + y), regions[world[(int)currentTemp,(int)currentHumidity]].tileData.tiles[0]);
+                float currentTemp = tempMap[x, y] * world.GetLength(0) == world.GetLength(0) ? world.GetLength(0) - 1 : tempMap[x, y] * world.GetLength(0);
+                float currentHumidity = humidityMap[x, y] * world.GetLength(1) == world.GetLength(1) ? world.GetLength(1) - 1 : humidityMap[x, y] * world.GetLength(1);
+                tileMap.SetTile(new Vector3Int(-(mapWidth / 2) + x, -(mapHeight / 2) + y), regions[world[(int)currentTemp, (int)currentHumidity]].tileData.tiles[0]);
             }
         }
     }
@@ -104,16 +117,16 @@ public class MapGenerator : MonoBehaviour
     //        }
     //    }
     //}
-//
+    //
     public void Flood()
     {
         for (int y = 0; y < mapHeight; y++)
         {
             for (int x = 0; x < mapWidth; x++)
             {
-                if (tileMap.GetTile(new Vector3Int(-(mapWidth / 2) + x, -(mapHeight / 2) + y)) == regions[7].tileData.tiles[0])
+                if (tileMap.GetTile(new Vector3Int(-(mapWidth / 2) + x, -(mapHeight / 2) + y)) == regions[2].tileData.tiles[0])
                 {
-                    tileMap.SetTile(new Vector3Int(-(mapWidth / 2) + x, -(mapHeight / 2) + y), regions[7].tileData.tiles[1]);
+                    tileMap.SetTile(new Vector3Int(-(mapWidth / 2) + x, -(mapHeight / 2) + y), regions[2].tileData.tiles[1]);
                 }
             }
         }

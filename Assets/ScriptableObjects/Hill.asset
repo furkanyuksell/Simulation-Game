@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dd9f860b6b505942a6a92d1ccd82a25, type: 3}
-  m_Name: Steppe
+  m_Name: Hill
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: 11400000, guid: 2b8bd93c60793bb4dad27023d41df605, type: 2}

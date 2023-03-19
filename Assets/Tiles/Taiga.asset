@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: RainForest
+  m_Name: Taiga
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 7482667652216324306, guid: 71b9130a5564b89439adaf06a56d48c5, type: 3}
-  m_Color: {r: 0.20629673, g: 0.30980393, b: 0.027450986, a: 1}
+  m_Color: {r: 0.047058824, g: 0.30980393, b: 0.02745098, a: 1}
   m_Transform:
     e00: 1
     e01: 0
