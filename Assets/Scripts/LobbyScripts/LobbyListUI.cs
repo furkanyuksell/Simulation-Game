@@ -19,27 +19,7 @@ public class LobbyListUI : MonoBehaviour
     private void Start()
     {
         LobbyManager.Instance.OnLobbyListChanged += LobbyManager_OnLobbyListChanged;
-        LobbyManager.Instance.OnJoinedLobby += LobbyManager_OnJoinedLobby;
-        LobbyManager.Instance.OnDestroyLobby += LobbyManager_OnLeftLobby;
-        LobbyManager.Instance.OnLeftLobby += LobbyManager_OnLeftLobby;
-        LobbyManager.Instance.OnKickedFromLobby += LobbyManager_OnKickedFromLobby;
-        Hide();
     }
-    private void LobbyManager_OnKickedFromLobby(object sender, LobbyManager.LobbyEventArgs e)
-    {
-        Show();
-    }
-
-    private void LobbyManager_OnLeftLobby(object sender, EventArgs e)
-    {
-        Show();
-    }
-
-    private void LobbyManager_OnJoinedLobby(object sender, LobbyManager.LobbyEventArgs e)
-    {
-        Hide();
-    }
-
     private void LobbyManager_OnLobbyListChanged(object sender, LobbyManager.OnLobbyListChangedEventArgs e)
     {
         UpdateLobbyList(e.lobbyList);
@@ -60,14 +40,5 @@ public class LobbyListUI : MonoBehaviour
             LobbyListSingleUI lobbyListSingleUI = lobbySingleTransform.GetComponent<LobbyListSingleUI>();
             lobbyListSingleUI.UpdateLobby(lobby);
         }
-    }
-    private void Hide()
-    {
-        gameObject.SetActive(false);
-    }
-
-    private void Show()
-    {
-        gameObject.SetActive(true);
     }
 }

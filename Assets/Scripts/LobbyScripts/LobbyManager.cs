@@ -218,11 +218,11 @@ public class LobbyManager : MonoBehaviour
                 if (IsLobbyHost())
                 {
                     joinedLobby = null;
-                    OnDestroyLobby?.Invoke(this, EventArgs.Empty);
+                    OnDestroyLobby?.Invoke(this, null);
                 }
                 else
                 {
-                    OnLeftLobby?.Invoke(this, EventArgs.Empty);
+                    OnLeftLobby?.Invoke(this, null);
                 }
 
             }

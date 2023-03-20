@@ -14,8 +14,12 @@ public class UIManager : MonoBehaviour, IProvidable
     private void Awake() {
         UIProvider.Register(this);
         MainUI.SetActive(true);
+        
         LobbyUI.SetActive(true); // set start event after that its closed itself 
+        LobbyUI.SetActive(false); // set start event after that its closed itself 
+        
         LobbyListUI.SetActive(true); // set start event after that its closed itself 
+        LobbyListUI.SetActive(false); // set start event after that its closed itself 
     }
 
 }

@@ -22,10 +22,10 @@ public class UIButton : MonoBehaviour
 
     private void Start()
     {
-
-        LobbyManager.Instance.OnJoinedLobby += BackwardButtonEffected;
-
         _backQueue.Push(UIProvider.GetUIManager.MainUI);
+        LobbyManager.Instance.OnLeftLobby += LobbyManager_LeftLobby;
+        LobbyManager.Instance.OnDestroyLobby += LobbyManager_LeftLobby;
+        LobbyManager.Instance.OnKickedFromLobby += LobbyManager_LeftLobby;
 
         _singleButton.onClick.AddListener(() =>
         {
@@ -34,7 +34,7 @@ public class UIButton : MonoBehaviour
 
         _multiButton.onClick.AddListener(() =>
         {
-            AddToStack(UIProvider.GetUIManager.MultiPlayerUI);
+            MoveForwardInStack(UIProvider.GetUIManager.MultiPlayerUI);
             _backButton.gameObject.SetActive(true);
         });
 
@@ -57,7 +57,7 @@ public class UIButton : MonoBehaviour
         {
             if (!isSignedIn)
                 LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox.PlayerName.text);
-            AddToStack(UIProvider.GetUIManager.LobbyListUI);
+            MoveForwardInStack(UIProvider.GetUIManager.LobbyListUI);
             isSignedIn = true;
             if (!_saveNameButton.IsActive())
                 _saveNameButton.gameObject.SetActive(true);
@@ -65,13 +65,7 @@ public class UIButton : MonoBehaviour
 
         _backButton.onClick.AddListener(() =>
         {
-            if (_backQueue.Count > 1)
-            {
-                _backQueue.Pop().SetActive(false);
-                _backQueue.Peek().SetActive(true);
-                if (_backQueue.Count == 1)
-                    _backButton.gameObject.SetActive(false);
-            }
+            BackwardInStack();
         });
 
         _statusButton.onClick.AddListener(() =>
@@ -92,8 +86,9 @@ public class UIButton : MonoBehaviour
         _createLobbyButton.onClick.AddListener(() =>
         {
             LobbyManager.Instance.CreateLobby(UIProvider.GetUITextbox.LobbyName.text, int.Parse(UIProvider.GetUITextbox.LobbyPlayerCount.text), isPrivateLobby);
-            _backQueue.Pop().SetActive(false);
-            _backQueue.Push(UIProvider.GetUIManager.LobbyUI);
+
+            _backButton.gameObject.SetActive(false);
+            MoveForwardInStack(UIProvider.GetUIManager.MultiPlayerUI, UIProvider.GetUIManager.LobbyUI);
         });
 
         _saveNameButton.onClick.AddListener(() =>
@@ -103,22 +98,44 @@ public class UIButton : MonoBehaviour
         _saveNameButton.gameObject.SetActive(false);
     }
 
-    private void BackwardButtonEffected(object sender, LobbyManager.LobbyEventArgs e)
+    private void LobbyManager_LeftLobby(object sender, System.EventArgs e)
     {
-        _backButton.gameObject.SetActive(false);
+        _backButton.gameObject.SetActive(true);
+        MoveForwardInStack(UIProvider.GetUIManager.MultiPlayerUI, UIProvider.GetUIManager.LobbyListUI);
     }
 
-    private void AddToStack(GameObject gameObject)
+    private void MoveForwardInStack(GameObject gameObject)
     {
         _backQueue.Peek().SetActive(false);
         _backQueue.Push(gameObject);
         _backQueue.Peek().SetActive(true);
     }
 
+    private void MoveForwardInStack(GameObject backwardPos, GameObject forwardPos)
+    {
+        while (_backQueue.Peek() != backwardPos)
+        {
+            _backQueue.Pop().SetActive(false);
+        }
+        _backQueue.Push(forwardPos);
+        _backQueue.Peek().SetActive(true);
+    }
+
+    private void BackwardInStack()
+    {
+        if (_backQueue.Count > 1)
+        {
+            _backQueue.Pop().SetActive(false);
+            _backQueue.Peek().SetActive(true);
+            if (_backQueue.Count == 1)
+                _backButton.gameObject.SetActive(false);
+        }
+    }
+
     private void ShowCreateLobbyUI()
     {
         if (_backQueue.Peek() != UIProvider.GetUIManager.CreateLobbyUI)
-            AddToStack(UIProvider.GetUIManager.CreateLobbyUI);
+            MoveForwardInStack(UIProvider.GetUIManager.CreateLobbyUI);
         if (!isSignedIn)
             LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox.PlayerName.text);
         isSignedIn = true;

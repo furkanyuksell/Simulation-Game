@@ -23,26 +23,17 @@ public class LobbyUI : MonoBehaviour
         LobbyManager.Instance.OnJoinedLobby += UpdateLobby_Event;
         LobbyManager.Instance.OnJoinedLobbyUpdate += UpdateLobby_Event;
         LobbyManager.Instance.OnDestroyLobby += LobbyManager_OnDestroyLobby;
-        LobbyManager.Instance.OnLeftLobby += LobbyManager_LeftLobby;
         LobbyManager.Instance.OnKickedFromLobby += LobbyManager_OnDestroyLobby;
 
         leaveLobbyButton.onClick.AddListener(() =>
         {
             LobbyManager.Instance.LeaveLobby();
         });
-
-        Hide();
     }
 
     private void LobbyManager_OnDestroyLobby(object sender, System.EventArgs e)
     {
         ClearLobby();
-        Hide();
-    }
-
-    private void LobbyManager_LeftLobby(object sender, System.EventArgs e)
-    {
-        Hide();
     }
 
     private void UpdateLobby_Event(object sender, LobbyManager.LobbyEventArgs e)
@@ -75,7 +66,6 @@ public class LobbyUI : MonoBehaviour
 
         lobbyNameText.text = lobby.Name;
 
-        Show();
     }
 
     private void ClearLobby()
@@ -85,16 +75,6 @@ public class LobbyUI : MonoBehaviour
             if (child == playerSingleTemplate) continue;
             Destroy(child.gameObject);
         }
-    }
-
-    private void Hide()
-    {
-        gameObject.SetActive(false);
-    }
-
-    private void Show()
-    {
-        gameObject.SetActive(true);
     }
 
 }
