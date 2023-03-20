@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1957936782830144369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957936782830144370}
+  - component: {fileID: 1957936782830144371}
+  - component: {fileID: 1957936782830144372}
+  m_Layer: 0
+  m_Name: Map Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1957936782830144370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957936782830144369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1957936782830144371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957936782830144369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4203bd28905504b4a81354a79649132e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawMode: 2
+  mapWidth: 1000
+  mapHeight: 1000
+  noiseScale: 500
+  octaves: 5
+  persistance: 0.5
+  lacunarity: 2
+  seed: 7
+  offset: {x: -3, y: 0}
+  autoUpdate: 0
+  regions:
+  - name: Snow
+    color: {r: 1, g: 1, b: 1, a: 0}
+    tileData: {fileID: 11400000, guid: d6b3b347f497bdf4fa8cfda24d5f23d0, type: 2}
+  - name: Rain Forest
+    color: {r: 0.20784314, g: 0.30980393, b: 0.027450982, a: 0}
+    tileData: {fileID: 11400000, guid: bfc184820f8e96b4b98195a48cb7d8a7, type: 2}
+  - name: Plains
+    color: {r: 0.48235297, g: 1, b: 0.03137255, a: 0}
+    tileData: {fileID: 11400000, guid: 5d4ece333a13a884db57da9edf82266b, type: 2}
+  - name: Hill
+    color: {r: 0.49019608, g: 0.24313726, b: 0.16078432, a: 0}
+    tileData: {fileID: 11400000, guid: c00b6bfb603e3764981d65adbffaaa1a, type: 2}
+  - name: Desert
+    color: {r: 1, g: 0.8941177, b: 0, a: 0}
+    tileData: {fileID: 11400000, guid: 615a0794597db2145ad21772bb149302, type: 2}
+  - name: Water
+    color: {r: 0.227451, g: 0.58431375, b: 0.9058824, a: 0}
+    tileData: {fileID: 11400000, guid: 826c35f934363e04988ff5d37a888b82, type: 2}
+  - name: Cold Water
+    color: {r: 0, g: 0.30588236, b: 1, a: 0}
+    tileData: {fileID: 11400000, guid: ea66ad3e0b26c884cb078b6eb17a52f8, type: 2}
+  - name: Sand
+    color: {r: 0.9843138, g: 0.9921569, b: 0.54509807, a: 0}
+    tileData: {fileID: 11400000, guid: ac0e678201a4ee84e97861318a4a3515, type: 2}
+  - name: Taiga
+    color: {r: 0.019607844, g: 0.29411766, b: 0, a: 1}
+    tileData: {fileID: 11400000, guid: 0f5ab2bc4c2e07742b3b9b9253b033b7, type: 2}
+  tileMap: {fileID: 0}
+--- !u!114 &1957936782830144372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957936782830144369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a4d5996a8bc204c81268694ab4b17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureRenderer: {fileID: 0}
