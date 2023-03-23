@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd9f860b6b505942a6a92d1ccd82a25, type: 3}
   m_Name: Cold Water
   m_EditorClassIdentifier: 
+  hungerRate: 1
+  thirstRate: 1
+  chillRate: 0
   tiles:
   - {fileID: 11400000, guid: be3ac047916efac42a563b3f7b61f484, type: 2}

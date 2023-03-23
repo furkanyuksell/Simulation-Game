@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd9f860b6b505942a6a92d1ccd82a25, type: 3}
   m_Name: Desert
   m_EditorClassIdentifier: 
+  hungerRate: 1.25
+  thirstRate: 1.5
+  chillRate: -1
   tiles:
   - {fileID: 11400000, guid: da7587b2be0e8074ba9656d0aa614fb1, type: 2}

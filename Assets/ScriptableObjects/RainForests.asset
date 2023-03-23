@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd9f860b6b505942a6a92d1ccd82a25, type: 3}
   m_Name: RainForests
   m_EditorClassIdentifier: 
+  hungerRate: 1
+  thirstRate: 1.25
+  chillRate: -0.5
   tiles:
   - {fileID: 11400000, guid: 0ecd833029606ec4b9c34aa2fd58b0e9, type: 2}
