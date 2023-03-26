@@ -86,6 +86,11 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
+    public void DeleteTile()
+    {
+        tileMap.ClearAllTiles();
+    }
+
     void OnValidate()
     {
         if (mapWidth < 1)

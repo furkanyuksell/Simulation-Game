@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map Generator
       objectReference: {fileID: 0}
+    - target: {fileID: 1957936782830144369, guid: 34c27593765f63045974de962fb8f001, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1957936782830144370, guid: 34c27593765f63045974de962fb8f001, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -371,6 +375,14 @@ PrefabInstance:
     - target: {fileID: 1957936782830144371, guid: 34c27593765f63045974de962fb8f001, type: 3}
       propertyPath: mapHeight
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957936782830144371, guid: 34c27593765f63045974de962fb8f001, type: 3}
+      propertyPath: autoUpdate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957936782830144371, guid: 34c27593765f63045974de962fb8f001, type: 3}
+      propertyPath: noiseScale
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1957936782830144372, guid: 34c27593765f63045974de962fb8f001, type: 3}
       propertyPath: textureRenderer
@@ -517,7 +529,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0.21133333, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -534,65 +546,15 @@ Tilemap:
   m_Enabled: 1
   m_Tiles: {}
   m_AnimatedTiles: {}
-  m_TileAssetArray:
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  m_TileSpriteArray:
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  m_TileMatrixArray:
-  - m_RefCount: 0
-    m_Data:
-      e00: -688356
-      e01: 0
-      e02: -2.101897e-19
-      e03: -2.101897e-19
-      e10: 7.86e-43
-      e11: 0
-      e12: 7.86e-43
-      e13: 7.86e-43
-      e20: 2.391784e-16
-      e21: 1.89e-43
-      e22: 5.4450415e-27
-      e23: 0.000000052384905
-      e30: 4.5905e-41
-      e31: 0
-      e32: 7.88e-43
-      e33: 7.92e-43
-  m_TileColorArray:
-  - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -25, y: -25, z: 0}
-  m_Size: {x: 50, y: 50, z: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:

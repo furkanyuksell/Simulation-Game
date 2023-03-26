@@ -26,5 +26,10 @@ public class MapGeneratorEditor : Editor
         {
             mapGen.Flood();
         }
+
+        if (GUILayout.Button("Delete Tiles"))
+        {
+            mapGen.DeleteTile();
+        }
     }
 }
