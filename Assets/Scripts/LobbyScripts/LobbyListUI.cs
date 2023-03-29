@@ -13,12 +13,12 @@ public class LobbyListUI : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        lobbySingleTemplate.gameObject.SetActive(false);
     }
 
     private void Start()
     {
         LobbyManager.Instance.OnLobbyListChanged += LobbyManager_OnLobbyListChanged;
+        lobbySingleTemplate.gameObject.SetActive(false);
     }
     private void LobbyManager_OnLobbyListChanged(object sender, LobbyManager.OnLobbyListChangedEventArgs e)
     {

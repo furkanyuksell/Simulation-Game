@@ -14,6 +14,7 @@ public class LobbyUI : MonoBehaviour
     [SerializeField] private Transform container;
     [SerializeField] private TextMeshProUGUI lobbyNameText;
     [SerializeField] private Button leaveLobbyButton;
+    [SerializeField] private Button startGameButton;
     private void Awake()
     {
         Instance = this;
@@ -49,6 +50,15 @@ public class LobbyUI : MonoBehaviour
     private void UpdateLobby(Lobby lobby)
     {
         ClearLobby();
+        
+        if (LobbyManager.Instance.IsLobbyHost())
+        {
+            startGameButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            startGameButton.gameObject.SetActive(false);
+        }
 
         foreach (Player player in lobby.Players)
         {
@@ -67,7 +77,6 @@ public class LobbyUI : MonoBehaviour
         lobbyNameText.text = lobby.Name;
 
     }
-
     private void ClearLobby()
     {
         foreach (Transform child in container)

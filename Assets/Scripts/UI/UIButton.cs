@@ -23,6 +23,7 @@ public class UIButton : MonoBehaviour
     private void Start()
     {
         _backQueue.Push(UIProvider.GetUIManager.MainUI);
+        LobbyManager.Instance.OnJoinedLobby += LobbyManager_JoinedLobby;
         LobbyManager.Instance.OnLeftLobby += LobbyManager_LeftLobby;
         LobbyManager.Instance.OnDestroyLobby += LobbyManager_LeftLobby;
         LobbyManager.Instance.OnKickedFromLobby += LobbyManager_LeftLobby;
@@ -85,10 +86,7 @@ public class UIButton : MonoBehaviour
 
         _createLobbyButton.onClick.AddListener(() =>
         {
-            LobbyManager.Instance.CreateLobby(UIProvider.GetUITextbox.LobbyName.text, int.Parse(UIProvider.GetUITextbox.LobbyPlayerCount.text), isPrivateLobby);
-
-            _backButton.gameObject.SetActive(false);
-            MoveForwardInStack(UIProvider.GetUIManager.MultiPlayerUI, UIProvider.GetUIManager.LobbyUI);
+            LobbyManager.Instance.CreateLobby(UIProvider.GetUITextbox.LobbyName.text, int.Parse(UIProvider.GetUITextbox.LobbyPlayerCount.text), isPrivateLobby);            
         });
 
         _saveNameButton.onClick.AddListener(() =>
@@ -98,6 +96,11 @@ public class UIButton : MonoBehaviour
         _saveNameButton.gameObject.SetActive(false);
     }
 
+    private void LobbyManager_JoinedLobby(object sender, System.EventArgs e)
+    {
+        _backButton.gameObject.SetActive(false);
+        MoveForwardInStack(UIProvider.GetUIManager.MultiPlayerUI, UIProvider.GetUIManager.LobbyUI);
+    }
     private void LobbyManager_LeftLobby(object sender, System.EventArgs e)
     {
         _backButton.gameObject.SetActive(true);
