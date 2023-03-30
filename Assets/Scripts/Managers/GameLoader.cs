@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Unity.Netcode;
 public class GameLoader : MonoBehaviour
 {
     [SerializeField] GameObject loadingScreen;
@@ -21,7 +22,12 @@ public class GameLoader : MonoBehaviour
             slider.value = progress;
             yield return null;
         }
-   }
+    }
+
+    public void LoadNetworkGame(string sceneName)
+    {
+        NetworkManager.Singleton.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
 
 
 }

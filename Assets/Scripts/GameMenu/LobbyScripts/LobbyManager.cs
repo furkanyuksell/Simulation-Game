@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Lobbies;
@@ -75,7 +76,7 @@ public class LobbyManager : MonoBehaviour
         Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers, options);
 
         joinedLobby = lobby;
-
+        NetworkConnection.Instance.HostConnection();
         OnJoinedLobby?.Invoke(this, new LobbyEventArgs { lobby = lobby });
 
         Debug.Log("Created Lobby " + lobby.Name);
@@ -89,7 +90,7 @@ public class LobbyManager : MonoBehaviour
         {
             Player = player
         });
-
+        NetworkConnection.Instance.ClientConnection();
         OnJoinedLobby?.Invoke(this, new LobbyEventArgs { lobby = lobby });
     }
 
