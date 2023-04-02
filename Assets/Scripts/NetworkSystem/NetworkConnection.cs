@@ -62,11 +62,19 @@ public class NetworkConnection : NetworkBehaviour
     }
     public void HostConnection()
     {
+        RemoveNetworkCallbacks();
         NetworkManager.Singleton.ConnectionApprovalCallback += NetworkManager_ConnectionApprovalCallback;
         NetworkManager.Singleton.OnClientConnectedCallback += NetworkManager_OnClientConnectedCallback;
         NetworkManager.Singleton.OnClientDisconnectCallback += NetworkManager_Server_OnClientDisconnectCallback;
+
         NetworkManager.Singleton.StartHost();
         Debug.Log("Host started");
+    }
+    void RemoveNetworkCallbacks()
+    {
+        NetworkManager.Singleton.ConnectionApprovalCallback -= NetworkManager_ConnectionApprovalCallback;
+        NetworkManager.Singleton.OnClientConnectedCallback  -= NetworkManager_OnClientConnectedCallback;
+        NetworkManager.Singleton.OnClientDisconnectCallback -= NetworkManager_Server_OnClientDisconnectCallback;
     }
 
 
@@ -192,7 +200,8 @@ public class NetworkConnection : NetworkBehaviour
         return playerDataNetworkList[playerIndex];
     }
 
-    public NetworkList<PlayerData> GetPlayerDataNetworkList() {
+    public NetworkList<PlayerData> GetPlayerDataNetworkList()
+    {
         return playerDataNetworkList;
     }
 

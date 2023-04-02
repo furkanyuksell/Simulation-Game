@@ -10,6 +10,11 @@ public static class GameLoader
         UIMenu,
         WorldScene
     }
+    private static Scene targetScene;
+    public static void Load(Scene targetScene)
+    {
+        SceneManager.LoadScene(targetScene.ToString());
+    }
 
     public static void LoadNetworkGame(string sceneName)
     {
