@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,6 +11,7 @@ public class LobbyListSingleUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _lobbyNameText;
     [SerializeField] private TextMeshProUGUI _playersText;
     [SerializeField] private TextMeshProUGUI _isPrivate;
+    public static Action<Transform, string> OnJoiningLobby;
 
     private Lobby lobby;
 
@@ -17,7 +19,8 @@ public class LobbyListSingleUI : MonoBehaviour
     {
         GetComponent<Button>().onClick.AddListener(() =>
         {
-            LobbyManager.Instance.JoinLobby(lobby);
+            OnJoiningLobby?.Invoke(transform.parent, "Joining lobby...");
+            LobbyManager.Instance.JoinWithId(lobby.Id);
         });
     }
 

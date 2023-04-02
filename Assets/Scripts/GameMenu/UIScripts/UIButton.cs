@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class UIButton : MonoBehaviour
 {
     [SerializeField] private Button _singleButton;
@@ -14,21 +14,17 @@ public class UIButton : MonoBehaviour
     [SerializeField] private Button _findLobbyButton;
     [SerializeField] private Button _statusButton;
     [SerializeField] private Button _createLobbyButton;
-    [SerializeField] private Button _saveNameButton;
-
     [SerializeField] private Button _backButton;
     Stack<GameObject> _backQueue = new Stack<GameObject>();
     bool isPrivateLobby = false;
-    bool isSignedIn = false; // i'll fix with this later on for the sign once  
-
+    private GameObject _warningBox;
     private void Start()
     {
         _backQueue.Push(UIProvider.GetUIManager.MainUI);
+        LobbyManager.Instance.OnCreateLobby += LobbyManager_JoinedLobby;
         LobbyManager.Instance.OnJoinedLobby += LobbyManager_JoinedLobby;
         LobbyManager.Instance.OnLeftLobby += LobbyManager_LeftLobby;
-        LobbyManager.Instance.OnDestroyLobby += LobbyManager_LeftLobby;
-        LobbyManager.Instance.OnKickedFromLobby += LobbyManager_LeftLobby;
-
+        LobbyListSingleUI.OnJoiningLobby += WarningBoxInfos;
         _singleButton.onClick.AddListener(() =>
         {
             Debug.Log("Single Player");
@@ -57,12 +53,7 @@ public class UIButton : MonoBehaviour
 
         _findLobbyButton.onClick.AddListener(() =>
         {
-            if (!isSignedIn)
-                LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox.PlayerName.text);
             MoveForwardInStack(UIProvider.GetUIManager.LobbyListUI);
-            isSignedIn = true;
-            if (!_saveNameButton.IsActive())
-                _saveNameButton.gameObject.SetActive(true);
         });
 
         _backButton.onClick.AddListener(() =>
@@ -87,18 +78,20 @@ public class UIButton : MonoBehaviour
 
         _createLobbyButton.onClick.AddListener(() =>
         {
-            LobbyManager.Instance.CreateLobby(UIProvider.GetUITextbox.LobbyName.text, int.Parse(UIProvider.GetUITextbox.LobbyPlayerCount.text), isPrivateLobby);            
+            WarningBoxInfos(UIProvider.GetUIManager.CreateLobbyUI.transform, "Creating Lobby...");
+            LobbyManager.Instance.CreateLobby(UIProvider.GetUITextbox.LobbyName.text, isPrivateLobby);
         });
+    }
 
-        _saveNameButton.onClick.AddListener(() =>
-        {
-            LobbyManager.Instance.UpdatePlayerName(UIProvider.GetUITextbox.PlayerName.text);
-        });
-        _saveNameButton.gameObject.SetActive(false);
+    private void WarningBoxInfos(Transform parent, string info)
+    {
+        _warningBox = Instantiate(UIProvider.GetUIManager.WarningBox, parent);
+        _warningBox.GetComponentInChildren<TextMeshProUGUI>().text = info;
     }
 
     private void LobbyManager_JoinedLobby(object sender, System.EventArgs e)
     {
+        Destroy(_warningBox);
         _backButton.gameObject.SetActive(false);
         MoveForwardInStack(UIProvider.GetUIManager.MultiPlayerUI, UIProvider.GetUIManager.LobbyUI);
     }
@@ -140,11 +133,5 @@ public class UIButton : MonoBehaviour
     {
         if (_backQueue.Peek() != UIProvider.GetUIManager.CreateLobbyUI)
             MoveForwardInStack(UIProvider.GetUIManager.CreateLobbyUI);
-        if (!isSignedIn)
-            LobbyManager.Instance.Authenticate(UIProvider.GetUITextbox.PlayerName.text);
-        isSignedIn = true;
-
-        if (!_saveNameButton.IsActive())
-            _saveNameButton.gameObject.SetActive(true);
     }
 }

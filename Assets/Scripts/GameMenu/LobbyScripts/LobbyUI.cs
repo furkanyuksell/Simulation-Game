@@ -5,6 +5,8 @@ using Unity.Services.Authentication;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Services.Relay;
+using Unity.Netcode;
 
 public class LobbyUI : MonoBehaviour
 {
@@ -21,15 +23,26 @@ public class LobbyUI : MonoBehaviour
     }
     void Start()
     {
-        LobbyManager.Instance.OnJoinedLobby += UpdateLobby_Event;
-        LobbyManager.Instance.OnJoinedLobbyUpdate += UpdateLobby_Event;
-        LobbyManager.Instance.OnDestroyLobby += LobbyManager_OnDestroyLobby;
-        LobbyManager.Instance.OnKickedFromLobby += LobbyManager_OnDestroyLobby;
+        Debug.Log("LOBBYUI START");
+        Lobby lobby = LobbyManager.Instance.GetLobby();
+        lobbyNameText.text = lobby.Name;
+        NetworkConnection.Instance.OnPlayerDataNetworkListChanged += UpdateLobby_Event;
 
         leaveLobbyButton.onClick.AddListener(() =>
         {
+            Debug.Log("Leaving lobby");
             LobbyManager.Instance.LeaveLobby();
         });
+
+        startGameButton.onClick.AddListener(() =>
+        {
+            Debug.Log("Starting game");
+            LobbyManager.Instance.DeleteLobby();
+            GameLoader.LoadNetworkGame("WorldScene");
+        });
+
+        playerSingleTemplate.gameObject.SetActive(false);
+        NetworkConnection.Instance.RefreshLobbyPlayersUI();
     }
 
     private void LobbyManager_OnDestroyLobby(object sender, System.EventArgs e)
@@ -37,20 +50,17 @@ public class LobbyUI : MonoBehaviour
         ClearLobby();
     }
 
-    private void UpdateLobby_Event(object sender, LobbyManager.LobbyEventArgs e)
+    private void UpdateLobby_Event(object sender, System.EventArgs e)
     {
+        Debug.Log("AMA NOT Updating lobby");
         UpdateLobby();
     }
 
     private void UpdateLobby()
     {
-        UpdateLobby(LobbyManager.Instance.GetJoinedLobby());
-    }
-
-    private void UpdateLobby(Lobby lobby)
-    {
+        Debug.Log("Updating lobby");
         ClearLobby();
-        
+
         if (LobbyManager.Instance.IsLobbyHost())
         {
             startGameButton.gameObject.SetActive(true);
@@ -60,22 +70,20 @@ public class LobbyUI : MonoBehaviour
             startGameButton.gameObject.SetActive(false);
         }
 
-        foreach (Player player in lobby.Players)
+        NetworkList<PlayerData> playerDataList = NetworkConnection.Instance.GetPlayerDataNetworkList();
+        foreach (PlayerData playerData in playerDataList)
         {
+            Debug.Log("Connected Client Id: " + playerData.clientId);
+            Debug.Log("Connected Client Id: " + playerData.playerName);
             Transform playerSingleTransform = Instantiate(playerSingleTemplate, container);
-            playerSingleTransform.gameObject.SetActive(true);
             LobbyPlayerSingleUI lobbyPlayerSingleUI = playerSingleTransform.GetComponent<LobbyPlayerSingleUI>();
-
+            lobbyPlayerSingleUI.gameObject.SetActive(true);
             lobbyPlayerSingleUI.SetKickPlayerButtonVisible(
                 LobbyManager.Instance.IsLobbyHost() &&
-                player.Id != AuthenticationService.Instance.PlayerId // Don't allow kick self
+                playerData.playerId != AuthenticationService.Instance.PlayerId // Don't allow kick self
             );
-
-            lobbyPlayerSingleUI.UpdatePlayer(player);
+            lobbyPlayerSingleUI.UpdatePlayer(playerData);
         }
-
-        lobbyNameText.text = lobby.Name;
-
     }
     private void ClearLobby()
     {
@@ -86,4 +94,8 @@ public class LobbyUI : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        NetworkConnection.Instance.OnPlayerDataNetworkListChanged -= UpdateLobby_Event;
+    }
 }

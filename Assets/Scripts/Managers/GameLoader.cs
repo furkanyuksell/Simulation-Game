@@ -3,28 +3,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Unity.Netcode;
-public class GameLoader : MonoBehaviour
+public static class GameLoader
 {
-    [SerializeField] GameObject loadingScreen;
-    [SerializeField] Slider slider;
-    public void LoadGame(int sceneIndex)
+    public enum Scene
     {
-        StartCoroutine(LoadAsynchronously(sceneIndex));
+        UIMenu,
+        WorldScene
     }
 
-    IEnumerator LoadAsynchronously(int sceneIndex)
-    {
-        loadingScreen.SetActive(true);
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-            slider.value = progress;
-            yield return null;
-        }
-    }
-
-    public void LoadNetworkGame(string sceneName)
+    public static void LoadNetworkGame(string sceneName)
     {
         NetworkManager.Singleton.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }

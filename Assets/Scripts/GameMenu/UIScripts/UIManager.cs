@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class UIManager : MonoBehaviour, IProvidable
 {
     [SerializeField] public GameObject MainUI;
@@ -10,6 +11,7 @@ public class UIManager : MonoBehaviour, IProvidable
     [SerializeField] public GameObject CreateLobbyUI;
     [SerializeField] public GameObject LobbyListUI;
     [SerializeField] public GameObject LobbyUI;
+    [SerializeField] public GameObject WarningBox;
 
     private void Awake() {
         UIProvider.Register(this);

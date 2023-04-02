@@ -13,4 +13,13 @@ public class UITextbox : MonoBehaviour, IProvidable
     {
         UIProvider.Register(this);
     }
+
+    void Start()
+    {
+        PlayerName.text = NetworkConnection.Instance.GetPlayerName();
+        PlayerName.onValueChanged.AddListener((string value) =>
+        {
+            NetworkConnection.Instance.SetPlayerName(value);
+        });
+    }
 }

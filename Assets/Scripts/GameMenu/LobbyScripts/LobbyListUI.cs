@@ -41,4 +41,9 @@ public class LobbyListUI : MonoBehaviour
             lobbyListSingleUI.UpdateLobby(lobby);
         }
     }
+
+    void OnDestroy()
+    {
+        LobbyManager.Instance.OnLobbyListChanged -= LobbyManager_OnLobbyListChanged;
+    }
 }

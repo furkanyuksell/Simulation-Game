@@ -10,27 +10,24 @@ public class LobbyPlayerSingleUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _playerNameText;
     [SerializeField] private TextMeshProUGUI _playerAddInfo; // if its needed
     [SerializeField] private Button _kickPlayerButton;
-    private Player player;
+    private PlayerData playerData;
 
     private void Awake()
     {
-        _kickPlayerButton.onClick.AddListener(KickPlayer);
+        _kickPlayerButton.onClick.AddListener(() =>
+        {
+            LobbyManager.Instance.KickPlayer(playerData.playerId.ToString());
+            NetworkConnection.Instance.KickPlayer(playerData.clientId);
+        });
     }
     public void SetKickPlayerButtonVisible(bool visible)
     {
         _kickPlayerButton.gameObject.SetActive(visible);
     }
-    public void UpdatePlayer(Player player)
+    public void UpdatePlayer(PlayerData playerData)
     {
-        this.player = player;
-        _playerNameText.text = player.Data[LobbyManager.KEY_PLAYER_NAME].Value;
+        this.playerData = playerData;
+        _playerNameText.text = playerData.playerName.ToString();
     }
 
-    private void KickPlayer()
-    {
-        if (player != null)
-        {
-            LobbyManager.Instance.KickPlayer(player.Id);
-        }
-    }
 }
