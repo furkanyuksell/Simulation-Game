@@ -32,6 +32,8 @@ public class LobbyUI : MonoBehaviour
         {
             Debug.Log("Leaving lobby");
             LobbyManager.Instance.LeaveLobby();
+            NetworkConnection.Instance.OnDisableNetworkCallbacks();
+            NetworkConnection.Instance.KickPlayer(NetworkManager.Singleton.LocalClientId);
             NetworkManager.Singleton.Shutdown();
             Debug.Log("Shutting down network manager SUCCESFULLY");
         });
