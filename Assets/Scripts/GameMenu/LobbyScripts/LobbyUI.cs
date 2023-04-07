@@ -23,6 +23,10 @@ public class LobbyUI : MonoBehaviour
     }
     void Start()
     {
+    }
+
+    private void LobbyUI_GetActive(object sender, System.EventArgs e)
+    {
         Debug.Log("LOBBYUI START");
         Lobby lobby = LobbyManager.Instance.GetLobby();
         lobbyNameText.text = lobby.Name;
@@ -30,12 +34,10 @@ public class LobbyUI : MonoBehaviour
 
         leaveLobbyButton.onClick.AddListener(() =>
         {
-            Debug.Log("Leaving lobby");
             LobbyManager.Instance.LeaveLobby();
-            NetworkConnection.Instance.OnDisableNetworkCallbacks();
-            NetworkConnection.Instance.KickPlayer(NetworkManager.Singleton.LocalClientId);
             NetworkManager.Singleton.Shutdown();
-            Debug.Log("Shutting down network manager SUCCESFULLY");
+            GameReset.Instance.ResetAllData();
+            GameLoader.Load(GameLoader.Scene.UIMenu);
         });
 
         startGameButton.onClick.AddListener(() =>
@@ -48,6 +50,8 @@ public class LobbyUI : MonoBehaviour
         playerSingleTemplate.gameObject.SetActive(false);
         NetworkConnection.Instance.RefreshLobbyPlayersUI();
     }
+
+
 
     private void LobbyManager_OnDestroyLobby(object sender, System.EventArgs e)
     {
@@ -98,8 +102,16 @@ public class LobbyUI : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        LobbyManager.Instance.OnCreateLobby += LobbyUI_GetActive;
+        LobbyManager.Instance.OnJoinedLobby += LobbyUI_GetActive;
+    }
+
     void OnDestroy()
     {
         NetworkConnection.Instance.OnPlayerDataNetworkListChanged -= UpdateLobby_Event;
+        LobbyManager.Instance.OnCreateLobby -= LobbyUI_GetActive;
+        LobbyManager.Instance.OnJoinedLobby -= LobbyUI_GetActive;
     }
 }

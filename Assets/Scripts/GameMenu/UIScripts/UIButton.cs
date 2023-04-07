@@ -134,4 +134,8 @@ public class UIButton : MonoBehaviour
         if (_backQueue.Peek() != UIProvider.GetUIManager.CreateLobbyUI)
             MoveForwardInStack(UIProvider.GetUIManager.CreateLobbyUI);
     }
+    void OnDisable()
+    {
+        LobbyListSingleUI.OnJoiningLobby -= WarningBoxInfos;
+    }
 }

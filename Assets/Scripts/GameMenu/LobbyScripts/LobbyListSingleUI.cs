@@ -19,7 +19,7 @@ public class LobbyListSingleUI : MonoBehaviour
     {
         GetComponent<Button>().onClick.AddListener(() =>
         {
-            OnJoiningLobby?.Invoke(transform.parent, "Joining lobby...");
+            OnJoiningLobby?.Invoke(transform.parent.transform.parent, "Joining lobby...");
             LobbyManager.Instance.JoinWithId(lobby.Id);
         });
     }

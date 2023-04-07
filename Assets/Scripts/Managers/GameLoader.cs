@@ -13,7 +13,7 @@ public static class GameLoader
     private static Scene targetScene;
     public static void Load(Scene targetScene)
     {
-        SceneManager.LoadScene(targetScene.ToString());
+        SceneManager.LoadScene(targetScene.ToString(), LoadSceneMode.Single);
     }
 
     public static void LoadNetworkGame(string sceneName)
