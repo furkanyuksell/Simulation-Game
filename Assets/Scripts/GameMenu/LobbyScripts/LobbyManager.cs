@@ -26,7 +26,6 @@ public class LobbyManager : MonoBehaviour
     private Lobby joinedLobby;
     public event EventHandler OnCreateLobby;
     public event EventHandler OnJoinedLobby;
-    public event EventHandler OnLeftLobby;
     public event EventHandler<OnLobbyListChangedEventArgs> OnLobbyListChanged;
     public class OnLobbyListChangedEventArgs : EventArgs
     {
@@ -183,6 +182,22 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
+    private void HandleLobbyHeartbeat()
+    {
+        if (IsLobbyHost())
+        {
+            heartbeatTimer -= Time.deltaTime;
+            if (heartbeatTimer < 0f)
+            {
+                float heartbeatTimerMax = 15f;
+                heartbeatTimer = heartbeatTimerMax;
+
+                Debug.Log("Heartbeat");
+                LobbyService.Instance.SendHeartbeatPingAsync(joinedLobby.Id);
+            }
+        }
+    }
+
     public Lobby GetLobby()
     {
         return joinedLobby;
@@ -239,6 +254,7 @@ public class LobbyManager : MonoBehaviour
         {
             try
             {
+                Debug.Log("Kicking player: " + playerId);
                 await LobbyService.Instance.RemovePlayerAsync(joinedLobby.Id, playerId);
             }
             catch (LobbyServiceException e)
@@ -247,19 +263,5 @@ public class LobbyManager : MonoBehaviour
             }
         }
     }
-    private void HandleLobbyHeartbeat()
-    {
-        if (IsLobbyHost())
-        {
-            heartbeatTimer -= Time.deltaTime;
-            if (heartbeatTimer < 0f)
-            {
-                float heartbeatTimerMax = 15f;
-                heartbeatTimer = heartbeatTimerMax;
 
-                Debug.Log("Heartbeat");
-                LobbyService.Instance.SendHeartbeatPingAsync(joinedLobby.Id);
-            }
-        }
-    }
 }

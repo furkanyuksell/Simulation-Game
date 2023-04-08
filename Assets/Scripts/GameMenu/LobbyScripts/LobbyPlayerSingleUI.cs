@@ -16,6 +16,7 @@ public class LobbyPlayerSingleUI : MonoBehaviour
     {
         _kickPlayerButton.onClick.AddListener(() =>
         {
+            Debug.Log("Kicking player " + playerData.playerName + " with id " + playerData.playerId);
             LobbyManager.Instance.KickPlayer(playerData.playerId.ToString());
             NetworkConnection.Instance.KickPlayer(playerData.clientId);
         });

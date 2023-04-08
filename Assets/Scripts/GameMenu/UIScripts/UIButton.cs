@@ -23,8 +23,8 @@ public class UIButton : MonoBehaviour
         _backQueue.Push(UIProvider.GetUIManager.MainUI);
         LobbyManager.Instance.OnCreateLobby += LobbyManager_JoinedLobby;
         LobbyManager.Instance.OnJoinedLobby += LobbyManager_JoinedLobby;
-        LobbyManager.Instance.OnLeftLobby += LobbyManager_LeftLobby;
         LobbyListSingleUI.OnJoiningLobby += WarningBoxInfos;
+
         _singleButton.onClick.AddListener(() =>
         {
             Debug.Log("Single Player");

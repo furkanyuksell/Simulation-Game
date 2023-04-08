@@ -49,7 +49,6 @@ public class NetworkConnection : NetworkBehaviour
 
     private void PlayerDataNetworkList_OnListChanged(NetworkListEvent<PlayerData> changeEvent)
     {
-        Debug.Log("PlayerDataNetworkList_OnListChanged");
         OnPlayerDataNetworkListChanged?.Invoke(this, EventArgs.Empty);
     }
     public void RefreshLobbyPlayersUI()
@@ -65,22 +64,9 @@ public class NetworkConnection : NetworkBehaviour
         NetworkManager.Singleton.StartHost();
         Debug.Log("Host started");
     }
-    /*
-    public void OnDisableNetworkCallbacks()
-    {
-        NetworkManager.Singleton.ConnectionApprovalCallback -= NetworkManager_ConnectionApprovalCallback;
-        NetworkManager.Singleton.OnClientConnectedCallback  -= NetworkManager_OnClientConnectedCallback;
-        NetworkManager.Singleton.OnClientDisconnectCallback -= NetworkManager_Server_OnClientDisconnectCallback;
-
-        NetworkManager.Singleton.OnClientDisconnectCallback -= NetworkManager_Client_OnClientDisconnectCallback;
-        NetworkManager.Singleton.OnClientConnectedCallback -= NetworkManager_Client_OnClientConnectedCallback;
-        
-    }*/
-
 
     private void NetworkManager_ConnectionApprovalCallback(NetworkManager.ConnectionApprovalRequest connectionApprovalRequest, NetworkManager.ConnectionApprovalResponse connectionApprovalResponse)
     {
-        Debug.Log("NetworkManager_ConnectionApprovalCallback");
         if (SceneManager.GetActiveScene().name != GameLoader.Scene.UIMenu.ToString())
         {
             connectionApprovalResponse.Approved = false;
@@ -101,7 +87,6 @@ public class NetworkConnection : NetworkBehaviour
     }
     private void NetworkManager_OnClientConnectedCallback(ulong clientId)
     {
-        Debug.Log("NetworkManager_OnClientConnectedCallback");
         try
         {
             playerDataNetworkList.Add(new PlayerData
@@ -111,15 +96,16 @@ public class NetworkConnection : NetworkBehaviour
         }
         catch (System.Exception)
         {
-            Debug.Log("PlayerDataNetworkList is what's causing the problem");
+            Debug.Log("NetworkManager_OnClientConnectedCallback is what's causing the problem");
             throw;
         }
         SetPlayerNameServerRpc(GetPlayerName());
         SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
     }
+
+    
     private void NetworkManager_Server_OnClientDisconnectCallback(ulong clientId)
     {
-        Debug.Log("NetworkManager_Server_OnClientDisconnectCallback");
         for (int i = 0; i < playerDataNetworkList.Count; i++)
         {
             PlayerData playerData = playerDataNetworkList[i];
@@ -131,7 +117,6 @@ public class NetworkConnection : NetworkBehaviour
         }
     }
 
-
     public void ClientConnection()
     {
         NetworkManager.Singleton.OnClientDisconnectCallback += NetworkManager_Client_OnClientDisconnectCallback;
@@ -141,7 +126,6 @@ public class NetworkConnection : NetworkBehaviour
 
     private void NetworkManager_Client_OnClientConnectedCallback(ulong clientId)
     {
-        Debug.Log("NetworkManager_Client_OnClientConnectedCallback");
         SetPlayerNameServerRpc(GetPlayerName());
         SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
     }
@@ -172,7 +156,6 @@ public class NetworkConnection : NetworkBehaviour
 
     private void NetworkManager_Client_OnClientDisconnectCallback(ulong clientId)
     {
-        Debug.Log("NetworkManager_Client_OnClientDisconnectCallback");
         OnFailedToJoinGame?.Invoke(this, EventArgs.Empty);
     }
     public bool IsPlayerIndexConnected(int playerIndex)
@@ -218,7 +201,25 @@ public class NetworkConnection : NetworkBehaviour
     {
         return playerDataNetworkList;
     }
+    public bool IsPlayerInLobby()
+    {
 
+        foreach (PlayerData playerData in playerDataNetworkList)
+        {
+            if (playerData.playerId == AuthenticationService.Instance.PlayerId)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public void DebugPlayers()
+    {
+        foreach (PlayerData playerData in playerDataNetworkList)
+        {
+            Debug.Log("PlayerName" + playerData.playerName + "PlayerId" + playerData.playerId + "ClientId" + playerData.clientId);
+        }
+    }
     public void KickPlayer(ulong clientId)
     {
         NetworkManager.Singleton.DisconnectClient(clientId);

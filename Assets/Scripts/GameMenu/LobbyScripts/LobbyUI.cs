@@ -7,29 +7,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Services.Relay;
 using Unity.Netcode;
+using System;
 
 public class LobbyUI : MonoBehaviour
 {
     public static LobbyUI Instance { get; private set; }
-
     [SerializeField] private Transform playerSingleTemplate;
     [SerializeField] private Transform container;
     [SerializeField] private TextMeshProUGUI lobbyNameText;
     [SerializeField] private Button leaveLobbyButton;
     [SerializeField] private Button startGameButton;
+    [SerializeField] private GameObject playAgainContainer;
+    [SerializeField] private Button playAgainButton;
     private void Awake()
     {
         Instance = this;
     }
-    void Start()
-    {
-    }
-
+ 
     private void LobbyUI_GetActive(object sender, System.EventArgs e)
     {
         Debug.Log("LOBBYUI START");
         Lobby lobby = LobbyManager.Instance.GetLobby();
         lobbyNameText.text = lobby.Name;
+        NetworkManager.Singleton.OnClientDisconnectCallback += NetworkManager_Server_OnClientDisconnectCallback;
         NetworkConnection.Instance.OnPlayerDataNetworkListChanged += UpdateLobby_Event;
 
         leaveLobbyButton.onClick.AddListener(() =>
@@ -81,8 +81,7 @@ public class LobbyUI : MonoBehaviour
         NetworkList<PlayerData> playerDataList = NetworkConnection.Instance.GetPlayerDataNetworkList();
         foreach (PlayerData playerData in playerDataList)
         {
-            Debug.Log("Connected Client Id: " + playerData.clientId);
-            Debug.Log("Connected Client Id: " + playerData.playerName);
+            Debug.Log("ClientId: " + playerData.clientId + " PlayerId: " + playerData.playerId + " PlayerName: " + playerData.playerName);
             Transform playerSingleTransform = Instantiate(playerSingleTemplate, container);
             LobbyPlayerSingleUI lobbyPlayerSingleUI = playerSingleTransform.GetComponent<LobbyPlayerSingleUI>();
             lobbyPlayerSingleUI.gameObject.SetActive(true);
@@ -101,6 +100,19 @@ public class LobbyUI : MonoBehaviour
             Destroy(child.gameObject);
         }
     }
+    private void NetworkManager_Server_OnClientDisconnectCallback(ulong clientId)
+    {
+        if(clientId == NetworkManager.ServerClientId)
+        {
+            playAgainContainer.gameObject.SetActive(true);
+            playAgainButton.onClick.AddListener(() =>
+            {
+                GameReset.Instance.ResetAllData();
+                GameLoader.Load(GameLoader.Scene.UIMenu);
+            });
+        }   
+    }
+
 
     void OnEnable()
     {
