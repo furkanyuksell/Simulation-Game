@@ -42,9 +42,8 @@ public class LobbyUI : MonoBehaviour
 
         startGameButton.onClick.AddListener(() =>
         {
-            Debug.Log("Starting game");
-            LobbyManager.Instance.DeleteLobby();
-            GameLoader.LoadNetworkGame("WorldScene");
+            Debug.Log("StartGameCLicked");
+            NetworkGameStarter.Instance.StartGame();
         });
 
         playerSingleTemplate.gameObject.SetActive(false);

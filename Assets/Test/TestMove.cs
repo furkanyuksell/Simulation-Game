@@ -10,7 +10,8 @@ public class TestMove : NetworkBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        textMesh.text = "Hello World";
+        PlayerData playerData = NetworkConnection.Instance.GetPlayerDataFromClientId(OwnerClientId);
+        textMesh.text = playerData.playerName.ToString();
     }
     // Update is called once per frame
     void Update()

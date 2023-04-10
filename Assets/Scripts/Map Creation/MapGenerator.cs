@@ -3,6 +3,7 @@ using UnityEngine.Tilemaps;
 
 public class MapGenerator : MonoBehaviour
 {
+    public static MapGenerator Instance { get; private set; }
     public enum DrawMode
     {
         NoiseMap,
@@ -37,6 +38,10 @@ public class MapGenerator : MonoBehaviour
                                          {4,4,4,4,4,5,5}};// 4 desert sand humidity rises as goes right
 
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     public void GenerateMap()
     {
         float[,] temperatureMap = Noise.GenerateNoiseMap(mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);

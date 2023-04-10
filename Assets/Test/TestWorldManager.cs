@@ -14,20 +14,17 @@ public class TestWorldManager : NetworkBehaviour
         if (IsServer)
         {
             Debug.Log("Server");
-            NetworkManager.SceneManager.OnSceneEvent += SceneManager_OnSceneEvent;
-
+            NetworkManager.Singleton.SceneManager.OnLoadEventCompleted += SceneManager_OnLoadEventCompleted;
         }
     }
-    private void SceneManager_OnSceneEvent(SceneEvent sceneEvent)
+    private void SceneManager_OnLoadEventCompleted(string sceneName, UnityEngine.SceneManagement.LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
     {
-        if (sceneEvent.SceneEventType == SceneEventType.LoadComplete)
+        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
-            {
-                Debug.Log("Spawning player for client: " + clientId);
-                Transform playerTransform = Instantiate(playerPrefab);
-                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
-            }
+            Debug.Log("Spawning player for client: " + clientId);
+            Transform playerTransform = Instantiate(playerPrefab);
+            playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
         }
+
     }
 }
