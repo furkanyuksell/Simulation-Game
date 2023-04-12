@@ -62,6 +62,7 @@ public class MapGenerator : MonoBehaviour
             display.DrawTexture(TextureGenerator.TextureFromHeightMap(temperatureMap));
         }
 
+        Debug.Log("Map Done");
     }
 
     private void DrawTileMap(float[,] tempMap, float[,] humidityMap)
