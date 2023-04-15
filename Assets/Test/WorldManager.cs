@@ -6,10 +6,9 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TestManager : NetworkBehaviour
+public class WorldManager : NetworkBehaviour
 {
-    public static TestManager Instance;
-    [SerializeField] public TextMeshProUGUI testText;
+    public static WorldManager Instance;
     private void Awake()
     {
         Instance = this;
@@ -20,7 +19,6 @@ public class TestManager : NetworkBehaviour
     }
     private void SceneManager_OnLoadEventCompleted(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
     {
-        testText.text = sceneName;
         CreateMapClientRpc();
     }
 

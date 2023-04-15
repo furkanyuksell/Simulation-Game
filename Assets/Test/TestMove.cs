@@ -24,27 +24,6 @@ public class TestMove : NetworkBehaviour
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         Vector2 inputDir = input.normalized;
         rb.velocity = inputDir * moveSpeed;
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SendMessageToClientRpc();
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            SendMessageToServerRpc();
-        }
     }
 
-    [ClientRpc]
-    private void SendMessageToClientRpc()
-    {
-        TestManager.Instance.testText.text = "Bir mesaj gonderildi / " + OwnerClientId;
-
-    }
-
-    [ServerRpc]
-    private void SendMessageToServerRpc()
-    {
-        TestManager.Instance.testText.text = "Bir mesaj gonderildi / " + OwnerClientId;
-    }
 }
