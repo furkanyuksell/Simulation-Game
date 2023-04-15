@@ -10,7 +10,7 @@ public static class GameLoader
         UIMenu,
         WorldScene
     }
-    private static Scene targetScene;
+
     public static void Load(Scene targetScene)
     {
         SceneManager.LoadScene(targetScene.ToString(), LoadSceneMode.Single);
@@ -19,6 +19,7 @@ public static class GameLoader
     public static void LoadNetworkGame(string sceneName)
     {
         NetworkManager.Singleton.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        
     }
 
 

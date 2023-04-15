@@ -1,18 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TestManager : MonoBehaviour
+public class TestManager : NetworkBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static TestManager Instance;
+    [SerializeField] public TextMeshProUGUI testText;
+    private void Awake()
     {
-        
+        Instance = this;
+        NetworkManager.Singleton.SceneManager.OnLoadEventCompleted += SceneManager_OnLoadEventCompleted;
+    }
+    private void SceneManager_OnLoadEventCompleted(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
+    {
+        testText.text = sceneName;
+        CreateMapClientRpc();
     }
 
-    // Update is called once per frame
-    void Update()
+    [ClientRpc]
+    private void CreateMapClientRpc()
     {
-        
+        MapGenerator.Instance.GenerateMap();
     }
+
 }

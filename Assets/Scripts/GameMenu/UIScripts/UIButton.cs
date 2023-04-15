@@ -15,7 +15,7 @@ public class UIButton : MonoBehaviour
     [SerializeField] private Button _statusButton;
     [SerializeField] private Button _createLobbyButton;
     [SerializeField] private Button _backButton;
-    Stack<GameObject> _backQueue = new Stack<GameObject>();
+    readonly Stack<GameObject> _backQueue = new Stack<GameObject>();
     bool isPrivateLobby = false;
     private GameObject _warningBox;
     private void Start()

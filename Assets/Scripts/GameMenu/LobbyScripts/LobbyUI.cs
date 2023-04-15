@@ -49,9 +49,7 @@ public class LobbyUI : MonoBehaviour
         playerSingleTemplate.gameObject.SetActive(false);
         NetworkConnection.Instance.RefreshLobbyPlayersUI();
     }
-
-
-
+    
     private void LobbyManager_OnDestroyLobby(object sender, System.EventArgs e)
     {
         ClearLobby();
