@@ -18,11 +18,6 @@ public static class ServiceProvider
             return null;
         }
     }
-    
-    public static void ResetDictionary()
-    {
-        ProvidableServices.Clear();
-    }
     public static T Register<T>(T service) where T : class, IProvidable
     {
         ProvidableServices.Add(typeof(T), service);

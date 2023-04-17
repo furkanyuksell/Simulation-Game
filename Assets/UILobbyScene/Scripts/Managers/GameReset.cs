@@ -15,7 +15,6 @@ public class GameReset : MonoBehaviour
     public void ResetAllData()
     {
         UIProvider.ResetDictionary();
-        ServiceProvider.ResetDictionary(); // ??????? InGame Func
 
         if (NetworkManager.Singleton != null)
         {
