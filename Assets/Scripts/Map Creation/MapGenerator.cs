@@ -65,6 +65,8 @@ public class MapGenerator : MonoBehaviour
         Debug.Log("Map Done");
     }
 
+    private TileBase _tileBase;
+    private Vector3Int _tilePos;
     private void DrawTileMap(float[,] tempMap, float[,] humidityMap)
     {
         for (int y = 0; y < mapHeight; y++)
@@ -73,11 +75,35 @@ public class MapGenerator : MonoBehaviour
             {
                 float currentTemp = tempMap[x, y] * world.GetLength(0) == world.GetLength(0) ? world.GetLength(0) - 1 : tempMap[x, y] * world.GetLength(0);
                 float currentHumidity = humidityMap[x, y] * world.GetLength(1) == world.GetLength(1) ? world.GetLength(1) - 1 : humidityMap[x, y] * world.GetLength(1);
-                tileMap.SetTile(new Vector3Int(-(mapWidth / 2) + x, -(mapHeight / 2) + y), regions[world[(int)currentTemp, (int)currentHumidity]].tileData.tiles[0]);
+                _tilePos = new Vector3Int(-(mapWidth / 2) + x, -(mapHeight / 2) + y);
+                _tileBase = regions[world[(int)currentTemp, (int)currentHumidity]].tileData.tiles[0];
+                tileMap.SetTile(_tilePos, _tileBase);
+                AddTilePosAccordingTo(_tileBase, _tilePos);
             }
         }
     }
 
+    private void AddTilePosAccordingTo(TileBase tileBase, Vector3Int tilePos)
+    {
+        if (tileBase == ServiceProvider.GetDataManager.ColdWater.tiles[0])
+            ServiceProvider.GetDataManager.ColdWater.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.Desert.tiles[0])
+            ServiceProvider.GetDataManager.Desert.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.Hill.tiles[0])
+            ServiceProvider.GetDataManager.Hill.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.Plains.tiles[0])
+            ServiceProvider.GetDataManager.Plains.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.RainForests.tiles[0])
+            ServiceProvider.GetDataManager.RainForests.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.Sand.tiles[0])
+            ServiceProvider.GetDataManager.Sand.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.Snow.tiles[0])
+            ServiceProvider.GetDataManager.Snow.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.Taiga.tiles[0])
+            ServiceProvider.GetDataManager.Taiga.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.Water.tiles[0])
+            ServiceProvider.GetDataManager.Water.tilePositions.Add(tilePos);
+    }
     public void Flood()
     {
         for (int y = 0; y < mapHeight; y++)
