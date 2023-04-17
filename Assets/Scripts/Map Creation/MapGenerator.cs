@@ -69,6 +69,7 @@ public class MapGenerator : MonoBehaviour
     private Vector3Int _tilePos;
     private void DrawTileMap(float[,] tempMap, float[,] humidityMap)
     {
+        ServiceProvider.GetDataManager.Initialize();
         for (int y = 0; y < mapHeight; y++)
         {
             for (int x = 0; x < mapWidth; x++)
