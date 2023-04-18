@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour, IProvidable
     public TileData Snow;
     public TileData Taiga;
     public TileData Water;
-
+    public List<TileData> tileDataList;
     private void Awake()
     {
         Initialize();

@@ -12,22 +12,14 @@ public class Population : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        
     }
 
-    void Start()
-    {
-        _tileMap = MapGenerator.Instance.tileMap;
-        MapGenerator.Instance.GenerateMap();
-        
-        CreatePopulationAccordingToTile();
-    }
+    
 
     private void CreatePopulationAccordingToTile()
     {
-        
-    }
     
+    }
 
 }
 
