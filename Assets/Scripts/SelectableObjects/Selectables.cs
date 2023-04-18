@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Selectables : MonoBehaviour
 {
-    public enum SelectableTypes
+    private GameObject _selectedGO;
+    private void Awake()
     {
-        ROCK,GROUND,FOOD,ANIMALS,TREES
-    }   
+        _selectedGO = transform.Find("Selected").gameObject;
+        SetSelectedVisible(false);
+    }
+
+    public void SetSelectedVisible(bool visible)
+    {
+        _selectedGO.SetActive(visible);
+    }
 }

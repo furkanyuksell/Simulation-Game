@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class InputController : MonoBehaviour
-{
-    
+{   
+    public enum SelectableTypes
+    {
+        ROCK,GROUND,FOOD,ANIMALS,TREES
+    }   
     [SerializeField] private Tilemap _tileMap;
     [SerializeField] private Camera _camera;
     [SerializeField] private DragSelectionController _dragSelectionController;
@@ -15,14 +18,14 @@ public class InputController : MonoBehaviour
     private TileBase _lastTile;
     private Vector3Int _startCellPos;
     private Vector3Int _lastCellPos;
-    private SelectableAnimals.SelectableTypes currentSelection;
+    private SelectableTypes currentSelection;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             _startCellPos = _tileMap.WorldToCell(_camera.ScreenToWorldPoint(Input.mousePosition));
-            _dragSelectionController.SelectionStarted(_tileMap.GetCellCenterWorld(_startCellPos),Selectables.SelectableTypes.TREES);
+            _dragSelectionController.SelectionStarted(_tileMap.GetCellCenterWorld(_startCellPos),SelectableTypes.TREES);
             if (_tileMap.HasTile(_startCellPos))
             {
                 _startTile = _tileMap.GetTile(_startCellPos);
@@ -43,6 +46,7 @@ public class InputController : MonoBehaviour
             {
                 _lastTile = null;
             }
+            _dragSelectionController.SetSelectionPosition(_tileMap.GetCellCenterWorld(_lastCellPos));
         }
         else if (Input.GetMouseButtonUp(0))
         {
