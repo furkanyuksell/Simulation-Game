@@ -30779,26 +30779,14 @@ MonoBehaviour:
   - {x: 249, y: 249, z: 0}
   animalList:
   - animalName: Horse
-    _animal: {fileID: -7215672625580687994, guid: da2246bd31ea251429941011303a922b, type: 3}
-    spawnChance: 5.47
+    animal: {fileID: -7215672625580687994, guid: da2246bd31ea251429941011303a922b, type: 3}
+    spawnChance: 25
     spawnTime: 8.87
     spawnDistance: 24.3
     maxSpawnCount: 0
   - animalName: Chicken
-    _animal: {fileID: -7215672625580687994, guid: da2246bd31ea251429941011303a922b, type: 3}
-    spawnChance: 5.47
-    spawnTime: 8.87
-    spawnDistance: 24.3
-    maxSpawnCount: 0
-  - animalName: Cow
-    _animal: {fileID: -7215672625580687994, guid: da2246bd31ea251429941011303a922b, type: 3}
-    spawnChance: 5.47
-    spawnTime: 8.87
-    spawnDistance: 24.3
-    maxSpawnCount: 0
-  - animalName: Goat
-    _animal: {fileID: -7215672625580687994, guid: da2246bd31ea251429941011303a922b, type: 3}
-    spawnChance: 5.47
+    animal: {fileID: 6155108915090489208, guid: 1a4a9526f6de2a24583a4628f8ab2bdf, type: 3}
+    spawnChance: 50
     spawnTime: 8.87
     spawnDistance: 24.3
     maxSpawnCount: 0

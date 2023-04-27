@@ -1,13 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RainForestArea : Region
 {
-    
-    void Start()
+    protected override void Start()
     {
-        _tileData = ServiceProvider.GetDataManager.RainForests;    
+        InitalizeRegion();
+        base.Start();
     }
-    
+
+    void InitalizeRegion()
+    {
+        tileData = ServiceProvider.GetDataManager.RainForests;
+    }
+
 }
