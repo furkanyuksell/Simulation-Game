@@ -14,7 +14,10 @@ public class BottomPanelController : MonoBehaviour
     }
     private void ChopControl()
     {
-
+        if (isInputWaiting)
+        {
+            
+        }
     }
     private void GatherControl()
     {

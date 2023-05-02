@@ -92,10 +92,10 @@ public class MapGenerator : MonoBehaviour
             ServiceProvider.GetDataManager.Desert.tilePositions.Add(tilePos);
         else if (tileBase == ServiceProvider.GetDataManager.Hill.tiles[0])
             ServiceProvider.GetDataManager.Hill.tilePositions.Add(tilePos);
-        else if (tileBase == ServiceProvider.GetDataManager.Plains.tiles[0])
-            ServiceProvider.GetDataManager.Plains.tilePositions.Add(tilePos);
-        else if (tileBase == ServiceProvider.GetDataManager.RainForests.tiles[0])
-            ServiceProvider.GetDataManager.RainForests.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.Plain.tiles[0])
+            ServiceProvider.GetDataManager.Plain.tilePositions.Add(tilePos);
+        else if (tileBase == ServiceProvider.GetDataManager.RainForest.tiles[0])
+            ServiceProvider.GetDataManager.RainForest.tilePositions.Add(tilePos);
         else if (tileBase == ServiceProvider.GetDataManager.Sand.tiles[0])
             ServiceProvider.GetDataManager.Sand.tilePositions.Add(tilePos);
         else if (tileBase == ServiceProvider.GetDataManager.Snow.tiles[0])
