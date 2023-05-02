@@ -11,13 +11,21 @@ public abstract class Region : MonoBehaviour
     private Animal _animal;
     protected virtual void Start()
     {
-        InitalizeRegion();
+        Init();
     }
 
-    private void InitalizeRegion()
+    private void Init()
     {
         CalculateAnimalSpawnChance();
-        SpawnAnimal();
+        InitializeRegionAnimalPool();
+    }
+
+    private void InitializeRegionAnimalPool()
+    {
+        foreach (TileData.AnimalStruct animalStruct in tileData.animalList)
+        {
+            AnimalPool.Instance.InitAnimalPools(animalStruct.animal);       
+        }   
     }
 
     private void Update()
@@ -32,11 +40,7 @@ public abstract class Region : MonoBehaviour
     {
         Vector3Int randPos = tileData.tilePositions[Random.Range(0, tileData.tilePositions.Count)];
         _animal = PickAnimal();
-        if (_animal != null)
-        {
-            Instantiate(_animal, randPos, Quaternion.identity);
-            AnimalPool.Instance.GetAnimal(_animal);
-        }
+        AnimalPool.Instance.GetAnimal(_animal);
     }
     private Animal PickAnimal()
     {
