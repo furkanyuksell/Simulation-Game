@@ -16,7 +16,6 @@ public abstract class Region : MonoBehaviour
 
     private void Init()
     {
-        CalculateAnimalSpawnChance();
         InitializeRegionAnimalPool();
     }
 
@@ -32,46 +31,25 @@ public abstract class Region : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SpawnAnimal();
+            PickAnimal();
         }
     }
 
     void SpawnAnimal()
     {
         Vector3Int randPos = tileData.tilePositions[Random.Range(0, tileData.tilePositions.Count)];
-        _animal = PickAnimal();
-        AnimalPool.Instance.GetAnimal(_animal);
+       
     }
-    private Animal PickAnimal()
+    private void PickAnimal()
     {
         float randSpawnPercentage = Random.Range(0,100);
-        float cumulativeProbability = 0f;
+        Debug.Log("Region: " + tileData.name + " / " + randSpawnPercentage);
         for(int i = 0; i < tileData.animalList.Count; i++)
         {
-            cumulativeProbability += tileData.animalList[i].animal.animalSpawnRate;
-            if (randSpawnPercentage <= cumulativeProbability)
+            if (randSpawnPercentage <= tileData.animalList[i].spawnChance)
             {
-                return tileData.animalList[i].animal;
+                AnimalPool.Instance.GetAnimal(tileData.animalList[i].animal);
             }
-        }
-
-        return null;
-    }
-    
-    float _totalSpawnChance = 0;
-    void CalculateAnimalSpawnChance()
-    {
-        //calculate spawn chance for each animal
-        
-        foreach (var animalStruct in tileData.animalList)
-        {
-            _totalSpawnChance += animalStruct.spawnChance;
-        }
-
-        foreach (var animalStruct in tileData.animalList)
-        {
-            float spawnChancePercentage = animalStruct.spawnChance / _totalSpawnChance * 100f;
-            animalStruct.animal.animalSpawnRate = spawnChancePercentage;
         }
     }
 }

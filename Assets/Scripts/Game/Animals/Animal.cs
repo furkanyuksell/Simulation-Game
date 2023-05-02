@@ -6,9 +6,7 @@ using UnityEngine.Pool;
 
 public abstract class Animal : MonoBehaviour, IPoolable<Animal>
 {
-    public float animalSpawnRate;
     private ObjectPool<Animal> _animalPool;
-    
     [SerializeField]float timer = 5;
     private void Update()
     {
