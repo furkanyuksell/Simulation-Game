@@ -10,10 +10,11 @@ public class ObjectPooler<T> where T : MonoBehaviour, IPoolable<T>
     
     public ObjectPool<T> Pool;
 
-    public ObjectPooler(GameObject prefab)
+    public ObjectPooler(GameObject prefab, Transform regionParent)
     {
         this.prefab = prefab;
         var parentObject = new GameObject(prefab.name + " Pool");
+        parentObject.transform.parent = regionParent;
         parent = parentObject.transform;
         Pool = new ObjectPool<T>(CreateObject, OnGetFromPool, OnReturnToPool);
     }

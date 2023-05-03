@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -12,13 +13,14 @@ public abstract class Region : MonoBehaviour
     protected virtual void Init()
     {
         SetRegionAnimalPool();
+        CalculateEachAnimalTypeToTilesPosCount();
     }
 
     private void SetRegionAnimalPool()
     {
-        foreach (TileData.AnimalStruct animalStruct in tileData.animalList)
+        foreach (TileData.AnimalType animalStruct in tileData.animalList)
         {
-            AnimalPool.Instance.InitAnimalPools(animalStruct.animal);       
+            AnimalPool.Instance.InitAnimalPools(animalStruct.animal, transform);       
         }      
     }
 
@@ -26,11 +28,11 @@ public abstract class Region : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SpawnAnimal();
+            //SpawnAnimal();
         }
     }
     
-    private void SpawnAnimal()
+    private void SpawnAnimal1()
     {
         if (tileData.tilePositions != null)
         {
@@ -46,5 +48,34 @@ public abstract class Region : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void SpawnAnimal()
+    {
+        
+    }
+
+    private void CalculateEachAnimalTypeToTilesPosCount()
+    {
+        for (int i = 0; i < tileData.animalList.Count; i++)
+        {
+            int animalCount = Mathf.RoundToInt(tileData.tilePositions.Count / (100-tileData.animalList[i].spawnChance));
+            tileData.animalList[i].maxSpawnCount = animalCount;
+        }
+    }
+
+    private void DebugText()
+    {
+        Debug.Log(tileData.name + ": " + tileData.tilePositions.Count);
+    }
+
+    private void OnEnable()
+    {
+        LogHelper.OnDebug += DebugText;
+    }
+
+    private void OnDisable()
+    {
+        LogHelper.OnDebug -= DebugText;
     }
 }

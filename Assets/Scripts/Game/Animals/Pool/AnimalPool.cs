@@ -14,9 +14,9 @@ public class AnimalPool : MonoBehaviour
         Instance = this;
     }
 
-    public void InitAnimalPools(Animal animal)
+    public void InitAnimalPools(Animal animal, Transform regionParent)
     {
-        pools.Add(animal, new ObjectPooler<Animal>(animal.gameObject));
+        pools.Add(animal, new ObjectPooler<Animal>(animal.gameObject, regionParent));
     }
     
     public Animal GetAnimal(Animal animal)

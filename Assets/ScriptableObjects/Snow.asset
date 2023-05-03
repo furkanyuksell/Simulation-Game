@@ -3834,7 +3834,7 @@ MonoBehaviour:
   animalList:
   - animalName: WildBear
     animal: {fileID: -5812842448562075684, guid: cbedf250292b77a4e83d092106cc3875, type: 3}
-    spawnChance: 1
+    spawnChance: 20
     spawnTime: 5
     spawnDistance: 5
-    maxSpawnCount: 5
+    maxSpawnCount: 50

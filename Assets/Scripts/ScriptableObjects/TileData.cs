@@ -10,11 +10,11 @@ public class TileData : ScriptableObject
     public float thirstRate;
     public float chillRate;
     public TileBase[] tiles;
-    [HideInInspector]public List<Vector3Int> tilePositions;
-    public List<AnimalStruct> animalList = new List<AnimalStruct>();
+    [HideInInspector] public List<Vector3Int> tilePositions;
+    public List<AnimalType> animalList = new List<AnimalType>();
 
     [System.Serializable]
-    public struct AnimalStruct
+    public class AnimalType
     {
         public string animalName;
         public Animal animal;

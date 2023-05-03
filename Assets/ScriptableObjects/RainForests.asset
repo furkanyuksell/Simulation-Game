@@ -30783,10 +30783,10 @@ MonoBehaviour:
     spawnChance: 25
     spawnTime: 8.87
     spawnDistance: 24.3
-    maxSpawnCount: 0
+    maxSpawnCount: 100
   - animalName: Chicken
     animal: {fileID: 6155108915090489208, guid: 1a4a9526f6de2a24583a4628f8ab2bdf, type: 3}
     spawnChance: 50
     spawnTime: 8.87
     spawnDistance: 24.3
-    maxSpawnCount: 0
+    maxSpawnCount: 200
