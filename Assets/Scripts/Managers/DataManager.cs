@@ -33,4 +33,18 @@ public class DataManager : MonoBehaviour, IProvidable
         Taiga.tilePositions = new List<Vector3Int>();
         Water.tilePositions = new List<Vector3Int>();
     }
+
+    public void DeletePositions()
+    {
+        ColdWater.tilePositions.Clear();
+        Desert.tilePositions.Clear();
+        Hill.tilePositions.Clear();
+        Plain.tilePositions.Clear();
+        RainForest.tilePositions.Clear();
+        Sand.tilePositions.Clear();
+        Snow.tilePositions.Clear();
+        Taiga.tilePositions.Clear();
+        Water.tilePositions.Clear();
+        
+    }
 }

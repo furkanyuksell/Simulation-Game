@@ -19,11 +19,11 @@ public class AnimalPool : MonoBehaviour
         pools.Add(animal, new ObjectPooler<Animal>(animal.gameObject));
     }
     
-    public void GetAnimal(Animal animal)
+    public Animal GetAnimal(Animal animal)
     {
         if (pools.TryGetValue(animal, out ObjectPooler<Animal> pool))
         {
-            pool.Pool.Get();
+            return pool.Pool.Get();
             /*Debug.Log(
                 "Animal: " +
                 animal.name +
@@ -33,5 +33,7 @@ public class AnimalPool : MonoBehaviour
                 pool.Pool.CountInactive
             );*/
         }
+
+        return null;
     }
 }
