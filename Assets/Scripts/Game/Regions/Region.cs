@@ -9,7 +9,6 @@ using Random = UnityEngine.Random;
 public abstract class Region : MonoBehaviour
 {
     [SerializeField] protected TileData tileData;
-
     private AnimalController AnimalController { get; set; }
 
     protected virtual void Init()
@@ -38,6 +37,8 @@ public abstract class Region : MonoBehaviour
             {
                 Animal animal = AnimalController.SpawnAnimal(animalType);
                 _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
+                
+                
                 animal.transform.position = _randTilePos;
             }
         }      
@@ -47,12 +48,27 @@ public abstract class Region : MonoBehaviour
     {
         foreach (var animalType in tileData.animalList)
         {
-            
-        }    
+            if (animalType.waitTime > 0)
+            {
+                animalType.waitTime -= Time.deltaTime;
+            }
+            else
+            {
+                animalType.waitTime = animalType.spawnTime;
+                Animal animal = AnimalController.SpawnAnimal(animalType);
+                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
+                animal.transform.position = _randTilePos;
+            }
+        }
     }
-    
 
-    //Debugg---------------------------
+    private void Update()
+    {
+        SpawnRegionAnimalWithTime();
+    }
+
+
+    //Debug---------------------------
     private void DebugText()
     {
         Debug.Log(tileData.name + ": " + tileData.tilePositions.Count);
