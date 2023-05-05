@@ -9,61 +9,50 @@ using Random = UnityEngine.Random;
 public abstract class Region : MonoBehaviour
 {
     [SerializeField] protected TileData tileData;
-    private Animal _animal;
+
+    private AnimalController AnimalController { get; set; }
+
     protected virtual void Init()
     {
-        SetRegionAnimalPool();
-        CalculateEachAnimalTypeToTilesPosCount();
+        InitializeRegionAnimalsAtStart();
     }
 
-    private void SetRegionAnimalPool()
+    private void InitializeRegionAnimalsAtStart()
     {
-        foreach (TileData.AnimalType animalStruct in tileData.animalList)
+        if (tileData.animalList.Count == 0)
         {
-            AnimalPool.Instance.InitAnimalPools(animalStruct.animal, transform);       
+            Debug.Log("No animals in region: " + tileData.name);
+            return;
+        }
+        
+        AnimalController = new AnimalController(tileData, transform);
+        SpawnRegionAnimalPopulation();
+    }
+    
+    private Vector3Int _randTilePos;
+    private void SpawnRegionAnimalPopulation()
+    {
+        foreach (var animalType in tileData.animalList)
+        {
+            for (int i = 0; i < (animalType.maxSpawnCount/2); i++)
+            {
+                Animal animal = AnimalController.SpawnAnimal(animalType);
+                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
+                animal.transform.position = _randTilePos;
+            }
         }      
     }
 
-    private void Update()
+    private void SpawnRegionAnimalWithTime()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        foreach (var animalType in tileData.animalList)
         {
-            //SpawnAnimal();
-        }
+            
+        }    
     }
     
-    private void SpawnAnimal1()
-    {
-        if (tileData.tilePositions != null)
-        {
-            Vector3Int randPos = tileData.tilePositions[Random.Range(0, tileData.tilePositions.Count)];
-            float randSpawnPercentage = Random.Range(0,100);
-            Debug.Log("Region: " + tileData.name + " / " + randSpawnPercentage);
-            for(int i = 0; i < tileData.animalList.Count; i++)
-            {
-                if (randSpawnPercentage <= tileData.animalList[i].spawnChance)
-                {
-                    Animal animal = AnimalPool.Instance.GetAnimal(tileData.animalList[i].animal);
-                    animal.transform.position = randPos;
-                }
-            }
-        }
-    }
 
-    private void SpawnAnimal()
-    {
-        
-    }
-
-    private void CalculateEachAnimalTypeToTilesPosCount()
-    {
-        for (int i = 0; i < tileData.animalList.Count; i++)
-        {
-            int animalCount = Mathf.RoundToInt(tileData.tilePositions.Count / (100-tileData.animalList[i].spawnChance));
-            tileData.animalList[i].maxSpawnCount = animalCount;
-        }
-    }
-
+    //Debugg---------------------------
     private void DebugText()
     {
         Debug.Log(tileData.name + ": " + tileData.tilePositions.Count);

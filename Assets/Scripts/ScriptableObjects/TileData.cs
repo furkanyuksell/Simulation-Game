@@ -20,8 +20,9 @@ public class TileData : ScriptableObject
         public Animal animal;
         public float spawnChance;
         public float spawnTime;
-        public float spawnDistance;
+        public float waitTime;
         public int maxSpawnCount;
+        public int activeCount;
     }
     
 }

@@ -19,10 +19,11 @@ public class AnimalPool : MonoBehaviour
         pools.Add(animal, new ObjectPooler<Animal>(animal.gameObject, regionParent));
     }
     
-    public Animal GetAnimal(Animal animal)
+    public Animal GetAnimal(TileData.AnimalType animalType)
     {
-        if (pools.TryGetValue(animal, out ObjectPooler<Animal> pool))
+        if (pools.TryGetValue(animalType.animal, out ObjectPooler<Animal> pool))
         {
+            animalType.activeCount = pool.Pool.CountActive+1;
             return pool.Pool.Get();
             /*Debug.Log(
                 "Animal: " +
