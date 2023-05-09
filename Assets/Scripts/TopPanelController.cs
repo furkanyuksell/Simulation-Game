@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TopPanelController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TMP_Text woodStockCount;
+    [SerializeField] private TMP_Text mineStockCount;
+    [SerializeField] private TMP_Text foodStockCount;
+    [SerializeField] private TMP_Text herbStockCount;
 
-    // Update is called once per frame
-    void Update()
+    private void SetPopulation()
     {
-        
+
+    }
+    
+    private void SetStock()
+    {
+
     }
 }
