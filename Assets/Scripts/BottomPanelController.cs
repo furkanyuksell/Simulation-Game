@@ -1,65 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class BottomPanelController : MonoBehaviour
 {
-    private bool isInputWaiting;
-    private UnityAction activityControl;
+
+    [SerializeField] private InputController _inputController;
     
-    private void DigControl()
-    {
-
-    }
-    private void ChopControl()
-    {
-        if (isInputWaiting)
-        {
-            
-        }
-    }
-    private void GatherControl()
-    {
-
-    }
-    private void HoeControl()
-    {
-
-    }
-    private void HuntControl()
-    {
-
-    }
-
     private void OnClick()
     {
-        isInputWaiting = true;
-        Debug.Log(activityControl);
+        _inputController.SelectionEnable();
     }
+
     public void Dig()
     {
-        activityControl = Dig;
+        _inputController.currentSelection = InputController.SelectableTypes.ROCK;
         OnClick();
     }
     public void Chop()
     {
-        activityControl = ChopControl;
+        _inputController.currentSelection = InputController.SelectableTypes.TREES;
         OnClick();
     }
     public void Gather()
     {
-        activityControl = GatherControl;
+        _inputController.currentSelection = InputController.SelectableTypes.FOOD;
         OnClick();
     }
     public void Hoe()
     {
-        activityControl = HoeControl;
+        _inputController.currentSelection = InputController.SelectableTypes.GROUND;
         OnClick();
     }
     public void Hunt()
     {
-        activityControl = HuntControl;
+        _inputController.currentSelection = InputController.SelectableTypes.ANIMALS;
         OnClick();
     }
 }
