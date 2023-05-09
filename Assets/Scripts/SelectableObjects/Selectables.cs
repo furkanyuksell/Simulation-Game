@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Selectables : MonoBehaviour
 {
+    public InputController.SelectableTypes selectableTypes;
     private GameObject _selectedGO;
     private void Awake()
     {
