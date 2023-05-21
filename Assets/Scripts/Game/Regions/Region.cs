@@ -72,20 +72,19 @@ public abstract class Region : NetworkBehaviour
     
 
 
-    private float _serverCooldown = 6f;
+    //private float _serverCooldown = 6f;
     private void Update()
     {
         
         if (!IsServer)
             return; 
-        Debug.Log("Update workss");
-        if (!(_serverCooldown <= 0))
+        SpawnRegionAnimalWithTime();
+        /*if (!(_serverCooldown <= 0))
         {
             _serverCooldown -= Time.deltaTime;
             return;
-        }
-        Debug.Log("SpawnRegionAnimalWithTime");
-        SpawnRegionAnimalWithTime();
+        }*/
+
     }
     
     
