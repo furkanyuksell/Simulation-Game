@@ -24,6 +24,10 @@ public class LeftPanelController : MonoBehaviour
     private void Awake()
     {
         _rt = GetComponent<RectTransform>();
+        foreach(CraftElement craftElement in craftElementBTNList)
+        {
+            craftElement.CraftableSelected += CloseCraftMenu;
+        }
     }
 
     private void MoveRight()
@@ -69,8 +73,8 @@ public class LeftPanelController : MonoBehaviour
         int i = 0;
         while(i<craftElementOfList.Length)
         {
-            //craftElementBTNList[i].SetData(() => {Instantiate(craftElementOfList[i].craftElement,Vector3.zero,Quaternion.identity);},craftElementOfList[i].name);
-            craftElementBTNList[i].SetData(null,craftElementOfList[i].name);
+            GameObject go = craftElementOfList[i].craftElement;
+            craftElementBTNList[i].SetData(craftElementOfList[i].craftElement,craftElementOfList[i].name);
             i++;
         }
         while(i<craftElementBTNList.Length)
