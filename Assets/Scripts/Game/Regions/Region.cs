@@ -57,34 +57,36 @@ public abstract class Region : NetworkBehaviour
             _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
             if (AnimalController.CanAnimalSpawn(animalType))
             {
-                SetAnimalsOnClientRpc(i, _randTilePos);      
+                SetAnimalsOnClientRpc(i, AnimalController.RandTilePos);      
                 //Debug.Log("Spawned animal: " + animalType.animal.name + " at: " + _randTilePos);
             }
             i++;
         }
     }
+    
     [ClientRpc]
     private void SetAnimalsOnClientRpc(int animalIndex, Vector3 pos)
     {
-        Animal animal = AnimalPool.Instance.GetAnimal(tileData.animalList[animalIndex]);
-        animal.transform.position = pos;
+        /*Animal animal = AnimalPool.Instance.GetAnimal(tileData.animalList[animalIndex]);
+        animal.transform.position = pos;*/
+        AnimalController.SpawnAnimal(tileData.animalList[animalIndex], pos);
     }
     
 
 
-    //private float _serverCooldown = 6f;
+    private float _serverCooldown = 6f;
     private void Update()
     {
         
         if (!IsServer)
             return; 
-        SpawnRegionAnimalWithTime();
-        /*if (!(_serverCooldown <= 0))
+        
+        if (!(_serverCooldown <= 0))
         {
             _serverCooldown -= Time.deltaTime;
             return;
-        }*/
-
+        }
+        SpawnRegionAnimalWithTime();
     }
     
     

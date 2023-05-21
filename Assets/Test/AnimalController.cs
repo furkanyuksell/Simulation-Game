@@ -43,10 +43,13 @@ public class AnimalController
         
         return false;
     }
-    /*
-    public Animal SpawnAnimal(TileData.AnimalType animalType)
+    
+    
+    public void SpawnAnimal(TileData.AnimalType animalType, Vector3 pos)
     {
-        return AnimalPool.Instance.GetAnimal(animalType);
-    }*/
+        Animal animal = AnimalPool.Instance.GetAnimal(animalType);
+        animal.transform.position = pos;
+        
+    }
     
 }
