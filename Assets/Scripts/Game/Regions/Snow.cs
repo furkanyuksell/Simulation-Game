@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Snow : Region
 {
-    private void Start()
-    {
-          
-    }
-
     protected override void Init()
     {
         tileData = ServiceProvider.GetDataManager.Snow;
