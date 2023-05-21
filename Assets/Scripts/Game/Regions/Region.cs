@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public abstract class Region : MonoBehaviour
+
+public abstract class Region : NetworkBehaviour
 {
     [SerializeField] protected TileData tileData;
     private AnimalController AnimalController { get; set; }
@@ -25,10 +28,11 @@ public abstract class Region : MonoBehaviour
         }
         
         AnimalController = new AnimalController(tileData, transform);
-        SpawnRegionAnimalPopulation();
+        //SpawnRegionAnimalPopulation();
     }
     
     private Vector3Int _randTilePos;
+   /*
     private void SpawnRegionAnimalPopulation()
     {
         foreach (var animalType in tileData.animalList)
@@ -43,31 +47,49 @@ public abstract class Region : MonoBehaviour
             }
         }      
     }
-
+    */
+   
     private void SpawnRegionAnimalWithTime()
     {
+        var i = 0;
         foreach (var animalType in tileData.animalList)
         {
-            if (animalType.waitTime > 0)
+            _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
+            if (AnimalController.CanAnimalSpawn(animalType))
             {
-                animalType.waitTime -= Time.deltaTime;
+                SetAnimalsOnClientRpc(i, _randTilePos);      
+                //Debug.Log("Spawned animal: " + animalType.animal.name + " at: " + _randTilePos);
             }
-            else
-            {
-                animalType.waitTime = animalType.spawnTime;
-                Animal animal = AnimalController.SpawnAnimal(animalType);
-                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
-                animal.transform.position = _randTilePos;
-            }
+            i++;
         }
     }
+    [ClientRpc]
+    private void SetAnimalsOnClientRpc(int animalIndex, Vector3 pos)
+    {
+        Animal animal = AnimalPool.Instance.GetAnimal(tileData.animalList[animalIndex]);
+        animal.transform.position = pos;
+    }
+    
 
+
+    private float _serverCooldown = 6f;
     private void Update()
     {
+        
+        if (!IsServer)
+            return; 
+        Debug.Log("Update workss");
+        if (!(_serverCooldown <= 0))
+        {
+            _serverCooldown -= Time.deltaTime;
+            return;
+        }
+        Debug.Log("SpawnRegionAnimalWithTime");
         SpawnRegionAnimalWithTime();
     }
-
-
+    
+    
+    
     //Debug---------------------------
     private void DebugText()
     {
@@ -77,10 +99,12 @@ public abstract class Region : MonoBehaviour
     private void OnEnable()
     {
         LogHelper.OnDebug += DebugText;
+        MapGenerator.OnMapDone += Init;
     }
 
     private void OnDisable()
     {
         LogHelper.OnDebug -= DebugText;
+        MapGenerator.OnMapDone -= Init;
     }
 }

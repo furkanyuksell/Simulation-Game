@@ -7,7 +7,7 @@ public class RainForest : Region
 {
     private void Start()
     {
-        Init();
+        
     }
 
     protected override void Init()
@@ -15,6 +15,5 @@ public class RainForest : Region
         tileData = ServiceProvider.GetDataManager.RainForest;
         base.Init();
     }
-
-
+    
 }

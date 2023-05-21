@@ -3836,6 +3836,6 @@ MonoBehaviour:
     animal: {fileID: -5812842448562075684, guid: cbedf250292b77a4e83d092106cc3875, type: 3}
     spawnChance: 20
     spawnTime: 260
-    WaitTime: 0
+    cooldown: 0
     maxSpawnCount: 48
-    activeCount: 24
+    activeCount: 0

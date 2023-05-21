@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -5,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class MapGenerator : MonoBehaviour
 {
     public static MapGenerator Instance { get; private set; }
+    public static Action OnMapDone;
     public enum DrawMode
     {
         NoiseMap,
@@ -64,6 +66,7 @@ public class MapGenerator : MonoBehaviour
         }
 
         Debug.Log("Map Done");
+        OnMapDone?.Invoke();
     }
 
     private TileBase _tileBase;

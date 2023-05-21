@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -16,7 +17,7 @@ public class ObjectPooler<T> where T : MonoBehaviour, IPoolable<T>
         var parentObject = new GameObject(prefab.name + " Pool");
         parentObject.transform.parent = regionParent;
         parent = parentObject.transform;
-        Pool = new ObjectPool<T>(CreateObject, OnGetFromPool, OnReturnToPool);
+        Pool = new ObjectPool<T>(CreateObjectServerRpc, OnGetFromPool, OnReturnToPool);
     }
 
     private void OnReturnToPool(T obj)
@@ -28,8 +29,8 @@ public class ObjectPooler<T> where T : MonoBehaviour, IPoolable<T>
     {
         obj.gameObject.SetActive(true);
     }
-
-    private T CreateObject()
+    
+    private T CreateObjectServerRpc()
     {
         T t;
         t = GameObject.Instantiate(prefab, parent).GetComponent<T>();

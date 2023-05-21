@@ -34,7 +34,6 @@ public class AnimalPool : MonoBehaviour
                 pool.Pool.CountInactive
             );*/
         }
-
         return null;
     }
 }

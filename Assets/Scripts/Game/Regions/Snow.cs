@@ -6,7 +6,7 @@ public class Snow : Region
 {
     private void Start()
     {
-        Init();        
+          
     }
 
     protected override void Init()

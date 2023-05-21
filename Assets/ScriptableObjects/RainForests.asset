@@ -30782,13 +30782,13 @@ MonoBehaviour:
     animal: {fileID: -7215672625580687994, guid: da2246bd31ea251429941011303a922b, type: 3}
     spawnChance: 25
     spawnTime: 150
-    WaitTime: 0
+    cooldown: 0
     maxSpawnCount: 410
-    activeCount: 205
+    activeCount: 0
   - animalName: Chicken
     animal: {fileID: 6155108915090489208, guid: 1a4a9526f6de2a24583a4628f8ab2bdf, type: 3}
     spawnChance: 75
     spawnTime: 50
-    WaitTime: 0
-    maxSpawnCount: 384
-    activeCount: 192
+    cooldown: 0
+    maxSpawnCount: 1230
+    activeCount: 0

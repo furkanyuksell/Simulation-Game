@@ -6,7 +6,7 @@ namespace Game.Regions
     {
         private void Start()
         {
-            Init();        
+                  
         }
 
         protected override void Init()
