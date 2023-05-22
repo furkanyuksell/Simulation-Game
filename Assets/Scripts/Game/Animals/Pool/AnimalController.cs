@@ -39,7 +39,7 @@ public class AnimalController
             RandTilePos = _tileData.tilePositions[UtilServices.GetRandomNumber(0, _tileData.tilePositions.Count)];
             return true;
         }
-        animalType.cooldown -= Time.deltaTime;
+        animalType.cooldown -= Time.deltaTime+5;
         
         return false;
     }
