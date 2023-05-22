@@ -18,13 +18,5 @@ public abstract class Animal : NetworkBehaviour, IPoolable<Animal>
     {
         _animalPool.Release(this);
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            ReturnToPool();
-        }
-    }
 }
 
