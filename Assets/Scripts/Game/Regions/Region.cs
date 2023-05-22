@@ -28,26 +28,30 @@ public abstract class Region : NetworkBehaviour
         }
         
         AnimalController = new AnimalController(tileData, transform);
-        //SpawnRegionAnimalPopulation();
+        SpawnRegionAnimalPopulation();
     }
     
     private Vector3Int _randTilePos;
-   /*
+   
     private void SpawnRegionAnimalPopulation()
     {
+        var index = 0;
         foreach (var animalType in tileData.animalList)
         {
             for (int i = 0; i < (animalType.maxSpawnCount/2); i++)
             {
-                Animal animal = AnimalController.SpawnAnimal(animalType);
+               /* Animal animal = AnimalController.SpawnAnimal(animalType);
                 _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
-                
-                
-                animal.transform.position = _randTilePos;
+                */
+               _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)]; 
+               SetAnimalsOnClientRpc(index, _randTilePos);
+                //animal.transform.position = _randTilePos;
             }
+
+            index++;
         }      
     }
-    */
+    
    
     private void SpawnRegionAnimalWithTime()
     {
@@ -77,10 +81,8 @@ public abstract class Region : NetworkBehaviour
     private float _serverCooldown = 6f;
     private void Update()
     {
-        
         if (!IsServer)
-            return; 
-        
+            return;
         if (!(_serverCooldown <= 0))
         {
             _serverCooldown -= Time.deltaTime;

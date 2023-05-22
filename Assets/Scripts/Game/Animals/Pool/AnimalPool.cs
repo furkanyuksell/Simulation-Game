@@ -36,4 +36,9 @@ public class AnimalPool : MonoBehaviour
         }
         return null;
     }
+
+    public int GetActiveAnimalCount(TileData.AnimalType animalType)
+    {
+        return pools.TryGetValue(animalType.animal, out ObjectPooler<Animal> pool) ? pool.Pool.CountActive : 0;
+    }
 }

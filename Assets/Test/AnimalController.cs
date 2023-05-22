@@ -23,7 +23,7 @@ public class AnimalController
             AnimalPool.Instance.InitAnimalPools(animalData.animal, _transform);   
             int animalCount = Mathf.RoundToInt(_tileData.tilePositions.Count / (100-animalData.spawnChance));
             animalData.maxSpawnCount = animalCount;
-            animalData.activeCount = 0;
+            animalData.activeCount = AnimalPool.Instance.GetActiveAnimalCount(animalData);
             animalData.cooldown = 0;
         }      
     }
@@ -39,7 +39,7 @@ public class AnimalController
             RandTilePos = _tileData.tilePositions[UtilServices.GetRandomNumber(0, _tileData.tilePositions.Count)];
             return true;
         }
-        animalType.cooldown -= Time.deltaTime+5;
+        animalType.cooldown -= Time.deltaTime;
         
         return false;
     }
