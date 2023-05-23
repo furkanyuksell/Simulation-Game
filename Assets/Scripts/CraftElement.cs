@@ -12,6 +12,7 @@ public class CraftElement : MonoBehaviour
     private Camera _camera;
     private Vector3 _offset = new Vector3(0,0,10);
     public UnityAction CraftableSelected;
+    private BoxCollider2D _col;
 
     private void Start()
     {
@@ -28,6 +29,8 @@ public class CraftElement : MonoBehaviour
     {
         CraftableSelected?.Invoke();
         GameObject go = Instantiate(_craftElement,_camera.ScreenToWorldPoint(Input.mousePosition) + _offset,Quaternion.identity);
+        _col = go.GetComponent<BoxCollider2D>();
+        _col.enabled = false;
         _isPlacing = true;
         StartCoroutine(PlaceObject(go));
     }
@@ -40,7 +43,11 @@ public class CraftElement : MonoBehaviour
             go.transform.position = _camera.ScreenToWorldPoint(Input.mousePosition) + _offset;
             if(Input.GetMouseButtonDown(0))
             {
-                _isPlacing = false;
+                if(!Physics2D.OverlapBox((Vector2) _camera.ScreenToWorldPoint(Input.mousePosition), new Vector2(3, 3),0))
+                {
+                    _col.enabled = true; 
+                    _isPlacing = false;
+                }
             }
             yield return Time.deltaTime;
         }
