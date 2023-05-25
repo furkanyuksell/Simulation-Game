@@ -7,7 +7,7 @@ public class AnimalPool : MonoBehaviour
 {
     public static AnimalPool Instance { get; private set; }
 
-    private Dictionary<Animal, ObjectPooler<Animal>> pools = new Dictionary<Animal, ObjectPooler<Animal>>();
+    private Dictionary<Animal, ObjectPooler<Animal>> pools = new();
     // Start is called before the first frame update
     void Awake()
     {

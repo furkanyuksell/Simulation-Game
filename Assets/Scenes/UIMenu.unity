@@ -7775,6 +7775,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5639445264316447626, guid: aaf8bf80aa4269346ac44290dddcec0e, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639445264316447626, guid: aaf8bf80aa4269346ac44290dddcec0e, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.data[3].Prefab
+      value: 
+      objectReference: {fileID: 1606503529384602959, guid: b88167a577c8aac4da090d868658b767, type: 3}
+    - target: {fileID: 5639445264316447626, guid: aaf8bf80aa4269346ac44290dddcec0e, type: 3}
+      propertyPath: NetworkConfig.NetworkPrefabs.Array.data[4].Prefab
+      value: 
+      objectReference: {fileID: 8434640379915208136, guid: 5f2556b0cbb07b6409572e8e5946f677, type: 3}
     - target: {fileID: 5639445264316447628, guid: aaf8bf80aa4269346ac44290dddcec0e, type: 3}
       propertyPath: m_Name
       value: NetworkManager

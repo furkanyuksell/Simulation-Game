@@ -18,9 +18,11 @@ public class AnimalController
 
     private void SetRegionAnimalPoolAndAnimalMaxCount()
     {
+        var parentObject = new GameObject("Animals");
+        parentObject.transform.parent = _transform;
         foreach (var animalData in _tileData.animalList)
         {
-            AnimalPool.Instance.InitAnimalPools(animalData.animal, _transform);   
+            AnimalPool.Instance.InitAnimalPools(animalData.animal, parentObject.transform);   
             int animalCount = Mathf.RoundToInt(_tileData.tilePositions.Count / (100-animalData.spawnChance));
             animalData.maxSpawnCount = animalCount;
             animalData.activeCount = AnimalPool.Instance.GetActiveAnimalCount(animalData);

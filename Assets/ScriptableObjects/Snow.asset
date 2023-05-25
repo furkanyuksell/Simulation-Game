@@ -3836,6 +3836,11 @@ MonoBehaviour:
     animal: {fileID: -5812842448562075684, guid: cbedf250292b77a4e83d092106cc3875, type: 3}
     spawnChance: 20
     spawnTime: 260
-    cooldown: 0
+    cooldown: 213.0788
     maxSpawnCount: 48
+    activeCount: 25
+  rawMaterialList:
+  - rawMaterialName: GoldMine
+    rawMaterial: {fileID: 1606503529384602958, guid: b88167a577c8aac4da090d868658b767, type: 3}
+    maxSpawnCount: 15
     activeCount: 0

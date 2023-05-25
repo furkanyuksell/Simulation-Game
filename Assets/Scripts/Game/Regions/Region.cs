@@ -13,10 +13,44 @@ public abstract class Region : NetworkBehaviour
 {
     [SerializeField] protected TileData tileData;
     private AnimalController AnimalController { get; set; }
+    private RawMaterialController RawMaterialController { get; set; }
 
     protected virtual void Init()
     {
         InitializeRegionAnimalsAtStart();
+        InitializeRegionRawMaterialsAtStart();
+    }
+    private void InitializeRegionRawMaterialsAtStart()
+    {
+        if (tileData.rawMaterialList.Count == 0)
+        {
+            Debug.Log("No raw materials in region: " + tileData.name);
+            return;
+        }
+        
+        RawMaterialController = new RawMaterialController(this, tileData, transform);
+        SpawnRegionRawMaterialPopulation();
+    }
+
+    private void SpawnRegionRawMaterialPopulation()
+    {
+        var index = 0;
+        foreach (var rawMaterialType in tileData.rawMaterialList)
+        {
+            for (int i = 0; i < (rawMaterialType.maxSpawnCount/2); i++)
+            {
+                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)]; 
+                SetRawMaterialsOnClientRpc(index, _randTilePos);
+            }
+
+            index++;
+        }      
+    }
+
+    [ClientRpc]
+    private void SetRawMaterialsOnClientRpc(int index, Vector3Int randTilePos)
+    {
+        RawMaterialController.SpawnRawMaterial(tileData.rawMaterialList[index], randTilePos);
     }
 
     private void InitializeRegionAnimalsAtStart()
@@ -32,7 +66,6 @@ public abstract class Region : NetworkBehaviour
     }
     
     private Vector3Int _randTilePos;
-   
     private void SpawnRegionAnimalPopulation()
     {
         var index = 0;
@@ -48,7 +81,6 @@ public abstract class Region : NetworkBehaviour
         }      
     }
     
-   
     private void SpawnRegionAnimalWithTime()
     {
         var i = 0;
