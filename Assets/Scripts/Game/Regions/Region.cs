@@ -1,19 +1,56 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public abstract class Region : MonoBehaviour
+
+public abstract class Region : NetworkBehaviour
 {
     [SerializeField] protected TileData tileData;
     private AnimalController AnimalController { get; set; }
+    private RawMaterialController RawMaterialController { get; set; }
 
     protected virtual void Init()
     {
         InitializeRegionAnimalsAtStart();
+        InitializeRegionRawMaterialsAtStart();
+    }
+    private void InitializeRegionRawMaterialsAtStart()
+    {
+        if (tileData.rawMaterialList.Count == 0)
+        {
+            Debug.Log("No raw materials in region: " + tileData.name);
+            return;
+        }
+        
+        RawMaterialController = new RawMaterialController(this, tileData, transform);
+        SpawnRegionRawMaterialPopulation();
+    }
+
+    private void SpawnRegionRawMaterialPopulation()
+    {
+        var index = 0;
+        foreach (var rawMaterialType in tileData.rawMaterialList)
+        {
+            for (int i = 0; i < (rawMaterialType.maxSpawnCount/2); i++)
+            {
+                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)]; 
+                SetRawMaterialsOnClientRpc(index, _randTilePos);
+            }
+
+            index++;
+        }      
+    }
+
+    [ClientRpc]
+    private void SetRawMaterialsOnClientRpc(int index, Vector3Int randTilePos)
+    {
+        RawMaterialController.SpawnRawMaterial(tileData.rawMaterialList[index], randTilePos);
     }
 
     private void InitializeRegionAnimalsAtStart()
@@ -31,43 +68,56 @@ public abstract class Region : MonoBehaviour
     private Vector3Int _randTilePos;
     private void SpawnRegionAnimalPopulation()
     {
+        var index = 0;
         foreach (var animalType in tileData.animalList)
         {
             for (int i = 0; i < (animalType.maxSpawnCount/2); i++)
             {
-                Animal animal = AnimalController.SpawnAnimal(animalType);
-                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
-                
-                
-                animal.transform.position = _randTilePos;
+               _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)]; 
+               SetAnimalsOnClientRpc(index, _randTilePos);
             }
+
+            index++;
         }      
     }
-
+    
     private void SpawnRegionAnimalWithTime()
     {
+        var i = 0;
         foreach (var animalType in tileData.animalList)
         {
-            if (animalType.waitTime > 0)
+            _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
+            if (AnimalController.CanAnimalSpawn(animalType))
             {
-                animalType.waitTime -= Time.deltaTime;
+                SetAnimalsOnClientRpc(i, AnimalController.RandTilePos);
             }
-            else
-            {
-                animalType.waitTime = animalType.spawnTime;
-                Animal animal = AnimalController.SpawnAnimal(animalType);
-                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
-                animal.transform.position = _randTilePos;
-            }
+            i++;
         }
     }
+    
+    [ClientRpc]
+    private void SetAnimalsOnClientRpc(int animalIndex, Vector3 pos)
+    {
+        AnimalController.SpawnAnimal(tileData.animalList[animalIndex], pos);
+    }
+    
 
+
+    private float _serverCooldown = 6f;
     private void Update()
     {
+        if (!IsServer)
+            return;
+        if (!(_serverCooldown <= 0))
+        {
+            _serverCooldown -= Time.deltaTime;
+            return;
+        }
         SpawnRegionAnimalWithTime();
     }
-
-
+    
+    
+    
     //Debug---------------------------
     private void DebugText()
     {
@@ -77,10 +127,12 @@ public abstract class Region : MonoBehaviour
     private void OnEnable()
     {
         LogHelper.OnDebug += DebugText;
+        MapGenerator.OnMapDone += Init;
     }
 
     private void OnDisable()
     {
         LogHelper.OnDebug -= DebugText;
+        MapGenerator.OnMapDone -= Init;
     }
 }

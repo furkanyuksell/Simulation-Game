@@ -12,7 +12,8 @@ public class TileData : ScriptableObject
     public TileBase[] tiles;
     [HideInInspector] public List<Vector3Int> tilePositions;
     public List<AnimalType> animalList = new List<AnimalType>();
-
+    public List<RawMaterialType> rawMaterialList = new List<RawMaterialType>();
+    
     [System.Serializable]
     public class AnimalType
     {
@@ -20,9 +21,17 @@ public class TileData : ScriptableObject
         public Animal animal;
         public float spawnChance;
         public float spawnTime;
-        public float waitTime;
+        public float cooldown;
         public int maxSpawnCount;
         public int activeCount;
     }
     
+    [System.Serializable]
+    public class RawMaterialType
+    {
+        public string rawMaterialName;
+        public RawMaterial rawMaterial;
+        public int maxSpawnCount;
+        public int activeCount;
+    }
 }

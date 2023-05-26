@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2937224988440569067}
   - component: {fileID: 2937224988440569066}
   - component: {fileID: 6155108915090489208}
+  - component: {fileID: -3578137854660280769}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,4 +98,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fc4f384b6cf604486c77a682fa3a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalSpawnRate: 66.666664
+--- !u!114 &-3578137854660280769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937224988440569065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1

@@ -7,7 +7,7 @@ public class AnimalPool : MonoBehaviour
 {
     public static AnimalPool Instance { get; private set; }
 
-    private Dictionary<Animal, ObjectPooler<Animal>> pools = new Dictionary<Animal, ObjectPooler<Animal>>();
+    private Dictionary<Animal, ObjectPooler<Animal>> pools = new();
     // Start is called before the first frame update
     void Awake()
     {
@@ -34,7 +34,11 @@ public class AnimalPool : MonoBehaviour
                 pool.Pool.CountInactive
             );*/
         }
-
         return null;
+    }
+
+    public int GetActiveAnimalCount(TileData.AnimalType animalType)
+    {
+        return pools.TryGetValue(animalType.animal, out ObjectPooler<Animal> pool) ? pool.Pool.CountActive : 0;
     }
 }
