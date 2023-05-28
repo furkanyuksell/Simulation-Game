@@ -9,6 +9,8 @@ public class LeftPanelController : MonoBehaviour
     {
         public string name;
         public GameObject craftElement;
+        public int woodCost;
+        public int stoneCost;
     }
 
     private RectTransform _rt;
@@ -74,7 +76,7 @@ public class LeftPanelController : MonoBehaviour
         while(i<craftElementOfList.Length)
         {
             GameObject go = craftElementOfList[i].craftElement;
-            craftElementBTNList[i].SetData(craftElementOfList[i].craftElement,craftElementOfList[i].name);
+            craftElementBTNList[i].SetData(craftElementOfList[i].craftElement,craftElementOfList[i].name,craftElementOfList[i].woodCost,craftElementOfList[i].stoneCost);
             i++;
         }
         while(i<craftElementBTNList.Length)
