@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Selectables : MonoBehaviour
 {
+    public int woodCount, stoneCount, foodCount, herbCount;
     public InputController.SelectableTypes selectableTypes;
     private GameObject _selectedGO;
     private void Awake()
@@ -16,4 +17,5 @@ public class Selectables : MonoBehaviour
     {
         _selectedGO.SetActive(visible);
     }
+
 }

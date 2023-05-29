@@ -11,7 +11,6 @@ public class DragSelectionController : MonoBehaviour
     private List<Selectables> _selectedGOList = new List<Selectables>();
     [SerializeField] private Transform _selectionAreaTransform;
 
-
     private void Awake()
     {
         _selectionAreaTransform.gameObject.SetActive(false);

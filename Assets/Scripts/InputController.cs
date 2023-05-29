@@ -14,6 +14,7 @@ public class InputController : MonoBehaviour
     [SerializeField] private Tilemap _tileMap;
     [SerializeField] private Camera _camera;
     [SerializeField] private DragSelectionController _dragSelectionController;
+    [SerializeField] private TopPanelController _topPanelController;
 
 
     private TileBase _startTile;
@@ -60,6 +61,7 @@ public class InputController : MonoBehaviour
                 if (_startTile != null && _lastTile != null)
                 {
                     _selectedGOList = _dragSelectionController.SelectionEnded(_tileMap.GetCellCenterWorld(_lastCellPos));
+                    // Game Objects are here. We should work on them.
 
                     _startTile = null;
                     _lastTile = null;

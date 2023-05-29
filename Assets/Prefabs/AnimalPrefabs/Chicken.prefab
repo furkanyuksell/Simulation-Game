@@ -129,6 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc34a28f462c4243ade2a5ee9723cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  woodCount: 0
+  stoneCount: 0
+  foodCount: 50
+  herbCount: 0
   selectableTypes: 3
 --- !u!61 &-6875245509043064438
 BoxCollider2D:

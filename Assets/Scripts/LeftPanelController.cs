@@ -19,14 +19,15 @@ public class LeftPanelController : MonoBehaviour
     [SerializeField] private CraftElementData[] constructionElementList;
     [SerializeField] private CraftElement[] craftElementBTNList;
 
-    
+
     private bool isEnable = true;
     private bool isCraftElementsEnabled = true;
+    [SerializeField] private TopPanelController _topPanelController;
 
     private void Awake()
     {
         _rt = GetComponent<RectTransform>();
-        foreach(CraftElement craftElement in craftElementBTNList)
+        foreach (CraftElement craftElement in craftElementBTNList)
         {
             craftElement.CraftableSelected += CloseCraftMenu;
         }
@@ -34,32 +35,47 @@ public class LeftPanelController : MonoBehaviour
 
     private void MoveRight()
     {
-        _rt.anchoredPosition += new Vector2(110,0);
+        _rt.anchoredPosition += new Vector2(110, 0);
     }
     public void OpenCraftMenu()
     {
-        if(isEnable)
+        if (isEnable)
         {
             MoveRight();
             isEnable = false;
         }
     }
 
-    public void CloseCraftMenu()
+    public bool CloseCraftMenu(int woodCost, int stoneCost)
+    {
+        if (_topPanelController.GetWoodStock() >= woodCost && _topPanelController.GetMineStock() >= stoneCost)
+        {
+            _rt.anchoredPosition = Vector2.zero;
+            isEnable = true;
+            isCraftElementsEnabled = true;
+            _topPanelController.Purchase(woodCost, stoneCost);
+            return true;
+        }
+        return false;
+    }
+    
+    public void CloseBTN()
     {
         _rt.anchoredPosition = Vector2.zero;
         isEnable = true;
-        isCraftElementsEnabled = true; 
+        isCraftElementsEnabled = true;
     }
 
     public void OpenWorkshopMenu()
     {
         SetMenu(workShopElementList);
     }
+    
     public void OpenFurnitureMenu()
     {
         SetMenu(furnitureElementList);
     }
+
     public void OpenConstructionMenu()
     {
         SetMenu(constructionElementList);
@@ -67,19 +83,19 @@ public class LeftPanelController : MonoBehaviour
 
     public void SetMenu(CraftElementData[] craftElementOfList)
     {
-        if(isCraftElementsEnabled)
+        if (isCraftElementsEnabled)
         {
             MoveRight();
             isCraftElementsEnabled = false;
         }
         int i = 0;
-        while(i<craftElementOfList.Length)
+        while (i < craftElementOfList.Length)
         {
             GameObject go = craftElementOfList[i].craftElement;
-            craftElementBTNList[i].SetData(craftElementOfList[i].craftElement,craftElementOfList[i].name,craftElementOfList[i].woodCost,craftElementOfList[i].stoneCost);
+            craftElementBTNList[i].SetData(craftElementOfList[i].craftElement, craftElementOfList[i].name, craftElementOfList[i].woodCost, craftElementOfList[i].stoneCost);
             i++;
         }
-        while(i<craftElementBTNList.Length)
+        while (i < craftElementBTNList.Length)
         {
             craftElementBTNList[i].gameObject.SetActive(false);
             i++;

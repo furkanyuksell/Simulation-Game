@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using System;
 
 public class CraftElement : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class CraftElement : MonoBehaviour
     private bool _isPlacing;
     private Camera _camera;
     private Vector3 _offset = new Vector3(0, 0, 10);
-    public UnityAction CraftableSelected;
+    public Func<int, int, bool> CraftableSelected;
     private BoxCollider2D _col;
 
     [SerializeField] private TMP_Text woodCostTXT;
@@ -36,12 +37,14 @@ public class CraftElement : MonoBehaviour
 
     public void OnClick()
     {
-        CraftableSelected?.Invoke();
-        GameObject go = Instantiate(_craftElement, _camera.ScreenToWorldPoint(Input.mousePosition) + _offset, Quaternion.identity);
-        _col = go.GetComponent<BoxCollider2D>();
-        _col.enabled = false;
-        _isPlacing = true;
-        StartCoroutine(PlaceObject(go));
+        if ((bool)CraftableSelected?.Invoke(woodCost, stoneCost))
+        {
+            GameObject go = Instantiate(_craftElement, _camera.ScreenToWorldPoint(Input.mousePosition) + _offset, Quaternion.identity);
+            _col = go.GetComponent<BoxCollider2D>();
+            _col.enabled = false;
+            _isPlacing = true;
+            StartCoroutine(PlaceObject(go));
+        }
     }
 
     IEnumerator PlaceObject(GameObject go)
