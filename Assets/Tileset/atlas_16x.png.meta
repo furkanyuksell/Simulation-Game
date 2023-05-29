@@ -1,0 +1,4080 @@
+fileFormatVersion: 2
+guid: 498d6c33c89360e43b56b0934609c613
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8220004207842343721
+    second: atlas_16x_0
+  - first:
+      213: -8917494276948081965
+    second: atlas_16x_1
+  - first:
+      213: -4089702158966414991
+    second: atlas_16x_2
+  - first:
+      213: -6696023420931748170
+    second: atlas_16x_3
+  - first:
+      213: -6198666131353644898
+    second: atlas_16x_4
+  - first:
+      213: 592131814113056924
+    second: atlas_16x_5
+  - first:
+      213: -3027782111604198055
+    second: atlas_16x_6
+  - first:
+      213: 8808859571310830456
+    second: atlas_16x_7
+  - first:
+      213: -4917881067709642230
+    second: atlas_16x_8
+  - first:
+      213: -5871667795669756244
+    second: atlas_16x_9
+  - first:
+      213: -4715416408944206972
+    second: atlas_16x_10
+  - first:
+      213: -5780460213378756249
+    second: atlas_16x_11
+  - first:
+      213: 2132535878712514883
+    second: atlas_16x_12
+  - first:
+      213: 8307030112634560281
+    second: atlas_16x_13
+  - first:
+      213: 1428731561810082683
+    second: atlas_16x_14
+  - first:
+      213: 1607768824699851824
+    second: atlas_16x_15
+  - first:
+      213: 8584285218498451622
+    second: atlas_16x_16
+  - first:
+      213: -3624466932721182813
+    second: atlas_16x_17
+  - first:
+      213: -3148545679559786203
+    second: atlas_16x_18
+  - first:
+      213: 6558567262423513941
+    second: atlas_16x_19
+  - first:
+      213: -5566037074515333637
+    second: atlas_16x_20
+  - first:
+      213: 7663252407562828933
+    second: atlas_16x_21
+  - first:
+      213: 7163661937026927790
+    second: atlas_16x_22
+  - first:
+      213: -2046762322740271305
+    second: atlas_16x_23
+  - first:
+      213: 7331804470849511987
+    second: atlas_16x_24
+  - first:
+      213: -1297168168471260756
+    second: atlas_16x_25
+  - first:
+      213: -8359758514589808890
+    second: atlas_16x_26
+  - first:
+      213: 5673910272569780926
+    second: atlas_16x_27
+  - first:
+      213: -2195456867257232785
+    second: atlas_16x_28
+  - first:
+      213: 735270460777346848
+    second: atlas_16x_29
+  - first:
+      213: 174711960444950930
+    second: atlas_16x_30
+  - first:
+      213: -3691678079313487496
+    second: atlas_16x_31
+  - first:
+      213: -5716135279274612142
+    second: atlas_16x_32
+  - first:
+      213: -4750890422282348836
+    second: atlas_16x_33
+  - first:
+      213: -7861882499946256172
+    second: atlas_16x_34
+  - first:
+      213: 7705022296292488815
+    second: atlas_16x_35
+  - first:
+      213: 8653787656773880323
+    second: atlas_16x_36
+  - first:
+      213: -6200535944672372189
+    second: atlas_16x_37
+  - first:
+      213: -7630043304873266547
+    second: atlas_16x_38
+  - first:
+      213: -536923446818988857
+    second: atlas_16x_39
+  - first:
+      213: 8505652159609784745
+    second: atlas_16x_40
+  - first:
+      213: 8846796211075232159
+    second: atlas_16x_41
+  - first:
+      213: -7850004724171738109
+    second: atlas_16x_42
+  - first:
+      213: -9090109915739828865
+    second: atlas_16x_43
+  - first:
+      213: 2241190152204368129
+    second: atlas_16x_44
+  - first:
+      213: -3097854520910524630
+    second: atlas_16x_45
+  - first:
+      213: 6567358723526547376
+    second: atlas_16x_46
+  - first:
+      213: -3816373134512831820
+    second: atlas_16x_47
+  - first:
+      213: 8469935542562255034
+    second: atlas_16x_48
+  - first:
+      213: -3579095879287321708
+    second: atlas_16x_49
+  - first:
+      213: 5573873581965688717
+    second: atlas_16x_50
+  - first:
+      213: 4272870151861816036
+    second: atlas_16x_51
+  - first:
+      213: 4534335385341838297
+    second: atlas_16x_52
+  - first:
+      213: 2940325563501075074
+    second: atlas_16x_53
+  - first:
+      213: 6452042305032321859
+    second: atlas_16x_54
+  - first:
+      213: 3226970214985045197
+    second: atlas_16x_55
+  - first:
+      213: -5019228026404009808
+    second: atlas_16x_56
+  - first:
+      213: -6160986635966668584
+    second: atlas_16x_57
+  - first:
+      213: 2130918076860235891
+    second: atlas_16x_58
+  - first:
+      213: 6252300327141186995
+    second: atlas_16x_59
+  - first:
+      213: -7519777844042493219
+    second: atlas_16x_60
+  - first:
+      213: -6494508124517928069
+    second: atlas_16x_61
+  - first:
+      213: 35663548374972236
+    second: atlas_16x_62
+  - first:
+      213: -6131509453936655373
+    second: atlas_16x_63
+  - first:
+      213: -8829911823093987065
+    second: atlas_16x_64
+  - first:
+      213: 2124582716430211287
+    second: atlas_16x_65
+  - first:
+      213: -6549106150569606821
+    second: atlas_16x_66
+  - first:
+      213: 2141808037775951167
+    second: atlas_16x_67
+  - first:
+      213: 7337606404808024794
+    second: atlas_16x_68
+  - first:
+      213: -5666350012627122605
+    second: atlas_16x_69
+  - first:
+      213: -7997145793149424767
+    second: atlas_16x_70
+  - first:
+      213: 523267093996752736
+    second: atlas_16x_71
+  - first:
+      213: 2502982363226604799
+    second: atlas_16x_72
+  - first:
+      213: 7876225163406886994
+    second: atlas_16x_73
+  - first:
+      213: 6507091897339716211
+    second: atlas_16x_74
+  - first:
+      213: 1053528540639462987
+    second: atlas_16x_75
+  - first:
+      213: 7705030339036287828
+    second: atlas_16x_76
+  - first:
+      213: -6466300892876420827
+    second: atlas_16x_77
+  - first:
+      213: -4255211623565718324
+    second: atlas_16x_78
+  - first:
+      213: 6344289198515060419
+    second: atlas_16x_79
+  - first:
+      213: 1597408275151453961
+    second: atlas_16x_80
+  - first:
+      213: -8851692133850020005
+    second: atlas_16x_81
+  - first:
+      213: -2786567018686663695
+    second: atlas_16x_82
+  - first:
+      213: -4290635983011747050
+    second: atlas_16x_83
+  - first:
+      213: -5134769199725695734
+    second: atlas_16x_84
+  - first:
+      213: 5562167132252503274
+    second: atlas_16x_85
+  - first:
+      213: -1216669731981570115
+    second: atlas_16x_86
+  - first:
+      213: 6374174220780133727
+    second: atlas_16x_87
+  - first:
+      213: 8859766255500413425
+    second: atlas_16x_88
+  - first:
+      213: 2953310194084300014
+    second: atlas_16x_89
+  - first:
+      213: 3678888649958569766
+    second: atlas_16x_90
+  - first:
+      213: 6991344393054159142
+    second: atlas_16x_91
+  - first:
+      213: -8052328274044052345
+    second: atlas_16x_92
+  - first:
+      213: 6636900955433687511
+    second: atlas_16x_93
+  - first:
+      213: 2826053944195067607
+    second: atlas_16x_94
+  - first:
+      213: -6321892380121475020
+    second: atlas_16x_95
+  - first:
+      213: 5294408154470766570
+    second: atlas_16x_96
+  - first:
+      213: 4384239464099539460
+    second: atlas_16x_97
+  - first:
+      213: 1628838370218375232
+    second: atlas_16x_98
+  - first:
+      213: -6361143531085061286
+    second: atlas_16x_99
+  - first:
+      213: 999841336340467722
+    second: atlas_16x_100
+  - first:
+      213: -8364030551787452742
+    second: atlas_16x_101
+  - first:
+      213: 2226194198309984036
+    second: atlas_16x_102
+  - first:
+      213: 3969337448523058766
+    second: atlas_16x_103
+  - first:
+      213: -4870121247099683194
+    second: atlas_16x_104
+  - first:
+      213: 1840363230175721737
+    second: atlas_16x_105
+  - first:
+      213: 2490955507712123528
+    second: atlas_16x_106
+  - first:
+      213: -1125594662522256741
+    second: atlas_16x_107
+  - first:
+      213: -2530546793308881406
+    second: atlas_16x_108
+  - first:
+      213: -7986173585017872496
+    second: atlas_16x_109
+  - first:
+      213: 5272248543001066580
+    second: atlas_16x_110
+  - first:
+      213: 660209126259523796
+    second: atlas_16x_111
+  - first:
+      213: 7664261944439920967
+    second: atlas_16x_112
+  - first:
+      213: -1980032324153826769
+    second: atlas_16x_113
+  - first:
+      213: 4170100854253989515
+    second: atlas_16x_114
+  - first:
+      213: 5901381473766605704
+    second: atlas_16x_115
+  - first:
+      213: -6368340220707947987
+    second: atlas_16x_116
+  - first:
+      213: 7886462372603688757
+    second: atlas_16x_117
+  - first:
+      213: 5574617919341321924
+    second: atlas_16x_118
+  - first:
+      213: -5528842022943335776
+    second: atlas_16x_119
+  - first:
+      213: -5718936719251722981
+    second: atlas_16x_120
+  - first:
+      213: 359495483250059239
+    second: atlas_16x_121
+  - first:
+      213: -8145885037067227587
+    second: atlas_16x_122
+  - first:
+      213: -3529555043140194864
+    second: atlas_16x_123
+  - first:
+      213: 7854963485726089394
+    second: atlas_16x_124
+  - first:
+      213: -8782449814186574019
+    second: atlas_16x_125
+  - first:
+      213: -4240496654742712597
+    second: atlas_16x_126
+  - first:
+      213: 3846193172925393766
+    second: atlas_16x_127
+  - first:
+      213: -8684457144161732759
+    second: atlas_16x_128
+  - first:
+      213: -4360008916147001818
+    second: atlas_16x_129
+  - first:
+      213: 7703722800902531522
+    second: atlas_16x_130
+  - first:
+      213: -4598154029609028536
+    second: atlas_16x_131
+  - first:
+      213: 6919412707621040925
+    second: atlas_16x_132
+  - first:
+      213: -741867704939709158
+    second: atlas_16x_133
+  - first:
+      213: -6109364115776663310
+    second: atlas_16x_134
+  - first:
+      213: 8482748630101893991
+    second: atlas_16x_135
+  - first:
+      213: 8913219292320660792
+    second: atlas_16x_136
+  - first:
+      213: -3731381759204543038
+    second: atlas_16x_137
+  - first:
+      213: 8153153146556086175
+    second: atlas_16x_138
+  - first:
+      213: -5311651260445583475
+    second: atlas_16x_139
+  - first:
+      213: 7127926727809571490
+    second: atlas_16x_140
+  - first:
+      213: 4033579972788336653
+    second: atlas_16x_141
+  - first:
+      213: -5736840037120663998
+    second: atlas_16x_142
+  - first:
+      213: 5276952846949105424
+    second: atlas_16x_143
+  - first:
+      213: 7444714694211256631
+    second: atlas_16x_144
+  - first:
+      213: -2558855954215885133
+    second: atlas_16x_145
+  - first:
+      213: 4723553033195238076
+    second: atlas_16x_146
+  - first:
+      213: 8183431378146158132
+    second: atlas_16x_147
+  - first:
+      213: -6929832830414254019
+    second: atlas_16x_148
+  - first:
+      213: -3646407941960433021
+    second: atlas_16x_149
+  - first:
+      213: 1731967576620638393
+    second: atlas_16x_150
+  - first:
+      213: 1861841973292453435
+    second: atlas_16x_151
+  - first:
+      213: -1313674809791002004
+    second: atlas_16x_152
+  - first:
+      213: 563191324793608629
+    second: atlas_16x_153
+  - first:
+      213: -257255517745589058
+    second: atlas_16x_154
+  - first:
+      213: -8465614273736110241
+    second: atlas_16x_155
+  - first:
+      213: 3595769799472710266
+    second: atlas_16x_156
+  - first:
+      213: -7875181628047395826
+    second: atlas_16x_157
+  - first:
+      213: 1791768627065195097
+    second: atlas_16x_158
+  - first:
+      213: -3346191135294162513
+    second: atlas_16x_159
+  - first:
+      213: 126249250627374736
+    second: atlas_16x_160
+  - first:
+      213: 5783993162764987461
+    second: atlas_16x_161
+  - first:
+      213: 1328147071604349809
+    second: atlas_16x_162
+  - first:
+      213: -8367327065054062600
+    second: atlas_16x_163
+  - first:
+      213: -4554683416509611918
+    second: atlas_16x_164
+  - first:
+      213: -8751137501209703545
+    second: atlas_16x_165
+  - first:
+      213: -902269656152127902
+    second: atlas_16x_166
+  - first:
+      213: -6124116189069405795
+    second: atlas_16x_167
+  - first:
+      213: 8700737900276182584
+    second: atlas_16x_168
+  - first:
+      213: -4819325727473612681
+    second: atlas_16x_169
+  - first:
+      213: -259787246327794335
+    second: atlas_16x_170
+  - first:
+      213: -9191510623292338240
+    second: atlas_16x_171
+  - first:
+      213: -6091498223704294214
+    second: atlas_16x_172
+  - first:
+      213: -2319514596431443977
+    second: atlas_16x_173
+  - first:
+      213: 4486695014395672166
+    second: atlas_16x_174
+  - first:
+      213: 3515643620054592486
+    second: atlas_16x_175
+  - first:
+      213: 1208100123226719458
+    second: atlas_16x_176
+  - first:
+      213: -709387296459384509
+    second: atlas_16x_177
+  - first:
+      213: -2213720020804822433
+    second: atlas_16x_178
+  - first:
+      213: -4638927719077234087
+    second: atlas_16x_179
+  - first:
+      213: 7583403879570413652
+    second: atlas_16x_180
+  - first:
+      213: 6373950383600346608
+    second: atlas_16x_181
+  - first:
+      213: -6659265668958553384
+    second: atlas_16x_182
+  - first:
+      213: -8374787155391729612
+    second: atlas_16x_183
+  - first:
+      213: -842942940334520284
+    second: atlas_16x_184
+  - first:
+      213: 7376241194297834240
+    second: atlas_16x_185
+  - first:
+      213: -1863835082979052283
+    second: atlas_16x_186
+  - first:
+      213: 1592718551317879602
+    second: atlas_16x_187
+  - first:
+      213: 5911918963068094279
+    second: atlas_16x_188
+  - first:
+      213: 6148946564063659604
+    second: atlas_16x_189
+  - first:
+      213: 7800305127571749658
+    second: atlas_16x_190
+  - first:
+      213: 6477675045146382426
+    second: atlas_16x_191
+  - first:
+      213: -7892171095719623395
+    second: atlas_16x_192
+  - first:
+      213: 2842707286891111981
+    second: atlas_16x_193
+  - first:
+      213: -8902059875116723446
+    second: atlas_16x_194
+  - first:
+      213: 6364336147636965235
+    second: atlas_16x_195
+  - first:
+      213: -7560155292687036534
+    second: atlas_16x_196
+  - first:
+      213: -1143513467199589597
+    second: atlas_16x_197
+  - first:
+      213: 4527981801615409655
+    second: atlas_16x_198
+  - first:
+      213: 7530477614884002593
+    second: atlas_16x_199
+  - first:
+      213: -3712629800689189962
+    second: atlas_16x_200
+  - first:
+      213: -795263068825512303
+    second: atlas_16x_201
+  - first:
+      213: -7605630511480942688
+    second: atlas_16x_202
+  - first:
+      213: 5618848953245186646
+    second: atlas_16x_203
+  - first:
+      213: 612728243500101503
+    second: atlas_16x_204
+  - first:
+      213: 3551949778553864249
+    second: atlas_16x_205
+  - first:
+      213: 3767725203022916293
+    second: atlas_16x_206
+  - first:
+      213: -2856531879829763009
+    second: atlas_16x_207
+  - first:
+      213: -5796362045218417948
+    second: atlas_16x_208
+  - first:
+      213: -4756321619915863037
+    second: atlas_16x_209
+  - first:
+      213: -2160070586279140135
+    second: atlas_16x_210
+  - first:
+      213: -6427346515592840149
+    second: atlas_16x_211
+  - first:
+      213: 1756094193137905951
+    second: atlas_16x_212
+  - first:
+      213: 7800354888871476549
+    second: atlas_16x_213
+  - first:
+      213: 3897599141398459002
+    second: atlas_16x_214
+  - first:
+      213: 1954955967145076316
+    second: atlas_16x_215
+  - first:
+      213: -2427373756193590737
+    second: atlas_16x_216
+  - first:
+      213: 8474622607901253708
+    second: atlas_16x_217
+  - first:
+      213: -4594414988503953139
+    second: atlas_16x_218
+  - first:
+      213: 8669691264190077975
+    second: atlas_16x_219
+  - first:
+      213: -6502637721942590035
+    second: atlas_16x_220
+  - first:
+      213: -3573774436395180730
+    second: atlas_16x_221
+  - first:
+      213: 895467167338841354
+    second: atlas_16x_222
+  - first:
+      213: 5030703394559121186
+    second: atlas_16x_223
+  - first:
+      213: -5116968765615428041
+    second: atlas_16x_224
+  - first:
+      213: -2733393669885699483
+    second: atlas_16x_225
+  - first:
+      213: 1986674951898682240
+    second: atlas_16x_226
+  - first:
+      213: -5828437043655066887
+    second: atlas_16x_227
+  - first:
+      213: -3830737352037049219
+    second: atlas_16x_228
+  - first:
+      213: 2146547477551169450
+    second: atlas_16x_229
+  - first:
+      213: -4275312002102384994
+    second: atlas_16x_230
+  - first:
+      213: 460455758321160429
+    second: atlas_16x_231
+  - first:
+      213: 22155417766855585
+    second: atlas_16x_232
+  - first:
+      213: -3202214571322620109
+    second: atlas_16x_233
+  - first:
+      213: 8949916493380457630
+    second: atlas_16x_234
+  - first:
+      213: -6800239102513216372
+    second: atlas_16x_235
+  - first:
+      213: -713507955677996234
+    second: atlas_16x_236
+  - first:
+      213: -2607281997226273916
+    second: atlas_16x_237
+  - first:
+      213: 5524772948351782712
+    second: atlas_16x_238
+  - first:
+      213: 5999776588799340434
+    second: atlas_16x_239
+  - first:
+      213: 4719229448335459754
+    second: atlas_16x_240
+  - first:
+      213: -4215971604638059885
+    second: atlas_16x_241
+  - first:
+      213: 7714041174498414301
+    second: atlas_16x_242
+  - first:
+      213: -548669132794896166
+    second: atlas_16x_243
+  - first:
+      213: -6845269436717803570
+    second: atlas_16x_244
+  - first:
+      213: 6939977671766335079
+    second: atlas_16x_245
+  - first:
+      213: 5093197328227368119
+    second: atlas_16x_246
+  - first:
+      213: 8428435461448214249
+    second: atlas_16x_247
+  - first:
+      213: -3150778551509845348
+    second: atlas_16x_248
+  - first:
+      213: 8710925804847538047
+    second: atlas_16x_249
+  - first:
+      213: -7350067507430237551
+    second: atlas_16x_250
+  - first:
+      213: -5558472022844286662
+    second: atlas_16x_251
+  - first:
+      213: 4161282922123094536
+    second: atlas_16x_252
+  - first:
+      213: 210290742308928963
+    second: atlas_16x_253
+  - first:
+      213: -6909864677014126202
+    second: atlas_16x_254
+  - first:
+      213: -1761683904098881447
+    second: atlas_16x_255
+  - first:
+      213: -2373992581138691131
+    second: atlas_16x_256
+  - first:
+      213: 379500732696091021
+    second: atlas_16x_257
+  - first:
+      213: 1730439538041442511
+    second: atlas_16x_258
+  - first:
+      213: 4521540989430358306
+    second: atlas_16x_259
+  - first:
+      213: -118060087576515722
+    second: atlas_16x_260
+  - first:
+      213: -4309587203058961043
+    second: atlas_16x_261
+  - first:
+      213: 6996355117031824259
+    second: atlas_16x_262
+  - first:
+      213: -7055912524607101519
+    second: atlas_16x_263
+  - first:
+      213: 4529597076431132669
+    second: atlas_16x_264
+  - first:
+      213: 3903112809402166728
+    second: atlas_16x_265
+  - first:
+      213: -5920842656005629560
+    second: atlas_16x_266
+  - first:
+      213: 507247185368261627
+    second: atlas_16x_267
+  - first:
+      213: -6092756845319879924
+    second: atlas_16x_268
+  - first:
+      213: -7315865036779247126
+    second: atlas_16x_269
+  - first:
+      213: 3552242385614429786
+    second: atlas_16x_270
+  - first:
+      213: -575866808512736884
+    second: atlas_16x_271
+  - first:
+      213: 2753772354951753351
+    second: atlas_16x_272
+  - first:
+      213: 963361958957859138
+    second: atlas_16x_273
+  - first:
+      213: 8028242139485700819
+    second: atlas_16x_274
+  - first:
+      213: -7276313696864156233
+    second: atlas_16x_275
+  - first:
+      213: -2436419403542239349
+    second: atlas_16x_276
+  - first:
+      213: -5762965678526691106
+    second: atlas_16x_277
+  - first:
+      213: -5074241504903905377
+    second: atlas_16x_278
+  - first:
+      213: -1676262401879646083
+    second: atlas_16x_279
+  - first:
+      213: 3745219096065743396
+    second: atlas_16x_280
+  - first:
+      213: 6272036675878167130
+    second: atlas_16x_281
+  - first:
+      213: 418517696562495429
+    second: atlas_16x_282
+  - first:
+      213: -5294656511074774357
+    second: atlas_16x_283
+  - first:
+      213: -1696596176726589515
+    second: atlas_16x_284
+  - first:
+      213: -591944939587306594
+    second: atlas_16x_285
+  - first:
+      213: -568962258841412651
+    second: atlas_16x_286
+  - first:
+      213: 1103393071322673275
+    second: atlas_16x_287
+  - first:
+      213: 1598045240772306511
+    second: atlas_16x_288
+  - first:
+      213: 6223598848176278813
+    second: atlas_16x_289
+  - first:
+      213: -801153336941166250
+    second: atlas_16x_290
+  - first:
+      213: 6279887967031912810
+    second: atlas_16x_291
+  - first:
+      213: 7842399752943300124
+    second: atlas_16x_292
+  - first:
+      213: -557448076280662408
+    second: atlas_16x_293
+  - first:
+      213: -2449952632453639479
+    second: atlas_16x_294
+  - first:
+      213: 7856627558776069363
+    second: atlas_16x_295
+  - first:
+      213: -7546697382171443010
+    second: atlas_16x_296
+  - first:
+      213: -1979528252196088013
+    second: atlas_16x_297
+  - first:
+      213: 4288008938419600481
+    second: atlas_16x_298
+  - first:
+      213: -4212681371883156000
+    second: atlas_16x_299
+  - first:
+      213: -8591136558338134067
+    second: atlas_16x_300
+  - first:
+      213: -4503617763346172300
+    second: atlas_16x_301
+  - first:
+      213: -5003703057447471974
+    second: atlas_16x_302
+  - first:
+      213: 2681448437984402031
+    second: atlas_16x_303
+  - first:
+      213: 8654513233858945027
+    second: atlas_16x_304
+  - first:
+      213: 7852023577344877277
+    second: atlas_16x_305
+  - first:
+      213: -889718316922012117
+    second: atlas_16x_306
+  - first:
+      213: 4152272716146111267
+    second: atlas_16x_307
+  - first:
+      213: -6245678508300427684
+    second: atlas_16x_308
+  - first:
+      213: -6423705606767487455
+    second: atlas_16x_309
+  - first:
+      213: -3432407025545727765
+    second: atlas_16x_310
+  - first:
+      213: 4501516576040893530
+    second: atlas_16x_311
+  - first:
+      213: 3900684422846105130
+    second: atlas_16x_312
+  - first:
+      213: 8596962641054717156
+    second: atlas_16x_313
+  - first:
+      213: -7865307849934897770
+    second: atlas_16x_314
+  - first:
+      213: -6200930119937289496
+    second: atlas_16x_315
+  - first:
+      213: 6384739964391104938
+    second: atlas_16x_316
+  - first:
+      213: -4323474253293728508
+    second: atlas_16x_317
+  - first:
+      213: -2875022266384045870
+    second: atlas_16x_318
+  - first:
+      213: -4301525120422173806
+    second: atlas_16x_319
+  - first:
+      213: -4394569073890664697
+    second: atlas_16x_320
+  - first:
+      213: 5653602907249802297
+    second: atlas_16x_321
+  - first:
+      213: 5433800979538059455
+    second: atlas_16x_322
+  - first:
+      213: 8156391469058102934
+    second: atlas_16x_323
+  - first:
+      213: 1114185735888527614
+    second: atlas_16x_324
+  - first:
+      213: 2806185947067271809
+    second: atlas_16x_325
+  - first:
+      213: -8821229673435378725
+    second: atlas_16x_326
+  - first:
+      213: -3709664438029434691
+    second: atlas_16x_327
+  - first:
+      213: -5199254960502276465
+    second: atlas_16x_328
+  - first:
+      213: 1387652708922035410
+    second: atlas_16x_329
+  - first:
+      213: 1050979919382420909
+    second: atlas_16x_330
+  - first:
+      213: 8453056688545261620
+    second: atlas_16x_331
+  - first:
+      213: -948017604270304909
+    second: atlas_16x_332
+  - first:
+      213: 5656022357218118068
+    second: atlas_16x_333
+  - first:
+      213: -9075818034729299934
+    second: atlas_16x_334
+  - first:
+      213: 4741291625025670684
+    second: atlas_16x_335
+  - first:
+      213: 2218725898617347698
+    second: atlas_16x_336
+  - first:
+      213: 5850717392042047158
+    second: atlas_16x_337
+  - first:
+      213: 7004203190198831665
+    second: atlas_16x_338
+  - first:
+      213: 6265226093738666370
+    second: atlas_16x_339
+  - first:
+      213: 7357638620842275020
+    second: atlas_16x_340
+  - first:
+      213: 1387940108289300848
+    second: atlas_16x_341
+  - first:
+      213: -4199635841393194261
+    second: atlas_16x_342
+  - first:
+      213: -8303289914909487973
+    second: atlas_16x_343
+  - first:
+      213: 4506901900492327525
+    second: atlas_16x_344
+  - first:
+      213: -6108800576360461953
+    second: atlas_16x_345
+  - first:
+      213: 2336602017879790651
+    second: atlas_16x_346
+  - first:
+      213: -5596413519005493994
+    second: atlas_16x_347
+  - first:
+      213: -2137497016066584394
+    second: atlas_16x_348
+  - first:
+      213: -263749242606071373
+    second: atlas_16x_349
+  - first:
+      213: -2462538182108948304
+    second: atlas_16x_350
+  - first:
+      213: 4599150728676447688
+    second: atlas_16x_351
+  - first:
+      213: -6574160737297207249
+    second: atlas_16x_352
+  - first:
+      213: -5882504522763238025
+    second: atlas_16x_353
+  - first:
+      213: -3849344123298105405
+    second: atlas_16x_354
+  - first:
+      213: -4422502233618518094
+    second: atlas_16x_355
+  - first:
+      213: 601273906841012296
+    second: atlas_16x_356
+  - first:
+      213: -2608961738808759679
+    second: atlas_16x_357
+  - first:
+      213: 4717272162022178528
+    second: atlas_16x_358
+  - first:
+      213: 9169354097665232809
+    second: atlas_16x_359
+  - first:
+      213: 4025356839962960716
+    second: atlas_16x_360
+  - first:
+      213: 198790631101335140
+    second: atlas_16x_361
+  - first:
+      213: 8756812006558216202
+    second: atlas_16x_362
+  - first:
+      213: 7416125575410864183
+    second: atlas_16x_363
+  - first:
+      213: -671571265612719549
+    second: atlas_16x_364
+  - first:
+      213: -6887526774978322349
+    second: atlas_16x_365
+  - first:
+      213: 5992580023546040215
+    second: atlas_16x_366
+  - first:
+      213: -6254281656946273708
+    second: atlas_16x_367
+  - first:
+      213: -1387277934193549259
+    second: atlas_16x_368
+  - first:
+      213: -7395159009941084792
+    second: atlas_16x_369
+  - first:
+      213: -7526655711076042972
+    second: atlas_16x_370
+  - first:
+      213: 9135540692963751490
+    second: atlas_16x_371
+  - first:
+      213: 9215911315986589753
+    second: atlas_16x_372
+  - first:
+      213: 3684424980656666694
+    second: atlas_16x_373
+  - first:
+      213: -178908023154962339
+    second: atlas_16x_374
+  - first:
+      213: -4140952255377073014
+    second: atlas_16x_375
+  - first:
+      213: 993745165374939764
+    second: atlas_16x_376
+  - first:
+      213: -7907506859042963568
+    second: atlas_16x_377
+  - first:
+      213: -7989263717092590050
+    second: atlas_16x_378
+  - first:
+      213: -4244281080644018621
+    second: atlas_16x_379
+  - first:
+      213: 479282406992856050
+    second: atlas_16x_380
+  - first:
+      213: -6899982924133006856
+    second: atlas_16x_381
+  - first:
+      213: -3629164317359180482
+    second: atlas_16x_382
+  - first:
+      213: -5677298059871537081
+    second: atlas_16x_383
+  - first:
+      213: 3297945003157599122
+    second: atlas_16x_384
+  - first:
+      213: -8997145819134490504
+    second: atlas_16x_385
+  - first:
+      213: -1974226593879650543
+    second: atlas_16x_386
+  - first:
+      213: -6977803465221716507
+    second: atlas_16x_387
+  - first:
+      213: -1629225584844958011
+    second: atlas_16x_388
+  - first:
+      213: 7667900667633395428
+    second: atlas_16x_389
+  - first:
+      213: 5076975943339179646
+    second: atlas_16x_390
+  - first:
+      213: -7294605661063090206
+    second: atlas_16x_391
+  - first:
+      213: -2023868701425617678
+    second: atlas_16x_392
+  - first:
+      213: -7429105796894636950
+    second: atlas_16x_393
+  - first:
+      213: 7903341574189365578
+    second: atlas_16x_394
+  - first:
+      213: -5969401178070676340
+    second: atlas_16x_395
+  - first:
+      213: -3323368256258005773
+    second: atlas_16x_396
+  - first:
+      213: -4607578560415575515
+    second: atlas_16x_397
+  - first:
+      213: 2544516304884064776
+    second: atlas_16x_398
+  - first:
+      213: 5512968306767621039
+    second: atlas_16x_399
+  - first:
+      213: 8225585030049547189
+    second: atlas_16x_400
+  - first:
+      213: -3683271965267090243
+    second: atlas_16x_401
+  - first:
+      213: 374251411930434363
+    second: atlas_16x_402
+  - first:
+      213: 4923879129353519662
+    second: atlas_16x_403
+  - first:
+      213: -8209822971628740499
+    second: atlas_16x_404
+  - first:
+      213: 4408489736705269930
+    second: atlas_16x_405
+  - first:
+      213: 8637084147463876035
+    second: atlas_16x_406
+  - first:
+      213: -1165670697187466608
+    second: atlas_16x_407
+  - first:
+      213: 7009193746954898870
+    second: atlas_16x_408
+  - first:
+      213: -1074785370336157722
+    second: atlas_16x_409
+  - first:
+      213: 6745624691008428562
+    second: atlas_16x_410
+  - first:
+      213: 4095320014846034051
+    second: atlas_16x_411
+  - first:
+      213: -8662412037812079495
+    second: atlas_16x_412
+  - first:
+      213: -5947193829920246455
+    second: atlas_16x_413
+  - first:
+      213: -371066813117876330
+    second: atlas_16x_414
+  - first:
+      213: -4116249731430177229
+    second: atlas_16x_415
+  - first:
+      213: -1475738601705793888
+    second: atlas_16x_416
+  - first:
+      213: -6826076951730778378
+    second: atlas_16x_417
+  - first:
+      213: -7708135909960689380
+    second: atlas_16x_418
+  - first:
+      213: -3547268234805096307
+    second: atlas_16x_419
+  - first:
+      213: 6749072380756299955
+    second: atlas_16x_420
+  - first:
+      213: -5710630738655110207
+    second: atlas_16x_421
+  - first:
+      213: 2462157887334193396
+    second: atlas_16x_422
+  - first:
+      213: 104070415774933788
+    second: atlas_16x_423
+  - first:
+      213: 2979719008859788137
+    second: atlas_16x_424
+  - first:
+      213: -3630582992184002192
+    second: atlas_16x_425
+  - first:
+      213: -6689359979512212649
+    second: atlas_16x_426
+  - first:
+      213: 3657286965017293020
+    second: atlas_16x_427
+  - first:
+      213: 823532596601346513
+    second: atlas_16x_428
+  - first:
+      213: -4815588398891512584
+    second: atlas_16x_429
+  - first:
+      213: 4939278708311673825
+    second: atlas_16x_430
+  - first:
+      213: 6792472196647985406
+    second: atlas_16x_431
+  - first:
+      213: 5137894085352216779
+    second: atlas_16x_432
+  - first:
+      213: -3710702031422097037
+    second: atlas_16x_433
+  - first:
+      213: -8896782423667655292
+    second: atlas_16x_434
+  - first:
+      213: 5746802255776270905
+    second: atlas_16x_435
+  - first:
+      213: 1310675177110448558
+    second: atlas_16x_436
+  - first:
+      213: 7053490046618168910
+    second: atlas_16x_437
+  - first:
+      213: -8031331609915739481
+    second: atlas_16x_438
+  - first:
+      213: -7840232992069563672
+    second: atlas_16x_439
+  - first:
+      213: -9180798909332991148
+    second: atlas_16x_440
+  - first:
+      213: 416938100859253531
+    second: atlas_16x_441
+  - first:
+      213: -4665604724085373693
+    second: atlas_16x_442
+  - first:
+      213: -3547836240321229278
+    second: atlas_16x_443
+  - first:
+      213: -4936797481636269235
+    second: atlas_16x_444
+  - first:
+      213: 3880256968463925936
+    second: atlas_16x_445
+  - first:
+      213: -7498518691957536670
+    second: atlas_16x_446
+  - first:
+      213: 974660099414766309
+    second: atlas_16x_447
+  - first:
+      213: 4887080949860524583
+    second: atlas_16x_448
+  - first:
+      213: -165028616189249673
+    second: atlas_16x_449
+  - first:
+      213: 6826053253806766662
+    second: atlas_16x_450
+  - first:
+      213: -136462925507815419
+    second: atlas_16x_451
+  - first:
+      213: -3297625719368341843
+    second: atlas_16x_452
+  - first:
+      213: 7840787108963481324
+    second: atlas_16x_453
+  - first:
+      213: 8986617779429432994
+    second: atlas_16x_454
+  - first:
+      213: 3534468908277744379
+    second: atlas_16x_455
+  - first:
+      213: 2878523212529643546
+    second: atlas_16x_456
+  - first:
+      213: -3550228812797319331
+    second: atlas_16x_457
+  - first:
+      213: 8453854199310117277
+    second: atlas_16x_458
+  - first:
+      213: -7914045579454164510
+    second: atlas_16x_459
+  - first:
+      213: -4827934258195554844
+    second: atlas_16x_460
+  - first:
+      213: -4445457053680830696
+    second: atlas_16x_461
+  - first:
+      213: -5592169552907272780
+    second: atlas_16x_462
+  - first:
+      213: -6198062173903498804
+    second: atlas_16x_463
+  - first:
+      213: 5018827671970553528
+    second: atlas_16x_464
+  - first:
+      213: -2843089456625121263
+    second: atlas_16x_465
+  - first:
+      213: 1014090280450215360
+    second: atlas_16x_466
+  - first:
+      213: 3450399806956105476
+    second: atlas_16x_467
+  - first:
+      213: 6552153678990488424
+    second: atlas_16x_468
+  - first:
+      213: -1048782290445629246
+    second: atlas_16x_469
+  - first:
+      213: -8366305267200414238
+    second: atlas_16x_470
+  - first:
+      213: -3839517703225942880
+    second: atlas_16x_471
+  - first:
+      213: -4420593978401333651
+    second: atlas_16x_472
+  - first:
+      213: -8939905077067777668
+    second: atlas_16x_473
+  - first:
+      213: 7158395665718279714
+    second: atlas_16x_474
+  - first:
+      213: -4382475270903176082
+    second: atlas_16x_475
+  - first:
+      213: -7424775483020595148
+    second: atlas_16x_476
+  - first:
+      213: 6304604865543981888
+    second: atlas_16x_477
+  - first:
+      213: -3784609330376001291
+    second: atlas_16x_478
+  - first:
+      213: -8666209383257301749
+    second: atlas_16x_479
+  - first:
+      213: 6629531594386514882
+    second: atlas_16x_480
+  - first:
+      213: -4777221684803579006
+    second: atlas_16x_481
+  - first:
+      213: 2824040339368132407
+    second: atlas_16x_482
+  - first:
+      213: 5952850817005807195
+    second: atlas_16x_483
+  - first:
+      213: -1661263184278266778
+    second: atlas_16x_484
+  - first:
+      213: 873487722754978709
+    second: atlas_16x_485
+  - first:
+      213: -6488941717338192414
+    second: atlas_16x_486
+  - first:
+      213: 7722582142716764764
+    second: atlas_16x_487
+  - first:
+      213: -9219463877327293782
+    second: atlas_16x_488
+  - first:
+      213: -4837250797266304526
+    second: atlas_16x_489
+  - first:
+      213: -9124031540583924943
+    second: atlas_16x_490
+  - first:
+      213: 5738188460614684750
+    second: atlas_16x_491
+  - first:
+      213: 2406392101441019991
+    second: atlas_16x_492
+  - first:
+      213: -6248017573505421073
+    second: atlas_16x_493
+  - first:
+      213: 2205872586800799070
+    second: atlas_16x_494
+  - first:
+      213: -6368023427609306952
+    second: atlas_16x_495
+  - first:
+      213: -3331434658142497652
+    second: atlas_16x_496
+  - first:
+      213: -7660899434686515302
+    second: atlas_16x_497
+  - first:
+      213: -1087879048445469442
+    second: atlas_16x_498
+  - first:
+      213: 7734217639276667893
+    second: atlas_16x_499
+  - first:
+      213: 3983100126278840699
+    second: atlas_16x_500
+  - first:
+      213: -3682383050002388957
+    second: atlas_16x_501
+  - first:
+      213: 1337578139971443081
+    second: atlas_16x_502
+  - first:
+      213: -1059477798958167455
+    second: atlas_16x_503
+  - first:
+      213: 5897624394417429898
+    second: atlas_16x_504
+  - first:
+      213: 3051306265573259706
+    second: atlas_16x_505
+  - first:
+      213: 1745613099508237643
+    second: atlas_16x_506
+  - first:
+      213: 6661788367832615162
+    second: atlas_16x_507
+  - first:
+      213: -287326673020643937
+    second: atlas_16x_508
+  - first:
+      213: 4899187156321034250
+    second: atlas_16x_509
+  - first:
+      213: 6515606469565117327
+    second: atlas_16x_510
+  - first:
+      213: 4517520358586837291
+    second: atlas_16x_511
+  - first:
+      213: 4916793614716156906
+    second: atlas_16x_512
+  - first:
+      213: -1905935008855942035
+    second: atlas_16x_513
+  - first:
+      213: 4408184067502557683
+    second: atlas_16x_514
+  - first:
+      213: 3529871162126298253
+    second: atlas_16x_515
+  - first:
+      213: 2533817022512335296
+    second: atlas_16x_516
+  - first:
+      213: -8469713007644350744
+    second: atlas_16x_517
+  - first:
+      213: -732444867736920740
+    second: atlas_16x_518
+  - first:
+      213: 6703793438597917518
+    second: atlas_16x_519
+  - first:
+      213: 3096639710375171708
+    second: atlas_16x_520
+  - first:
+      213: -6427924803848266133
+    second: atlas_16x_521
+  - first:
+      213: 9114872354904432431
+    second: atlas_16x_522
+  - first:
+      213: -8059217230134809939
+    second: atlas_16x_523
+  - first:
+      213: -6956036952579663522
+    second: atlas_16x_524
+  - first:
+      213: -5403110151129447236
+    second: atlas_16x_525
+  - first:
+      213: 3532450193801808385
+    second: atlas_16x_526
+  - first:
+      213: -8175602581196788360
+    second: atlas_16x_527
+  - first:
+      213: 6005605182615788566
+    second: atlas_16x_528
+  - first:
+      213: -8674237213198367844
+    second: atlas_16x_529
+  - first:
+      213: 3062129222076400916
+    second: atlas_16x_530
+  - first:
+      213: 3263448637423649909
+    second: atlas_16x_531
+  - first:
+      213: -1020992197641916333
+    second: atlas_16x_532
+  - first:
+      213: -6573377341444573613
+    second: atlas_16x_533
+  - first:
+      213: -3495370939398899033
+    second: atlas_16x_534
+  - first:
+      213: -6650915874656400657
+    second: atlas_16x_535
+  - first:
+      213: 2675804058473378395
+    second: atlas_16x_536
+  - first:
+      213: 5842864083847350712
+    second: atlas_16x_537
+  - first:
+      213: 2818508605215318536
+    second: atlas_16x_538
+  - first:
+      213: -5916782361871950899
+    second: atlas_16x_539
+  - first:
+      213: -2132809853967838818
+    second: atlas_16x_540
+  - first:
+      213: -2378359739996799505
+    second: atlas_16x_541
+  - first:
+      213: -3677300391068828046
+    second: atlas_16x_542
+  - first:
+      213: -3615685364029643944
+    second: atlas_16x_543
+  - first:
+      213: 1688521119856939064
+    second: atlas_16x_544
+  - first:
+      213: 6589867172818270054
+    second: atlas_16x_545
+  - first:
+      213: 4688449281438873826
+    second: atlas_16x_546
+  - first:
+      213: -3770968351256865073
+    second: atlas_16x_547
+  - first:
+      213: -1167877290914123213
+    second: atlas_16x_548
+  - first:
+      213: -2328043172758318309
+    second: atlas_16x_549
+  - first:
+      213: -5217788323030436757
+    second: atlas_16x_550
+  - first:
+      213: -6853317618806374363
+    second: atlas_16x_551
+  - first:
+      213: -6634282042783053742
+    second: atlas_16x_552
+  - first:
+      213: -4160366765873936963
+    second: atlas_16x_553
+  - first:
+      213: 4271766905732480044
+    second: atlas_16x_554
+  - first:
+      213: -537495198616871459
+    second: atlas_16x_555
+  - first:
+      213: -8713819568574484652
+    second: atlas_16x_556
+  - first:
+      213: -2457836486548080475
+    second: atlas_16x_557
+  - first:
+      213: 4492503821422915105
+    second: atlas_16x_558
+  - first:
+      213: 488186231308690154
+    second: atlas_16x_559
+  - first:
+      213: 7898036383478795079
+    second: atlas_16x_560
+  - first:
+      213: -8306642813603826045
+    second: atlas_16x_561
+  - first:
+      213: -3899040423675397750
+    second: atlas_16x_562
+  - first:
+      213: 2318482782180944985
+    second: atlas_16x_563
+  - first:
+      213: 8791688502250429380
+    second: atlas_16x_564
+  - first:
+      213: 2421938898084562495
+    second: atlas_16x_565
+  - first:
+      213: 8173603406318252332
+    second: atlas_16x_566
+  - first:
+      213: 7375338626537213191
+    second: atlas_16x_567
+  - first:
+      213: 1144367064939926370
+    second: atlas_16x_568
+  - first:
+      213: 7001785619403789953
+    second: atlas_16x_569
+  - first:
+      213: -4276200284184375030
+    second: atlas_16x_570
+  - first:
+      213: -8365447808379325421
+    second: atlas_16x_571
+  - first:
+      213: 4912989243953652725
+    second: atlas_16x_572
+  - first:
+      213: -7700145764405831747
+    second: atlas_16x_573
+  - first:
+      213: -8205508394986594926
+    second: atlas_16x_574
+  - first:
+      213: -183785610137073733
+    second: atlas_16x_575
+  - first:
+      213: 4918119916549470649
+    second: atlas_16x_576
+  - first:
+      213: 1854620411904587819
+    second: atlas_16x_577
+  - first:
+      213: 7361227109836697481
+    second: atlas_16x_578
+  - first:
+      213: -5687530380239780995
+    second: atlas_16x_579
+  - first:
+      213: 4317361336195558654
+    second: atlas_16x_580
+  - first:
+      213: -3838577382414565068
+    second: atlas_16x_581
+  - first:
+      213: 6064420722522276450
+    second: atlas_16x_582
+  - first:
+      213: 9098534896178151512
+    second: atlas_16x_583
+  - first:
+      213: 1963393419355197942
+    second: atlas_16x_584
+  - first:
+      213: 1561000803542051871
+    second: atlas_16x_585
+  - first:
+      213: 9197660731424333669
+    second: atlas_16x_586
+  - first:
+      213: 2862283207542861804
+    second: atlas_16x_587
+  - first:
+      213: 627913686935534400
+    second: atlas_16x_588
+  - first:
+      213: 955257010727179702
+    second: atlas_16x_589
+  - first:
+      213: -1522792457567034949
+    second: atlas_16x_590
+  - first:
+      213: -7423051111789115382
+    second: atlas_16x_591
+  - first:
+      213: -611950006807835297
+    second: atlas_16x_592
+  - first:
+      213: 5150683413336117431
+    second: atlas_16x_593
+  - first:
+      213: 3536041281702290168
+    second: atlas_16x_594
+  - first:
+      213: -4296256027734507684
+    second: atlas_16x_595
+  - first:
+      213: 4218959783762360902
+    second: atlas_16x_596
+  - first:
+      213: 2248105622784164269
+    second: atlas_16x_597
+  - first:
+      213: 1015586123897257867
+    second: atlas_16x_598
+  - first:
+      213: 7932337875493388217
+    second: atlas_16x_599
+  - first:
+      213: 8282212807812968757
+    second: atlas_16x_600
+  - first:
+      213: -8474838744749048883
+    second: atlas_16x_601
+  - first:
+      213: 58214439772123553
+    second: atlas_16x_602
+  - first:
+      213: -4892541619541079642
+    second: atlas_16x_603
+  - first:
+      213: -905906050335839644
+    second: atlas_16x_604
+  - first:
+      213: 52660777944160948
+    second: atlas_16x_605
+  - first:
+      213: 8557612361577174068
+    second: atlas_16x_606
+  - first:
+      213: 8369001680053748671
+    second: atlas_16x_607
+  - first:
+      213: 4791917715490091214
+    second: atlas_16x_608
+  - first:
+      213: 3946021320696340858
+    second: atlas_16x_609
+  - first:
+      213: 2544934650135912089
+    second: atlas_16x_610
+  - first:
+      213: 4726793752859503143
+    second: atlas_16x_611
+  - first:
+      213: 8011035865322692632
+    second: atlas_16x_612
+  - first:
+      213: 1468389934172225610
+    second: atlas_16x_613
+  - first:
+      213: 705825583731397053
+    second: atlas_16x_614
+  - first:
+      213: 517336096469450168
+    second: atlas_16x_615
+  - first:
+      213: 1073882246501331209
+    second: atlas_16x_616
+  - first:
+      213: -3185367340866816126
+    second: atlas_16x_617
+  - first:
+      213: 3768661828927611903
+    second: atlas_16x_618
+  - first:
+      213: 4459081916164445962
+    second: atlas_16x_619
+  - first:
+      213: -8378230758981261103
+    second: atlas_16x_620
+  - first:
+      213: -124050896041454376
+    second: atlas_16x_621
+  - first:
+      213: 2365651441229078710
+    second: atlas_16x_622
+  - first:
+      213: -15522669060307837
+    second: atlas_16x_623
+  - first:
+      213: 6040704400006616525
+    second: atlas_16x_624
+  - first:
+      213: 8627665587919737643
+    second: atlas_16x_625
+  - first:
+      213: 6312136463235181000
+    second: atlas_16x_626
+  - first:
+      213: 4220418779039005633
+    second: atlas_16x_627
+  - first:
+      213: -3366994345721402969
+    second: atlas_16x_628
+  - first:
+      213: 4358594454790198677
+    second: atlas_16x_629
+  - first:
+      213: 5023199424348311769
+    second: atlas_16x_630
+  - first:
+      213: -8988842896857380681
+    second: atlas_16x_631
+  - first:
+      213: -1252593923318156056
+    second: atlas_16x_632
+  - first:
+      213: 6747012375090597277
+    second: atlas_16x_633
+  - first:
+      213: 4098939931497688909
+    second: atlas_16x_634
+  - first:
+      213: 6554584790328862441
+    second: atlas_16x_635
+  - first:
+      213: -4537561724958472371
+    second: atlas_16x_636
+  - first:
+      213: 5481206119072353625
+    second: atlas_16x_637
+  - first:
+      213: 1328142920880944377
+    second: atlas_16x_638
+  - first:
+      213: -2277161895308144488
+    second: atlas_16x_639
+  - first:
+      213: 527945115057255273
+    second: atlas_16x_640
+  - first:
+      213: -9004472232421100477
+    second: atlas_16x_641
+  - first:
+      213: 3489067323484955900
+    second: atlas_16x_642
+  - first:
+      213: -5653380607799461951
+    second: atlas_16x_643
+  - first:
+      213: -3321546546338946939
+    second: atlas_16x_644
+  - first:
+      213: -337991364214005526
+    second: atlas_16x_645
+  - first:
+      213: -9153941131395167362
+    second: atlas_16x_646
+  - first:
+      213: 2847879924930163644
+    second: atlas_16x_647
+  - first:
+      213: -8549896644739321317
+    second: atlas_16x_648
+  - first:
+      213: 4698170223559671703
+    second: atlas_16x_649
+  - first:
+      213: -7079271945869890243
+    second: atlas_16x_650
+  - first:
+      213: 3698617407840720738
+    second: atlas_16x_651
+  - first:
+      213: 5845339303896951407
+    second: atlas_16x_652
+  - first:
+      213: -8728429778605437444
+    second: atlas_16x_653
+  - first:
+      213: -2962091146188568941
+    second: atlas_16x_654
+  - first:
+      213: -9043185962082644365
+    second: atlas_16x_655
+  - first:
+      213: -6917091184319098531
+    second: atlas_16x_656
+  - first:
+      213: 3095734035837305456
+    second: atlas_16x_657
+  - first:
+      213: 1325646227923219152
+    second: atlas_16x_658
+  - first:
+      213: -4700526770147410548
+    second: atlas_16x_659
+  - first:
+      213: 3968284269802435371
+    second: atlas_16x_660
+  - first:
+      213: 1435122592972014399
+    second: atlas_16x_661
+  - first:
+      213: -1478800559965335068
+    second: atlas_16x_662
+  - first:
+      213: -5483440097443947384
+    second: atlas_16x_663
+  - first:
+      213: -104141896880510082
+    second: atlas_16x_664
+  - first:
+      213: 7965157857133117198
+    second: atlas_16x_665
+  - first:
+      213: -4097897644982859080
+    second: atlas_16x_666
+  - first:
+      213: 8212605652140121728
+    second: atlas_16x_667
+  - first:
+      213: 6310913639462461565
+    second: atlas_16x_668
+  - first:
+      213: -6873101282469565511
+    second: atlas_16x_669
+  - first:
+      213: -1575425127964651164
+    second: atlas_16x_670
+  - first:
+      213: -4136070305645107476
+    second: atlas_16x_671
+  - first:
+      213: -3383071821664854342
+    second: atlas_16x_672
+  - first:
+      213: -2924595949876816177
+    second: atlas_16x_673
+  - first:
+      213: 5457495943696683301
+    second: atlas_16x_674
+  - first:
+      213: 9136717433338494015
+    second: atlas_16x_675
+  - first:
+      213: 800902808579155393
+    second: atlas_16x_676
+  - first:
+      213: 6878275090134672894
+    second: atlas_16x_677
+  - first:
+      213: 8302158317125477707
+    second: atlas_16x_678
+  - first:
+      213: 9079201401727110802
+    second: atlas_16x_679
+  - first:
+      213: 2753924640957305631
+    second: atlas_16x_680
+  - first:
+      213: -1318859157573417831
+    second: atlas_16x_681
+  - first:
+      213: -8904262527494149479
+    second: atlas_16x_682
+  - first:
+      213: 4679181483979388462
+    second: atlas_16x_683
+  - first:
+      213: -1744499585199354300
+    second: atlas_16x_684
+  - first:
+      213: -560880682494568162
+    second: atlas_16x_685
+  - first:
+      213: 2179443353202524617
+    second: atlas_16x_686
+  - first:
+      213: -4403042537356686847
+    second: atlas_16x_687
+  - first:
+      213: 1252790597847051119
+    second: atlas_16x_688
+  - first:
+      213: -2729483620315785063
+    second: atlas_16x_689
+  - first:
+      213: -7675032388368447924
+    second: atlas_16x_690
+  - first:
+      213: 530285628580563092
+    second: atlas_16x_691
+  - first:
+      213: -799371460298898058
+    second: atlas_16x_692
+  - first:
+      213: 119286113454649539
+    second: atlas_16x_693
+  - first:
+      213: 6914234187486462009
+    second: atlas_16x_694
+  - first:
+      213: 2008701383777024803
+    second: atlas_16x_695
+  - first:
+      213: 7140899195366170377
+    second: atlas_16x_696
+  - first:
+      213: -1093149035679395929
+    second: atlas_16x_697
+  - first:
+      213: -8502103164628035484
+    second: atlas_16x_698
+  - first:
+      213: 7683953764107439872
+    second: atlas_16x_699
+  - first:
+      213: -9203128501639458029
+    second: atlas_16x_700
+  - first:
+      213: 3135533822775325876
+    second: atlas_16x_701
+  - first:
+      213: -2203413606984190613
+    second: atlas_16x_702
+  - first:
+      213: -3127593967274384509
+    second: atlas_16x_703
+  - first:
+      213: -7768745092586228418
+    second: atlas_16x_704
+  - first:
+      213: 6961084172283911529
+    second: atlas_16x_705
+  - first:
+      213: -7693699101800960851
+    second: atlas_16x_706
+  - first:
+      213: -1409366849671986712
+    second: atlas_16x_707
+  - first:
+      213: 8790757646879976015
+    second: atlas_16x_708
+  - first:
+      213: -137919319150541377
+    second: atlas_16x_709
+  - first:
+      213: -896519666679129518
+    second: atlas_16x_710
+  - first:
+      213: 7947894258096998842
+    second: atlas_16x_711
+  - first:
+      213: 9150293428684227573
+    second: atlas_16x_712
+  - first:
+      213: -6117103652905910095
+    second: atlas_16x_713
+  - first:
+      213: 6320259095181632173
+    second: atlas_16x_714
+  - first:
+      213: -7609648614315876681
+    second: atlas_16x_715
+  - first:
+      213: 4394047323232959084
+    second: atlas_16x_716
+  - first:
+      213: 7348432143262700694
+    second: atlas_16x_717
+  - first:
+      213: -7912847856769940855
+    second: atlas_16x_718
+  - first:
+      213: 509846759754462206
+    second: atlas_16x_719
+  - first:
+      213: 2742042985594814756
+    second: atlas_16x_720
+  - first:
+      213: 8738676322796906164
+    second: atlas_16x_721
+  - first:
+      213: -3808681959862252400
+    second: atlas_16x_722
+  - first:
+      213: 1195644695837908730
+    second: atlas_16x_723
+  - first:
+      213: 5746084204612416304
+    second: atlas_16x_724
+  - first:
+      213: 6543817778023163997
+    second: atlas_16x_725
+  - first:
+      213: -8053788504143285739
+    second: atlas_16x_726
+  - first:
+      213: -1098133668707521204
+    second: atlas_16x_727
+  - first:
+      213: -7912399300596443478
+    second: atlas_16x_728
+  - first:
+      213: 2844327064592264543
+    second: atlas_16x_729
+  - first:
+      213: 6961340057429115400
+    second: atlas_16x_730
+  - first:
+      213: 4155049067322600308
+    second: atlas_16x_731
+  - first:
+      213: -1429986261401246718
+    second: atlas_16x_732
+  - first:
+      213: 3685980705796216832
+    second: atlas_16x_733
+  - first:
+      213: -7388411041293800549
+    second: atlas_16x_734
+  - first:
+      213: 3876580448658417591
+    second: atlas_16x_735
+  - first:
+      213: 6520265889277671444
+    second: atlas_16x_736
+  - first:
+      213: 8455371213478371949
+    second: atlas_16x_737
+  - first:
+      213: 6432655964528894692
+    second: atlas_16x_738
+  - first:
+      213: 9220293691758370104
+    second: atlas_16x_739
+  - first:
+      213: 2080192277689365559
+    second: atlas_16x_740
+  - first:
+      213: 4453802553722648994
+    second: atlas_16x_741
+  - first:
+      213: 2155685624953048038
+    second: atlas_16x_742
+  - first:
+      213: 8133060678707588713
+    second: atlas_16x_743
+  - first:
+      213: 9093853105638243904
+    second: atlas_16x_744
+  - first:
+      213: -6799926641899062387
+    second: atlas_16x_745
+  - first:
+      213: -7452691633685377732
+    second: atlas_16x_746
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: atlas_16x_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bb8ac8642531270800000000000000
+      internalID: 8220004207842343721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_1
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 233
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d24ee7b332be3480800000000000000
+      internalID: -8917494276948081965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 233
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171a8a9fd857e37c0800000000000000
+      internalID: -4089702158966414991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 216
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6becaabfc22f213a0800000000000000
+      internalID: -6696023420931748170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_4
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 241
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90db67def9e9f9a0800000000000000
+      internalID: -6198666131353644898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 240
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c989a686fbca73800800000000000000
+      internalID: 592131814113056924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 224
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955bc8c16382bf5d0800000000000000
+      internalID: -3027782111604198055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_7
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 241
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8732848db1b5f3a70800000000000000
+      internalID: 8808859571310830456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 208
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a4c87993d20cbb0800000000000000
+      internalID: -4917881067709642230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_9
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 216
+        width: 76
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6d000df35a38ea0800000000000000
+      internalID: -5871667795669756244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_10
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 0
+        width: 320
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b15d862c97f8eb0800000000000000
+      internalID: -4715416408944206972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_11
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 193
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761d747ef0ea7cfa0800000000000000
+      internalID: -5780460213378756249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_12
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 225
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3495f61451a489d10800000000000000
+      internalID: 2132535878712514883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_13
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 225
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f5e0affdf784370800000000000000
+      internalID: 8307030112634560281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_14
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 198
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b341529cfd3d310800000000000000
+      internalID: 1428731561810082683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0349e2d4a31ff4610800000000000000
+      internalID: 1607768824699851824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_16
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 209
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a89c3bbce1812770800000000000000
+      internalID: 8584285218498451622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_17
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 204
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a71107278e43bdc0800000000000000
+      internalID: -3624466932721182813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_18
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 202
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5218fbad26e1e44d0800000000000000
+      internalID: -3148545679559786203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_19
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 209
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b72482d26b40b50800000000000000
+      internalID: 6558567262423513941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdebd655c671c2b0800000000000000
+      internalID: -5566037074515333637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_21
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 193
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c70f88677595a60800000000000000
+      internalID: 7663252407562828933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_22
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 168
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac0a77b3907a6360800000000000000
+      internalID: 7163661937026927790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_23
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 193
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737a96df2807893e0800000000000000
+      internalID: -2046762322740271305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_24
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 175
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3322b97125dcfb560800000000000000
+      internalID: 7331804470849511987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_25
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 167
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca193586c688ffde0800000000000000
+      internalID: -1297168168471260756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_26
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 151
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607c3d14ceb2cfb80800000000000000
+      internalID: -8359758514589808890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_27
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 177
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba26fbc457cdbe40800000000000000
+      internalID: 5673910272569780926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_28
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 180
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62d07b7c9b2881e0800000000000000
+      internalID: -2195456867257232785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_29
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 161
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027b874a694343a00800000000000000
+      internalID: 735270460777346848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_30
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 161
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29955543a93bc6200800000000000000
+      internalID: 174711960444950930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_31
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 161
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8795c61a85684ccc0800000000000000
+      internalID: -3691678079313487496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_32
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 163
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a22c6bf353ca0b0800000000000000
+      internalID: -5716135279274612142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_33
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 112
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd61e0d0552711eb0800000000000000
+      internalID: -4750890422282348836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_34
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 120
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8e7d4358bf4e290800000000000000
+      internalID: -7861882499946256172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_35
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 145
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f667afc94fcbdea60800000000000000
+      internalID: 7705022296292488815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_36
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 145
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30acaab260e681870800000000000000
+      internalID: 8653787656773880323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_37
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 144
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a13c0096543f9a0800000000000000
+      internalID: -6200535944672372189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_38
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 127
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d827e283a04ac1690800000000000000
+      internalID: -7630043304873266547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_39
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 119
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc96c848f67c88f0800000000000000
+      internalID: -536923446818988857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_40
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 103
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9439403952a0670800000000000000
+      internalID: 8505652159609784745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_41
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 112
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f913969184226ca70800000000000000
+      internalID: 8846796211075232159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_42
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 112
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304fa926b4e2f0390800000000000000
+      internalID: -7850004724171738109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_43
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 128
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d421f613179d180800000000000000
+      internalID: -9090109915739828865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_44
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 112
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109be30b19e4a1f10800000000000000
+      internalID: 2241190152204368129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_45
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 96
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f4a43f9b53205d0800000000000000
+      internalID: -3097854520910524630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 80
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7dc54b6f1f32b50800000000000000
+      internalID: 6567358723526547376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_47
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 96
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2c40baad4890bc0800000000000000
+      internalID: -3816373134512831820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_48
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 80
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0f0e410814b8570800000000000000
+      internalID: 8469935542562255034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_49
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 80
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bc30ab24f745ec0800000000000000
+      internalID: -3579095879287321708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_50
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 98
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fbffbbd706a5d40800000000000000
+      internalID: 5573873581965688717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_51
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 90
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eac715b3c84c4b30800000000000000
+      internalID: 4272870151861816036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_52
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 88
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3c8cf42023dee30800000000000000
+      internalID: 4534335385341838297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_53
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 79
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a5b7085822ec820800000000000000
+      internalID: 2940325563501075074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_54
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 71
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b7e33ca424a8950800000000000000
+      internalID: 6452042305032321859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_55
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 78
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc413f4305088cc20800000000000000
+      internalID: 3226970214985045197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_56
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 80
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b80187f3be185ab0800000000000000
+      internalID: -5019228026404009808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_57
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 82
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d027410c47cf7aa0800000000000000
+      internalID: -6160986635966668584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_58
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 48
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37086b863ba829d10800000000000000
+      internalID: 2130918076860235891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_59
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 64
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd1f4c7502a4c650800000000000000
+      internalID: 6252300327141186995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_60
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 32
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd29eff64e164a790800000000000000
+      internalID: -7519777844042493219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_61
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 48
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b737837254fded5a0800000000000000
+      internalID: -6494508124517928069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_62
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 50
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47f15ceec3be7000800000000000000
+      internalID: 35663548374972236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_63
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 50
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3082543a088eaa0800000000000000
+      internalID: -6131509453936655373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_64
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7090672daf9d57580800000000000000
+      internalID: -8829911823093987065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_65
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 50
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8d1cc59b80c7d10800000000000000
+      internalID: 2124582716430211287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_66
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5109fa97a6ec15a0800000000000000
+      internalID: -6549106150569606821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_67
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 34
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3546b4001b39bd10800000000000000
+      internalID: 2141808037775951167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_68
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 16
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2a63c162a64d560800000000000000
+      internalID: 7337606404808024794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_69
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 16
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35684546fa41d51b0800000000000000
+      internalID: -5666350012627122605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_70
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 16
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ba156954e640190800000000000000
+      internalID: -7997145793149424767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_71
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1
+        width: 61
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fc35c46a4034700800000000000000
+      internalID: 523267093996752736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_72
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4803fa2316cb220800000000000000
+      internalID: 2502982363226604799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_73
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2584cdb5e09fd4d60800000000000000
+      internalID: 7876225163406886994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_74
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372a1c5ca95dd4a50800000000000000
+      internalID: 6507091897339716211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_75
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b460d8930a2ee9e00800000000000000
+      internalID: 1053528540639462987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_76
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4539dd53544cdea60800000000000000
+      internalID: 7705030339036287828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_16x_77
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5294f4d09951346a0800000000000000
+      internalID: -6466300892876420827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      atlas_16x_10: -4715416408944206972
+      atlas_16x_25: -1297168168471260756
+      atlas_16x_37: -6200535944672372189
+      atlas_16x_39: -536923446818988857
+      atlas_16x_7: 8808859571310830456
+      atlas_16x_41: 8846796211075232159
+      atlas_16x_47: -3816373134512831820
+      atlas_16x_52: 4534335385341838297
+      atlas_16x_2: -4089702158966414991
+      atlas_16x_8: -4917881067709642230
+      atlas_16x_19: 6558567262423513941
+      atlas_16x_33: -4750890422282348836
+      atlas_16x_29: 735270460777346848
+      atlas_16x_60: -7519777844042493219
+      atlas_16x_45: -3097854520910524630
+      atlas_16x_56: -5019228026404009808
+      atlas_16x_53: 2940325563501075074
+      atlas_16x_55: 3226970214985045197
+      atlas_16x_65: 2124582716430211287
+      atlas_16x_40: 8505652159609784745
+      atlas_16x_34: -7861882499946256172
+      atlas_16x_6: -3027782111604198055
+      atlas_16x_16: 8584285218498451622
+      atlas_16x_46: 6567358723526547376
+      atlas_16x_70: -7997145793149424767
+      atlas_16x_15: 1607768824699851824
+      atlas_16x_48: 8469935542562255034
+      atlas_16x_9: -5871667795669756244
+      atlas_16x_73: 7876225163406886994
+      atlas_16x_68: 7337606404808024794
+      atlas_16x_54: 6452042305032321859
+      atlas_16x_1: -8917494276948081965
+      atlas_16x_3: -6696023420931748170
+      atlas_16x_35: 7705022296292488815
+      atlas_16x_14: 1428731561810082683
+      atlas_16x_38: -7630043304873266547
+      atlas_16x_59: 6252300327141186995
+      atlas_16x_27: 5673910272569780926
+      atlas_16x_72: 2502982363226604799
+      atlas_16x_0: 8220004207842343721
+      atlas_16x_36: 8653787656773880323
+      atlas_16x_12: 2132535878712514883
+      atlas_16x_13: 8307030112634560281
+      atlas_16x_28: -2195456867257232785
+      atlas_16x_44: 2241190152204368129
+      atlas_16x_75: 1053528540639462987
+      atlas_16x_76: 7705030339036287828
+      atlas_16x_4: -6198666131353644898
+      atlas_16x_51: 4272870151861816036
+      atlas_16x_23: -2046762322740271305
+      atlas_16x_24: 7331804470849511987
+      atlas_16x_26: -8359758514589808890
+      atlas_16x_42: -7850004724171738109
+      atlas_16x_66: -6549106150569606821
+      atlas_16x_69: -5666350012627122605
+      atlas_16x_62: 35663548374972236
+      atlas_16x_11: -5780460213378756249
+      atlas_16x_49: -3579095879287321708
+      atlas_16x_77: -6466300892876420827
+      atlas_16x_31: -3691678079313487496
+      atlas_16x_22: 7163661937026927790
+      atlas_16x_50: 5573873581965688717
+      atlas_16x_57: -6160986635966668584
+      atlas_16x_61: -6494508124517928069
+      atlas_16x_18: -3148545679559786203
+      atlas_16x_21: 7663252407562828933
+      atlas_16x_5: 592131814113056924
+      atlas_16x_32: -5716135279274612142
+      atlas_16x_17: -3624466932721182813
+      atlas_16x_20: -5566037074515333637
+      atlas_16x_30: 174711960444950930
+      atlas_16x_43: -9090109915739828865
+      atlas_16x_74: 6507091897339716211
+      atlas_16x_71: 523267093996752736
+      atlas_16x_63: -6131509453936655373
+      atlas_16x_67: 2141808037775951167
+      atlas_16x_64: -8829911823093987065
+      atlas_16x_58: 2130918076860235891
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
