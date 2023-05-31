@@ -16,10 +16,10 @@ public class TopPanelController : MonoBehaviour
 
     private void Start()
     {
-        _woodStock = 200;
-        _stoneStock = 200;
-        _foodStock = 200;
-        _herbStock = 200;
+        _woodStock = 5000;
+        _stoneStock = 5000;
+        _foodStock = 5000;
+        _herbStock = 5000;
         UpdateTexts();
     }
 
