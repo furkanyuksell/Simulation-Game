@@ -73,6 +73,8 @@ public class MapGenerator : MonoBehaviour
     private Vector3Int _tilePos;
     private void DrawTileMap(float[,] tempMap, float[,] humidityMap)
     {
+        Debug.Log("Running DrawTileMap");
+        Grid.Instance.CreateGrid(mapHeight, mapWidth);
         ServiceProvider.GetDataManager.Initialize();
         for (int y = 0; y < mapHeight; y++)
         {
@@ -86,6 +88,7 @@ public class MapGenerator : MonoBehaviour
                 TileData tileData = regions[world[(int)currentTemp, (int)currentHumidity]].tileData;
                 tileMap.SetTile(_tilePos, tileData.tiles[0]);
                 tileData.tilePositions.Add(_tilePos);
+                Grid.Instance.FillGrid(new Node(tileData.isWalkable, _tilePos, x, y));
             }
         }
     }

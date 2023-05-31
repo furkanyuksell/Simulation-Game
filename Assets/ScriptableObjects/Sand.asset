@@ -18,6 +18,7 @@ MonoBehaviour:
   tiles:
   - {fileID: 11400000, guid: 8f74beda1ab07ba40ada55c02b491c75, type: 2}
   - {fileID: 11400000, guid: fe41b45d248271546a1283dfd4c95cd0, type: 2}
+  isWalkable: 1
   tilePositions:
   - {x: -250, y: -250, z: 0}
   - {x: -249, y: -250, z: 0}
@@ -60830,4 +60831,4 @@ MonoBehaviour:
   - rawMaterialName: GoldMine
     rawMaterial: {fileID: 1606503529384602958, guid: b88167a577c8aac4da090d868658b767, type: 3}
     maxSpawnCount: 30
-    activeCount: 0
+    activeCount: 15
