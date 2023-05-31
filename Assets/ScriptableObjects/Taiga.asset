@@ -17,6 +17,7 @@ MonoBehaviour:
   chillRate: 1.25
   tiles:
   - {fileID: 11400000, guid: 313d49eb059010c40bb70cdcb9494051, type: 2}
+  isWalkable: 1
   tilePositions:
   - {x: -30, y: -243, z: 0}
   - {x: -30, y: -242, z: 0}
@@ -34369,4 +34370,4 @@ MonoBehaviour:
   - rawMaterialName: Tree
     rawMaterial: {fileID: 8434640379915208143, guid: 5f2556b0cbb07b6409572e8e5946f677, type: 3}
     maxSpawnCount: 150
-    activeCount: 0
+    activeCount: 75

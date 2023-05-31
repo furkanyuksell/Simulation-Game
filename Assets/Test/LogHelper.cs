@@ -15,9 +15,15 @@ public class LogHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.D))
         {
             OnDebug?.Invoke();
+        }*/
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log(MapGenerator.Instance.tileMap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
         }
     }
 }

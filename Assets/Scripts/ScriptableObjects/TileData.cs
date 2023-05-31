@@ -10,6 +10,7 @@ public class TileData : ScriptableObject
     public float thirstRate;
     public float chillRate;
     public TileBase[] tiles;
+    public bool isWalkable;
     [HideInInspector] public List<Vector3Int> tilePositions;
     public List<AnimalType> animalList = new List<AnimalType>();
     public List<RawMaterialType> rawMaterialList = new List<RawMaterialType>();
