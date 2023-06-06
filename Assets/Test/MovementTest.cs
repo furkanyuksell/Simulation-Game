@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class MovementTest : MonoBehaviour
+public class MovementTest : NetworkBehaviour
 {
     Vector3[] path;
 
@@ -16,7 +17,11 @@ public class MovementTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!IsOwner)
+        {
+            return;
+        }
+        if (Input.GetMouseButtonDown(1))
         {
             PathRequestManager.RequestPath(transform.position,MapGenerator.Instance.tileMap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)), OnPathFound);
         }

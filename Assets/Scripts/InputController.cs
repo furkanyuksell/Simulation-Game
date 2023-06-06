@@ -8,9 +8,9 @@ public class InputController : MonoBehaviour
 {
     public enum SelectableTypes
     {
-        ROCK, GROUND, FOOD, ANIMALS, TREES
+        MINER, GROUND, GATHERER, HUNTER, WOODSMAN
     }
-
+    
     [SerializeField] private Tilemap _tileMap;
     [SerializeField] private Camera _camera;
     [SerializeField] private DragSelectionController _dragSelectionController;
@@ -61,8 +61,9 @@ public class InputController : MonoBehaviour
                 if (_startTile != null && _lastTile != null)
                 {
                     _selectedGOList = _dragSelectionController.SelectionEnded(_tileMap.GetCellCenterWorld(_lastCellPos));
+                    
                     // Game Objects are here. We should work on them.
-
+                    
                     _startTile = null;
                     _lastTile = null;
                     if(_selectedGOList.Count > 0)

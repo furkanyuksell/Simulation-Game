@@ -60830,5 +60830,5 @@ MonoBehaviour:
   rawMaterialList:
   - rawMaterialName: GoldMine
     rawMaterial: {fileID: 1606503529384602958, guid: b88167a577c8aac4da090d868658b767, type: 3}
-    maxSpawnCount: 30
+    maxSpawnCount: 50
     activeCount: 15

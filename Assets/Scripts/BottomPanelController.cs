@@ -12,17 +12,17 @@ public class BottomPanelController : MonoBehaviour
 
     public void Dig()
     {
-        _inputController.currentSelection = InputController.SelectableTypes.ROCK;
+        _inputController.currentSelection = InputController.SelectableTypes.MINER;
         OnClick();
     }
     public void Chop()
     {
-        _inputController.currentSelection = InputController.SelectableTypes.TREES;
+        _inputController.currentSelection = InputController.SelectableTypes.WOODSMAN;
         OnClick();
     }
     public void Gather()
     {
-        _inputController.currentSelection = InputController.SelectableTypes.FOOD;
+        _inputController.currentSelection = InputController.SelectableTypes.GATHERER;
         OnClick();
     }
     public void Hoe()
@@ -32,7 +32,7 @@ public class BottomPanelController : MonoBehaviour
     }
     public void Hunt()
     {
-        _inputController.currentSelection = InputController.SelectableTypes.ANIMALS;
+        _inputController.currentSelection = InputController.SelectableTypes.HUNTER;
         OnClick();
     }
 }
