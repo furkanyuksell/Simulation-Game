@@ -34,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4366185084168235969}
+  - {fileID: 3907300649234593426}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,6 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resources: []
+  healthBarSlider: {fileID: 0}
+  _health: 100
 --- !u!114 &6813948888074542915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,17 +343,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9575d28743e4fec40b33c38d5336f279, type: 3}
---- !u!114 &732624923280593926 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8210746543905674989, guid: 9575d28743e4fec40b33c38d5336f279, type: 3}
-  m_PrefabInstance: {fileID: 8924058612553171691}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &3907300649234593426 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5611807549767070841, guid: 9575d28743e4fec40b33c38d5336f279, type: 3}
