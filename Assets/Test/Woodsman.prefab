@@ -147,6 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  hasTask: 0
+  taskList: []
+  selectableTypes: 
 --- !u!114 &3209181628900570001
 MonoBehaviour:
   m_ObjectHideFlags: 0
