@@ -20,10 +20,10 @@ public class LogHelper : MonoBehaviour
         {
             OnDebug?.Invoke();
         }*/
-        
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log(MapGenerator.Instance.tileMap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
-        }
+        }*/
     }
 }

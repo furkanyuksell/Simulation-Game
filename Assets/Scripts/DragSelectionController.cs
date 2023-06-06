@@ -60,9 +60,14 @@ public class DragSelectionController : MonoBehaviour
             {
                 selectable.SetSelectedVisible(true);
                 _selectedGOList.Add(selectable);
-                Debug.Log(gameObject);
             }
         }
+
+        if (collider2DArray.Length>=1)
+        {
+            TaskManager.Instance.InitTask();
+        }
+
         return _selectedGOList;
     }
 }

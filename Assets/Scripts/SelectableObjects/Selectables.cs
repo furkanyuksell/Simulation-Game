@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Selectables : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class Selectables : MonoBehaviour
     public void SetSelectedVisible(bool visible)
     {
         _selectedGO.SetActive(visible);
+        if (visible)
+        {
+            TaskManager.Instance.OpenNewTask(this);
+        }
     }
 
 }
