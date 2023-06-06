@@ -17,10 +17,12 @@ public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, ID
     [SerializeField] private int _health;
     public int Health { get; set; }
     
+    private Selectables _selectables;
+    
     private void Awake()
     {
         if (healthBarSlider == null) healthBarSlider = GetComponentInChildren<Slider>();
-        
+        _selectables = GetComponent<Selectables>();
         healthBarSlider.gameObject.SetActive(false);
         Health = _health;
         SetHealthBar(Health);
@@ -34,6 +36,7 @@ public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, ID
     public void ReturnToPool()
     {
         _rawMaterialPool.Release(this);
+        TopPanelController.Instance.SetStock(_selectables.woodCount, _selectables.stoneCount, _selectables.foodCount, _selectables.herbCount);
     }
 
     public void TakeDamage(int damage)

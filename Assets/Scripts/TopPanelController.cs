@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using TMPro;
 
 public class TopPanelController : MonoBehaviour
 {
+    public static TopPanelController Instance { get; set; }
     [SerializeField] private TMP_Text woodStockTXT;
     [SerializeField] private TMP_Text stoneStockTXT;
     [SerializeField] private TMP_Text foodStockTXT;
@@ -13,6 +15,11 @@ public class TopPanelController : MonoBehaviour
     private int _stoneStock;
     private int _foodStock;
     private int _herbStock;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
