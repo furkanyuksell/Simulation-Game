@@ -2353,8 +2353,8 @@ TextureImporter:
         y: 0
         width: 16
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48573112, y: 0.7944898}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2416,8 +2416,8 @@ TextureImporter:
         y: 216
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2500,8 +2500,8 @@ TextureImporter:
         y: 241
         width: 14
         height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48256573, y: 0.8471314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2815,8 +2815,8 @@ TextureImporter:
         y: 168
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2878,8 +2878,8 @@ TextureImporter:
         y: 167
         width: 31
         height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48990458, y: 0.2938865}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3067,8 +3067,8 @@ TextureImporter:
         y: 120
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3697,8 +3697,8 @@ TextureImporter:
         y: 32
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5508127, y: 0.67322516}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3718,8 +3718,8 @@ TextureImporter:
         y: 50
         width: 27
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49673575, y: 0.83052254}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3760,8 +3760,8 @@ TextureImporter:
         y: 34
         width: 27
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50000054, y: 0.8235445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3823,8 +3823,8 @@ TextureImporter:
         y: 16
         width: 28
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48923165, y: 0.70748657}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3996,8 +3996,9 @@ TextureImporter:
     nameFileIdTable:
       atlas_16x_10: -4715416408944206972
       atlas_16x_25: -1297168168471260756
-      atlas_16x_37: -6200535944672372189
+      atlas_16x_63: -6131509453936655373
       atlas_16x_39: -536923446818988857
+      atlas_16x_64: -8829911823093987065
       atlas_16x_7: 8808859571310830456
       atlas_16x_41: 8846796211075232159
       atlas_16x_47: -3816373134512831820
@@ -4013,7 +4014,6 @@ TextureImporter:
       atlas_16x_53: 2940325563501075074
       atlas_16x_55: 3226970214985045197
       atlas_16x_65: 2124582716430211287
-      atlas_16x_40: 8505652159609784745
       atlas_16x_34: -7861882499946256172
       atlas_16x_6: -3027782111604198055
       atlas_16x_16: 8584285218498451622
@@ -4066,11 +4066,11 @@ TextureImporter:
       atlas_16x_20: -5566037074515333637
       atlas_16x_30: 174711960444950930
       atlas_16x_43: -9090109915739828865
-      atlas_16x_74: 6507091897339716211
-      atlas_16x_71: 523267093996752736
-      atlas_16x_63: -6131509453936655373
       atlas_16x_67: 2141808037775951167
-      atlas_16x_64: -8829911823093987065
+      atlas_16x_74: 6507091897339716211
+      atlas_16x_37: -6200535944672372189
+      atlas_16x_40: 8505652159609784745
+      atlas_16x_71: 523267093996752736
       atlas_16x_58: 2130918076860235891
   spritePackingTag: 
   pSDRemoveMatte: 0
