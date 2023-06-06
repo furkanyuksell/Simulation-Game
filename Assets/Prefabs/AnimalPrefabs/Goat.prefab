@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8634645987250927349}
   - component: {fileID: 1602407713186143123}
   - component: {fileID: -6242271828514762387}
+  - component: {fileID: 7735225384925593287}
   m_Layer: 0
   m_Name: Goat
   m_TagString: Untagged
@@ -160,6 +161,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2473874, y: 0.9598968}
   m_EdgeRadius: 0
+--- !u!114 &7735225384925593287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530626212059724567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04462e9ebe1b1db42acdac547ebf0f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  randomX: 7.5
+  randomY: 7.5
+  minWaitTime: 3
+  maxWaitTime: 7.5
 --- !u!1001 &5425582084702457176
 PrefabInstance:
   m_ObjectHideFlags: 0

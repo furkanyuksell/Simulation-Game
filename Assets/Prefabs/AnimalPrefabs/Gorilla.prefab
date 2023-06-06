@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -5544754363632582060}
   - component: {fileID: 6694334505674832951}
   - component: {fileID: -8018796129691381984}
+  - component: {fileID: 5778480687449437872}
   m_Layer: 0
   m_Name: Gorilla
   m_TagString: Untagged
@@ -160,6 +161,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.571429, y: 1.2231803}
   m_EdgeRadius: 0
+--- !u!114 &5778480687449437872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8657146864925610355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04462e9ebe1b1db42acdac547ebf0f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  randomX: 5
+  randomY: 5
+  minWaitTime: 5
+  maxWaitTime: 10
 --- !u!1001 &7773561964050191229
 PrefabInstance:
   m_ObjectHideFlags: 0
