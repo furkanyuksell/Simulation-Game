@@ -55,7 +55,7 @@ public class CraftElement : MonoBehaviour
             go.transform.position = _camera.ScreenToWorldPoint(Input.mousePosition) + _offset;
             if (Input.GetMouseButtonDown(0))
             {
-                if (!Physics2D.OverlapBox((Vector2)_camera.ScreenToWorldPoint(Input.mousePosition), new Vector2(3, 3), 0))
+                if (!Physics2D.OverlapBox((Vector2)_camera.ScreenToWorldPoint(Input.mousePosition), _col.size, 0))
                 {
                     _col.enabled = true;
                     _isPlacing = false;
