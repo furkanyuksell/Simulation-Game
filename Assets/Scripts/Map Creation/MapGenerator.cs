@@ -88,7 +88,7 @@ public class MapGenerator : MonoBehaviour
                 TileData tileData = regions[world[(int)currentTemp, (int)currentHumidity]].tileData;
                 tileMap.SetTile(_tilePos, tileData.tiles[0]);
                 tileData.tilePositions.Add(_tilePos);
-                Grid.Instance.FillGrid(new Node(tileData.isWalkable, _tilePos, x, y));
+                Grid.Instance.FillGrid(new Node(tileData, _tilePos, x, y));
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Node : IHeapItem<Node>
 {
@@ -12,14 +13,21 @@ public class Node : IHeapItem<Node>
     public int H { get; set; }
     public int F => G + H;
     public bool IsWalkable { get; set; }
+    public float HungerRate { get; set; }
+    public float ThirstRate { get; set; }
+    public float ChillRate { get; set; }
     int _heapIndex;
 
-    public Node(bool isWalkable, Vector3Int position, int gridX, int gridY)
+    public Node(TileData tiledata, Vector3Int position, int gridX, int gridY)
     {
-        IsWalkable = isWalkable;
+        IsWalkable = tiledata.isWalkable;
+        HungerRate = tiledata.hungerRate;
+        ThirstRate = tiledata.thirstRate;
+        ChillRate = tiledata.chillRate;
         Position = position;
         GridX = gridX;
         GridY = gridY;
+
     }
     public int HeapIndex {
         get {
