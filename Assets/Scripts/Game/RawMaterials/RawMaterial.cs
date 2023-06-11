@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -38,10 +39,17 @@ public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, ID
         _rawMaterialPool.Release(this);
         TopPanelController.Instance.SetStock(_selectables.woodCount, _selectables.stoneCount, _selectables.foodCount, _selectables.herbCount);
     }
+    
+    [ClientRpc]
+    public void ReturnToPoolClientRpc()
+    {
+        _rawMaterialPool.Release(this);
+    }
 
     public void TakeDamage(int damage)
     {
         Health -= damage;
+        _health = Health;
         healthBarSlider.value = Health;
         if (Health <= 0)
         {

@@ -15,10 +15,12 @@ public class DataManager : MonoBehaviour, IProvidable
     public TileData Snow;
     public TileData Taiga;
     public TileData Water;
+    public EmptyParentObject EmptyParentObject;
+    
     private void Awake()
     {
         Initialize();
-        ServiceProvider.Register(this);    
+        ServiceProvider.Register(this);
     }
     
     public void Initialize()

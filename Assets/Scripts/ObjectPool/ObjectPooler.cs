@@ -14,10 +14,15 @@ public class ObjectPooler<T> where T : MonoBehaviour, IPoolable<T>
     public ObjectPooler(GameObject prefab, Transform regionParent)
     {
         this.prefab = prefab;
-        var parentObject = new GameObject(prefab.name + " Pool");
-        parentObject.transform.parent = regionParent;
+
+        var emptyParentObject = GameObject.Instantiate(ServiceProvider.GetDataManager.EmptyParentObject);
+        var parentObject = emptyParentObject.GetComponent<NetworkObject>();
+        parentObject.Spawn();
+        parentObject.TrySetParent(regionParent);
+        emptyParentObject.SetNewName(prefab.name + " Pool");
+
         parent = parentObject.transform;
-        Pool = new ObjectPool<T>(CreateObjectServerRpc, OnGetFromPool, OnReturnToPool);
+        Pool = new ObjectPool<T>(CreateObject, OnGetFromPool, OnReturnToPool);
     }
 
     private void OnReturnToPool(T obj)
@@ -30,10 +35,15 @@ public class ObjectPooler<T> where T : MonoBehaviour, IPoolable<T>
         obj.gameObject.SetActive(true);
     }
     
-    private T CreateObjectServerRpc()
+    private T CreateObject()
     {
         T t;
-        t = GameObject.Instantiate(prefab, parent).GetComponent<T>();
+        t = GameObject.Instantiate(prefab).GetComponent<T>();
+        var networkObject = t.gameObject.GetComponent<NetworkObject>();
+        networkObject.Spawn();
+        networkObject.TrySetParent(parent);
+        /*t.GetComponent<NetworkObject>().Spawn();
+        t.GetComponent<NetworkObject>().TrySetParent(parent);*/
         t.gameObject.SetActive(true);
         t.Initialize(Pool);
         return t;

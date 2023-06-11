@@ -1,12 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
 
 public abstract class Region : NetworkBehaviour
@@ -14,11 +7,13 @@ public abstract class Region : NetworkBehaviour
     [SerializeField] protected TileData tileData;
     private AnimalController AnimalController { get; set; }
     private RawMaterialController RawMaterialController { get; set; }
+    private bool _isInitialized;
 
     protected virtual void Init()
     {
         InitializeRegionAnimalsAtStart();
         InitializeRegionRawMaterialsAtStart();
+        _isInitialized = true;
     }
     private void InitializeRegionRawMaterialsAtStart()
     {
@@ -31,7 +26,7 @@ public abstract class Region : NetworkBehaviour
         RawMaterialController = new RawMaterialController(this, tileData, transform);
         SpawnRegionRawMaterialPopulation();
     }
-
+    
     private void SpawnRegionRawMaterialPopulation()
     {
         var index = 0;
@@ -40,18 +35,19 @@ public abstract class Region : NetworkBehaviour
             for (int i = 0; i < (rawMaterialType.maxSpawnCount/2); i++)
             {
                 _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)]; 
-                SetRawMaterialsOnClientRpc(index, _randTilePos);
+                //SetRawMaterialsOnClientRpc(index, _randTilePos);
+                RawMaterialController.SpawnRawMaterial(tileData.rawMaterialList[index], _randTilePos);
             }
 
             index++;
         }      
     }
-
+/*
     [ClientRpc]
     private void SetRawMaterialsOnClientRpc(int index, Vector3Int randTilePos)
     {
         RawMaterialController.SpawnRawMaterial(tileData.rawMaterialList[index], randTilePos);
-    }
+    }*/
 
     private void InitializeRegionAnimalsAtStart()
     {
@@ -60,7 +56,6 @@ public abstract class Region : NetworkBehaviour
             Debug.Log("No animals in region: " + tileData.name);
             return;
         }
-        
         AnimalController = new AnimalController(tileData, transform);
         SpawnRegionAnimalPopulation();
     }
@@ -74,7 +69,8 @@ public abstract class Region : NetworkBehaviour
             for (int i = 0; i < (animalType.maxSpawnCount/2); i++)
             {
                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)]; 
-               SetAnimalsOnClientRpc(index, _randTilePos);
+               //SetAnimalsOnClientRpc(index, _randTilePos);
+               AnimalController.SpawnAnimal(tileData.animalList[index], _randTilePos);
             }
 
             index++;
@@ -89,31 +85,27 @@ public abstract class Region : NetworkBehaviour
             _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
             if (AnimalController.CanAnimalSpawn(animalType))
             {
-                SetAnimalsOnClientRpc(i, AnimalController.RandTilePos);
+                //SetAnimalsOnClientRpc(i, AnimalController.RandTilePos);
+                AnimalController.SpawnAnimal(tileData.animalList[i], AnimalController.RandTilePos);
             }
             i++;
         }
     }
-    
+
+    /*
     [ClientRpc]
     private void SetAnimalsOnClientRpc(int animalIndex, Vector3 pos)
     {
         AnimalController.SpawnAnimal(tileData.animalList[animalIndex], pos);
-    }
+    }*/
     
-
-
-    private float _serverCooldown = 6f;
+    
     private void Update()
     {
-        if (!IsServer)
+        if (!_isInitialized)
             return;
-        if (!(_serverCooldown <= 0))
-        {
-            _serverCooldown -= Time.deltaTime;
-            return;
-        }
-        SpawnRegionAnimalWithTime();
+        
+        //SpawnRegionAnimalWithTime();
     }
     
     
@@ -127,12 +119,12 @@ public abstract class Region : NetworkBehaviour
     private void OnEnable()
     {
         LogHelper.OnDebug += DebugText;
-        MapGenerator.OnMapDone += Init;
+        NetworkServerManager.OnServerDataLoad += Init;
     }
 
     private void OnDisable()
     {
         LogHelper.OnDebug -= DebugText;
-        MapGenerator.OnMapDone -= Init;
+        NetworkServerManager.OnServerDataLoad -= Init;
     }
 }

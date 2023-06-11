@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -3703410074477431467}
   - component: {fileID: -1370839295473166089}
   - component: {fileID: -7234058477202624059}
+  - component: {fileID: -4671779076895875338}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -164,6 +165,32 @@ MonoBehaviour:
   foodCount: 0
   herbCount: 0
   selectableTypes: 4
+--- !u!114 &-4671779076895875338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8434640379915208136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 1
+  SyncScaleY: 1
+  SyncScaleZ: 1
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1001 &6451368944423246440
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -70,6 +70,7 @@ public abstract class VillagerBase : NetworkBehaviour
         }
     }
     
+    
     private IEnumerator DoTask()
     {
         if (taskList[0].TryGetComponent(out RawMaterial rawMaterial))
@@ -79,7 +80,7 @@ public abstract class VillagerBase : NetworkBehaviour
                 rawMaterial.healthBarSlider.gameObject.SetActive(true);
                 while (damageable.Health > 0)
                 {
-                    damageable.TakeDamage(5);
+                    damageable.TakeDamage(25);
                     yield return new WaitForSeconds(1f);
                 }       
             }
@@ -94,4 +95,5 @@ public abstract class VillagerBase : NetworkBehaviour
             StopTask();
         }
     }
+    
 }
