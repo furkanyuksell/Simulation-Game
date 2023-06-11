@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class AnimalMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AnimalMovement : MonoBehaviour
     public float minWaitTime;
     public float maxWaitTime;
     private Vector2 currentRandomPos;
+    public Tilemap tileMap;
 
     void Start()
     {
@@ -27,13 +29,18 @@ public class AnimalMovement : MonoBehaviour
         float rate = 1.0f / speed;
         Vector2 currentPos = transform.position;
         transform.rotation = Quaternion.Euler(0, (currentRandomPos.x > 0) ? 0 : 180, 0);
-        while (i < 1.0f)
+        if(Grid.Instance.MapSizeControl(currentPos + currentRandomPos))
         {
-            i += Time.deltaTime * rate;
-            transform.position = Vector2.Lerp(currentPos, currentPos + currentRandomPos, i);
-            yield return null;
+            if(Grid.Instance.NodeFromWorldPoint(currentPos + currentRandomPos).IsWalkable) 
+            {
+                while (i < 1.0f)
+                {
+                    i += Time.deltaTime * rate;
+                    transform.position = Vector2.Lerp(currentPos, currentPos + currentRandomPos, i);
+                    yield return null;
+                }
+            }
         }
-
         float randomFloat = Random.Range(0.0f, 1.0f); // Create %50 chance to wait
         if (randomFloat < 0.5f)
             StartCoroutine(WaitForSomeTime());

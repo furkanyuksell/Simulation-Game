@@ -32,6 +32,15 @@ public class Grid : MonoBehaviour
         int y = Mathf.RoundToInt(worldPos.y + (_mapSizeY / 2));
         return grid[x, y];
     }
+
+    public bool MapSizeControl(Vector3 worldPos)
+    {
+        int x = Mathf.RoundToInt(worldPos.x + (_mapSizeX / 2));
+        int y = Mathf.RoundToInt(worldPos.y + (_mapSizeY / 2));
+        if(x > 0 && x < _mapSizeX && y > 0 && y < _mapSizeY)
+            return true;
+        return false;
+    }
     
     public List<Node> GetNeighbours(Node node)
     {
