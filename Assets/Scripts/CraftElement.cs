@@ -61,6 +61,11 @@ public class CraftElement : MonoBehaviour
                     _isPlacing = false;
                 }
             }
+            else if(Input.GetMouseButtonDown(1))
+            {
+                Destroy(go);
+                _isPlacing = false;
+            }
             yield return Time.deltaTime;
         }
         yield return null; ;
