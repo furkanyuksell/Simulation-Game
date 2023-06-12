@@ -42,8 +42,6 @@ public class ObjectPooler<T> where T : MonoBehaviour, IPoolable<T>
         var networkObject = t.gameObject.GetComponent<NetworkObject>();
         networkObject.Spawn();
         networkObject.TrySetParent(parent);
-        /*t.GetComponent<NetworkObject>().Spawn();
-        t.GetComponent<NetworkObject>().TrySetParent(parent);*/
         t.gameObject.SetActive(true);
         t.Initialize(Pool);
         return t;

@@ -1,16 +1,13 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Pool;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, IDamageable
 {
     [SerializeField] private List<GameObject> resources = new List<GameObject>();
+    
     private ObjectPool<RawMaterial> _rawMaterialPool;
     
     public Slider healthBarSlider;
@@ -41,19 +38,32 @@ public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, ID
     }
     
     [ClientRpc]
-    public void ReturnToPoolClientRpc()
+    private void ReturnToPoolClientRpc()
     {
         _rawMaterialPool.Release(this);
     }
 
     public void TakeDamage(int damage)
     {
+        DamageTakenOnClientRpc(damage);
+        /*Health -= damage;
+        _health = Health;
+        healthBarSlider.value = Health;*/
+        if (Health <= 0)
+        {
+            ReturnToPool();
+        }
+    }
+    
+    [ClientRpc]
+    private void DamageTakenOnClientRpc(int damage)
+    {
         Health -= damage;
         _health = Health;
         healthBarSlider.value = Health;
         if (Health <= 0)
         {
-            ReturnToPool();
+            gameObject.SetActive(false);
         }
     }
 

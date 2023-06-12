@@ -34,20 +34,12 @@ public abstract class Region : NetworkBehaviour
         {
             for (int i = 0; i < (rawMaterialType.maxSpawnCount/2); i++)
             {
-                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)]; 
-                //SetRawMaterialsOnClientRpc(index, _randTilePos);
+                _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
                 RawMaterialController.SpawnRawMaterial(tileData.rawMaterialList[index], _randTilePos);
             }
-
             index++;
         }      
     }
-/*
-    [ClientRpc]
-    private void SetRawMaterialsOnClientRpc(int index, Vector3Int randTilePos)
-    {
-        RawMaterialController.SpawnRawMaterial(tileData.rawMaterialList[index], randTilePos);
-    }*/
 
     private void InitializeRegionAnimalsAtStart()
     {
@@ -68,8 +60,7 @@ public abstract class Region : NetworkBehaviour
         {
             for (int i = 0; i < (animalType.maxSpawnCount/2); i++)
             {
-               _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)]; 
-               //SetAnimalsOnClientRpc(index, _randTilePos);
+               _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
                AnimalController.SpawnAnimal(tileData.animalList[index], _randTilePos);
             }
 
@@ -85,27 +76,19 @@ public abstract class Region : NetworkBehaviour
             _randTilePos = tileData.tilePositions[UtilServices.GetRandomNumber(0, tileData.tilePositions.Count)];
             if (AnimalController.CanAnimalSpawn(animalType))
             {
-                //SetAnimalsOnClientRpc(i, AnimalController.RandTilePos);
                 AnimalController.SpawnAnimal(tileData.animalList[i], AnimalController.RandTilePos);
             }
             i++;
         }
     }
 
-    /*
-    [ClientRpc]
-    private void SetAnimalsOnClientRpc(int animalIndex, Vector3 pos)
-    {
-        AnimalController.SpawnAnimal(tileData.animalList[animalIndex], pos);
-    }*/
-    
     
     private void Update()
     {
         if (!_isInitialized)
             return;
         
-        //SpawnRegionAnimalWithTime();
+        SpawnRegionAnimalWithTime();
     }
     
     
