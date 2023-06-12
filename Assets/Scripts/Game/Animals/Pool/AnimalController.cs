@@ -15,11 +15,15 @@ public class AnimalController
         _transform = transform;
         SetRegionAnimalPoolAndAnimalMaxCount();
     }
-
+    
     private void SetRegionAnimalPoolAndAnimalMaxCount()
     {
-        var parentObject = new GameObject("Animals");
-        parentObject.transform.parent = _transform;
+        var animalParent = GameObject.Instantiate(ServiceProvider.GetDataManager.EmptyParentObject);
+        var parentObject = animalParent.GetComponent<NetworkObject>();
+        parentObject.Spawn();
+        parentObject.TrySetParent(_transform);
+        animalParent.SetNewName("Animals");
+        
         foreach (var animalData in _tileData.animalList)
         {
             AnimalPool.Instance.InitAnimalPools(animalData.animal, parentObject.transform);   

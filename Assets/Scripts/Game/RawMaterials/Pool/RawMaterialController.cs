@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class RawMaterialController
+public class RawMaterialController 
 {
     private readonly Region _region;
     private readonly TileData _tileData;
@@ -18,8 +19,13 @@ public class RawMaterialController
 
     private void SetRegionRawMaterials()
     {
-        var parentObject = new GameObject("RawMaterials");
-        parentObject.transform.parent = _transform;
+        
+        var rawMaterialParent = GameObject.Instantiate(ServiceProvider.GetDataManager.EmptyParentObject);
+        var parentObject = rawMaterialParent.GetComponent<NetworkObject>();
+        parentObject.Spawn();
+        parentObject.TrySetParent(_transform);
+        rawMaterialParent.SetNewName("RawMaterials");
+        
         foreach (var rawMaterialData in _tileData.rawMaterialList)
         {
             RawMaterialPool.Instance.InitRawMaterialPools(_region ,rawMaterialData.rawMaterial, parentObject.transform);

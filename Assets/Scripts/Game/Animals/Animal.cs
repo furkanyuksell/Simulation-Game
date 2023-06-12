@@ -14,6 +14,7 @@ public abstract class Animal : NetworkBehaviour, IPoolable<Animal>
     {
         _animalPool = objPool;
     }
+    
     public void ReturnToPool()
     {
         _animalPool.Release(this);

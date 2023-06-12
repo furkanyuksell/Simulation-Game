@@ -1,15 +1,13 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Pool;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, IDamageable
 {
     [SerializeField] private List<GameObject> resources = new List<GameObject>();
+    
     private ObjectPool<RawMaterial> _rawMaterialPool;
     
     public Slider healthBarSlider;
@@ -38,14 +36,34 @@ public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, ID
         _rawMaterialPool.Release(this);
         TopPanelController.Instance.SetStock(_selectables.woodCount, _selectables.stoneCount, _selectables.foodCount, _selectables.herbCount);
     }
+    
+    [ClientRpc]
+    private void ReturnToPoolClientRpc()
+    {
+        _rawMaterialPool.Release(this);
+    }
 
     public void TakeDamage(int damage)
     {
-        Health -= damage;
-        healthBarSlider.value = Health;
+        DamageTakenOnClientRpc(damage);
+        /*Health -= damage;
+        _health = Health;
+        healthBarSlider.value = Health;*/
         if (Health <= 0)
         {
             ReturnToPool();
+        }
+    }
+    
+    [ClientRpc]
+    private void DamageTakenOnClientRpc(int damage)
+    {
+        Health -= damage;
+        _health = Health;
+        healthBarSlider.value = Health;
+        if (Health <= 0)
+        {
+            gameObject.SetActive(false);
         }
     }
 
