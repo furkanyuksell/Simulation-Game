@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
-public class AnimalMovement : MonoBehaviour
+public class AnimalMovement : NetworkBehaviour
 {
     public float speed;
     public float randomX;
@@ -10,10 +13,13 @@ public class AnimalMovement : MonoBehaviour
     public float minWaitTime;
     public float maxWaitTime;
     private Vector2 currentRandomPos;
-    public Tilemap tileMap;
-
+    
+    bool isDataLoad = false;
     void Start()
     {
+        if (!IsOwner)
+            return;
+        
         PickPosition();
     }
 
@@ -53,4 +59,5 @@ public class AnimalMovement : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
         PickPosition();
     }
+
 }

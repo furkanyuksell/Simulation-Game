@@ -3835,9 +3835,9 @@ MonoBehaviour:
   animalList:
   - animalName: WildBear
     animal: {fileID: -5812842448562075684, guid: cbedf250292b77a4e83d092106cc3875, type: 3}
-    spawnChance: 20
+    spawnChance: 3
     spawnTime: 260
-    cooldown: 80.73837
+    cooldown: 251.82642
     maxSpawnCount: 48
     activeCount: 25
   rawMaterialList:

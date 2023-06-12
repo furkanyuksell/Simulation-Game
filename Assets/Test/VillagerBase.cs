@@ -37,7 +37,11 @@ public abstract class VillagerBase : NetworkBehaviour
 
     private void Update()
     {
+        
         currentNode = Grid.Instance.NodeFromWorldPoint(transform.position);
+        if (currentNode==null)
+            return;
+        
         hunger -= currentNode.HungerRate * Time.deltaTime;
         thirst -= currentNode.ThirstRate * Time.deltaTime;
         chill -= currentNode.ChillRate *  Time.deltaTime;

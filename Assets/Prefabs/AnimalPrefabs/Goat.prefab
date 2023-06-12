@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1602407713186143123}
   - component: {fileID: -6242271828514762387}
   - component: {fileID: 7735225384925593287}
+  - component: {fileID: -1981733054520000010}
   m_Layer: 0
   m_Name: Goat
   m_TagString: Untagged
@@ -173,11 +174,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04462e9ebe1b1db42acdac547ebf0f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.5
   randomX: 7.5
   randomY: 7.5
   minWaitTime: 3
   maxWaitTime: 7.5
+--- !u!114 &-1981733054520000010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530626212059724567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 1
+  SyncScaleY: 1
+  SyncScaleZ: 1
+  PositionThreshold: 0.3
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1001 &5425582084702457176
 PrefabInstance:
   m_ObjectHideFlags: 0

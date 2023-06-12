@@ -25,7 +25,6 @@ public class TopPanelController : MonoBehaviour
     private int happyCount = 3;
     private int sadCount = 0;
 
-    [SerializeField] private VillagerBase villagersList;
 
     private void Awake()
     {
