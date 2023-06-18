@@ -5,27 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0723e4-cdcf-405f-80a9-4ceebd35c50b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/2D Arts/16x16_emoji_asset_pack_v1.1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Arts/16x16_emoji_asset_pack_v1.1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Arts/TX Plant.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Arts/TX Plant.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Arts/vecteezy_gold-stones-and-boulders-in-cartoon-style_8853535_928.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Arts/vecteezy_gold-stones-and-boulders-in-cartoon-style_8853535_928.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ImportedPackages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ImportedPackages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Chicken.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Chicken.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Goat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Goat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Gorilla.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Gorilla.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Network/NetworkManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Network/NetworkManager.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Test/MultiplayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Simulation-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Simulation-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Arts/Tasty_Characters - Village Pack/Assets/Textures/PackVillage01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Arts/Tasty_Characters - Village Pack/Assets/Textures/PackVillage01.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/GoldMine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/GoldMine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/Tree.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WorldScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Animals/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Animals/Animal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Animals/Pool/AnimalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Animals/Pool/AnimalController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/RawMaterials/Pool/RawMaterialController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/RawMaterials/Pool/RawMaterialController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/RawMaterials/RawMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/RawMaterials/RawMaterial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStarPathfinding/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStarPathfinding/Pathfinding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragSelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragSelectionController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Regions/Region.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Regions/Region.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPooler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPooler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/Miner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Miner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/NetworkServer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/NetworkServer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/NetworkServerManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/NetworkServerManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/MultiplayerManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/TaskManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/TaskManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Test/VillagerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/VillagerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/VillagerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/VillagerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/Woodsman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Woodsman.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,22 +37,28 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BottomPanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Animals/AnimalMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Animals/WildBear.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Regions/RainForest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IPoolable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightPanelController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/EmptyParentObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/LogHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/Miner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/TaskManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/VillagerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Test/VillagerListSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/VillagerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/Woodsman.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/EditorPluginInterop.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.multiplayer.tools@1.0.0/NetStats/Runtime/Dispatch/MetricDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Core/NetworkBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Core/NetworkManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Core/NetworkObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Messaging/Messages/RpcMessages.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Messaging/MessagingSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,26 +71,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\furka\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\furka\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\furka\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\furka\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\furka\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\furka\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Simulation-Game_Build/My project3.exe" />
@@ -169,6 +178,8 @@
       <workItem from="1686403350149" duration="8781000" />
       <workItem from="1686422542212" duration="7877000" />
       <workItem from="1686490196779" duration="16760000" />
+      <workItem from="1686649438827" duration="1207000" />
+      <workItem from="1686825957908" duration="31580000" />
     </task>
     <servers />
   </component>

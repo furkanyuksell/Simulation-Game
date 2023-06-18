@@ -55,7 +55,7 @@ public class Pathfinding : MonoBehaviour
                 }
             }
         }
-        
+
         if (pathSuccess) {
             waypoints = RetracePath(startNode,targetNode);
         }

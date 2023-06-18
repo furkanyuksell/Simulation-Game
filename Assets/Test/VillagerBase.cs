@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -26,21 +27,29 @@ public abstract class VillagerBase : NetworkBehaviour
 
     Node currentNode;
     
+    public TextMeshProUGUI PlayerNameText;
     public bool hasTask;
     public List<Selectables> taskList = new();
     public List<InputController.SelectableTypes> selectableTypes = new();
-    
+    private bool _isMapReady = false;
     private void Awake()
     {
         hasTask = false;
     }
 
+    [ClientRpc]
+    public void SetVillagerToManagerClientRpc()
+    {
+        PlayerNameText.text = NetworkConnection.Instance.GetPlayerDataFromClientId(OwnerClientId).playerName.ToString();
+        VillagerManager.Instance.AddVillager(this, OwnerClientId);
+    }
+
     private void Update()
     {
+        if (!_isMapReady)
+            return;
         
         currentNode = Grid.Instance.NodeFromWorldPoint(transform.position);
-        if (currentNode==null)
-            return;
         
         hunger -= currentNode.HungerRate * Time.deltaTime;
         thirst -= currentNode.ThirstRate * Time.deltaTime;
@@ -101,6 +110,12 @@ public abstract class VillagerBase : NetworkBehaviour
 
     IEnumerator FollowPath()
     {
+        if (_path.Length == 0)
+        {
+            _path = new Vector3[1];
+            _path[0] = transform.position;
+        }
+        
         Vector3 currentWaypoint = _path[0];
         while (true)
         {
@@ -109,8 +124,6 @@ public abstract class VillagerBase : NetworkBehaviour
                 _targetIndex++;
                 if (_targetIndex >= _path.Length)
                 {
-                    Debug.Log("End of path reached");
-                    StopCoroutine(DoTask());
                     StartCoroutine(DoTask());
                     yield break;
                 }
@@ -146,5 +159,19 @@ public abstract class VillagerBase : NetworkBehaviour
             StopTask();
         }
     }
+
+    private void MapReady()
+    {
+        _isMapReady = true;
+    }
     
+    private void OnEnable()
+    {
+        MapGenerator.OnMapDone += MapReady;
+    }
+    
+    private void OnDisable()
+    {
+        MapGenerator.OnMapDone -= MapReady;
+    }
 }

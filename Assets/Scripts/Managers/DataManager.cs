@@ -16,7 +16,8 @@ public class DataManager : MonoBehaviour, IProvidable
     public TileData Taiga;
     public TileData Water;
     public EmptyParentObject EmptyParentObject;
-    
+    public VillagerListSO VillagerListSO;
+
     private void Awake()
     {
         Initialize();

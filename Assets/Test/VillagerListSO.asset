@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57542f8e2ed811843bbfe5a36183130b, type: 3}
+  m_Name: VillagerListSO
+  m_EditorClassIdentifier: 
+  villagerList:
+  - {fileID: 11400000, guid: fb336d64cfd55e7408c4abde5a2b0e6b, type: 2}
+  - {fileID: 11400000, guid: 09aff275b6bf5cc47bf40656fdb9b5bb, type: 2}

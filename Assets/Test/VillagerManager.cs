@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class VillagerManager : NetworkBehaviour
+public class VillagerManager : MonoBehaviour
 {
     public static VillagerManager Instance { get; set; }
     public List<VillagerBase> villagerList = new List<VillagerBase>();
@@ -13,31 +14,19 @@ public class VillagerManager : NetworkBehaviour
         Instance = this;
     }
     
-    public void AddVillager(VillagerBase villager)
+    public void AddVillager(VillagerBase villager, ulong clientId)
     {
+        if (clientId != NetworkManager.Singleton.LocalClientId)
+            return; 
         villagerList.Add(villager);
     }
 
-    public bool SetTaskToVillager(List<Selectables> task)
+    private void Update()
     {
-        if (!IsOwner)
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            return false;
+            MultiplayerManager.Instance.TellWannaSpawnToServer(ServiceProvider.GetDataManager.VillagerListSO.villagerList[0], NetworkManager.Singleton.LocalClientId);
         }
-        foreach (var villagers in villagerList)
-        {
-            if (!villagers.hasTask)
-            {
-                if (villagers.selectableTypes.Contains(task[0].selectableTypes))
-                {
-                    villagers.StartTask(task);
-                    return true;
-                }
-            }
-        }
-
-        return false;
     }
-
 }
 

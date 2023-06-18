@@ -102,12 +102,12 @@ public abstract class Region : NetworkBehaviour
     private void OnEnable()
     {
         LogHelper.OnDebug += DebugText;
-        NetworkServerManager.OnServerDataLoad += Init;
+        MultiplayerManager.OnServerDataLoad += Init;
     }
 
     private void OnDisable()
     {
         LogHelper.OnDebug -= DebugText;
-        NetworkServerManager.OnServerDataLoad -= Init;
+        MultiplayerManager.OnServerDataLoad -= Init;
     }
 }

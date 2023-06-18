@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f9909f9960f32489a444322c2eb0f7, type: 3}
+  m_Name: WoodsmanSO
+  m_EditorClassIdentifier: 
+  villagerName: RossWoodsman
+  job: jobs
+  task: task
+  sprite: {fileID: -1483287635, guid: e48ddf4fb7304ce4ab48711eb6617a57, type: 3}
+  prefab: {fileID: 3209181628900570002, guid: f46bf3e7ee9929c45bd4e9b91b051cd1, type: 3}

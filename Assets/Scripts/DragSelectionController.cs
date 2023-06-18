@@ -62,12 +62,6 @@ public class DragSelectionController : MonoBehaviour
                 _selectedGOList.Add(selectable);
             }
         }
-
-        if (collider2DArray.Length>=1)
-        {
-            TaskManager.Instance.InitTask();
-        }
-
         return _selectedGOList;
     }
 }
