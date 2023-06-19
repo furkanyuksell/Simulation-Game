@@ -61,7 +61,7 @@ public class InputController : MonoBehaviour
                 if (_startTile != null && _lastTile != null)
                 {
                     _selectedGOList = _dragSelectionController.SelectionEnded(_tileMap.GetCellCenterWorld(_lastCellPos));
-                    
+                    TaskManager.Instance.SetTaskToVillager();
                     // Game Objects are here. We should work on them.
                     
                     _startTile = null;

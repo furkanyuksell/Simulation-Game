@@ -14,11 +14,6 @@ public class VillagerManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        
-    }
-
     public void AddVillager(VillagerBase villager, ulong clientId)
     {
         if (clientId != NetworkManager.Singleton.LocalClientId)

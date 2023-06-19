@@ -17,8 +17,8 @@ public class LoaderUI : MonoBehaviour
     {
         while (_slider.value < 1)
         {
-            _slider.value += 0.005f;
-            yield return new WaitForSeconds(0.005f);
+            _slider.value += 0.1f;
+            yield return new WaitForSeconds(0.1f);
         }
         Debug.Log("SliderCoroutine finished");
         OnLoaderUIFinished?.Invoke();

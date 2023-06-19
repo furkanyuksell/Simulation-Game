@@ -24,21 +24,23 @@ public class TaskManager : MonoBehaviour
     }
     
     
-    public bool SetTaskToVillager(List<Selectables> task)
+    public void SetTaskToVillager()
     {
-        foreach (var villagers in VillagerManager.Instance.villagerList)
+        if (_taskList.Count != 0)
         {
-            if (!villagers.hasTask)
+            List<Selectables> taskList = _taskList.ToList();
+            foreach (var villagers in VillagerManager.Instance.villagerList)
             {
-                if (villagers.selectableTypes.Contains(task[0].selectableTypes))
+                if (!villagers.hasTask)
                 {
-                    villagers.StartTask(task);
-                    return true;
+                    if (villagers.selectableTypes.Contains(taskList[0].selectableTypes))
+                    {
+                        villagers.StartTask(_taskList.ToList());
+                    }
                 }
             }
+            _taskList.Clear();
         }
-
-        return false;
     }
     /*
     public void InitTask()

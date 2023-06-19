@@ -37,15 +37,9 @@ public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, ID
         TopPanelController.Instance.SetStock(_selectables.woodCount, _selectables.stoneCount, _selectables.foodCount, _selectables.herbCount);
     }
     
-    [ClientRpc]
-    private void ReturnToPoolClientRpc()
-    {
-        _rawMaterialPool.Release(this);
-    }
-
     public void TakeDamage(int damage)
     {
-        DamageTakenOnClientRpc(damage);
+        DamageTakenOnServerRpc(damage);
         /*Health -= damage;
         _health = Health;
         healthBarSlider.value = Health;*/
@@ -53,6 +47,12 @@ public abstract class RawMaterial : NetworkBehaviour, IPoolable<RawMaterial>, ID
         {
             ReturnToPool();
         }
+    }
+    
+    [ServerRpc(RequireOwnership = false)]
+    private void DamageTakenOnServerRpc(int damage)
+    {
+        DamageTakenOnClientRpc(damage);
     }
     
     [ClientRpc]
