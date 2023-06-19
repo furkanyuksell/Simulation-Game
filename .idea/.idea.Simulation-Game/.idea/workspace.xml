@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a0723e4-cdcf-405f-80a9-4ceebd35c50b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Simulation-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Simulation-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/RawMaterials/RawMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/RawMaterials/RawMaterial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/LoaderUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/LoaderUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/TaskManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/TaskManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/VillagerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/VillagerManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="3a0723e4-cdcf-405f-80a9-4ceebd35c50b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +156,7 @@
       <workItem from="1686422542212" duration="7877000" />
       <workItem from="1686490196779" duration="16760000" />
       <workItem from="1686649438827" duration="1207000" />
-      <workItem from="1686825957908" duration="46277000" />
+      <workItem from="1686825957908" duration="46899000" />
     </task>
     <servers />
   </component>
