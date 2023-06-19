@@ -17,3 +17,4 @@ MonoBehaviour:
   task: task
   sprite: {fileID: -1483287635, guid: e48ddf4fb7304ce4ab48711eb6617a57, type: 3}
   prefab: {fileID: 3209181628900570002, guid: f46bf3e7ee9929c45bd4e9b91b051cd1, type: 3}
+  selectableTypes: 04000000

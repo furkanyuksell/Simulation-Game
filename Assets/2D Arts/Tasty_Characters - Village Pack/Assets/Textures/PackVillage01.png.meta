@@ -2312,6 +2312,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: PackVillage01_91
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 451
+        width: 87
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f15447659aa150489b899e316948981
+      internalID: -1975050468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2358,13 +2379,14 @@ TextureImporter:
       PackVillage01_56: 21300112
       PackVillage01_61: 21300122
       PackVillage01_33: 21300066
+      PackVillage01_91: -1975050468
       PackVillage01_28: 21300056
       PackVillage01_20: 21300040
       PackVillage01_23: 21300046
       PackVillage01_75: 21300150
       PackVillage01_1: 21300002
-      PackVillage01_19: 21300038
       PackVillage01_13: 21300026
+      PackVillage01_19: 21300038
       PackVillage01_49: 21300098
       PackVillage01_53: 21300106
       PackVillage01_46: 21300092

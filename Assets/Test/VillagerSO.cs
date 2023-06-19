@@ -10,4 +10,5 @@ public class VillagerSO : ScriptableObject
     public string task;
     public Sprite sprite;
     public VillagerBase prefab;
+    public List<InputController.SelectableTypes> selectableTypes = new();
 }

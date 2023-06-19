@@ -17,6 +17,8 @@ public class DataManager : MonoBehaviour, IProvidable
     public TileData Water;
     public EmptyParentObject EmptyParentObject;
     public VillagerListSO VillagerListSO;
+    public Transform SingleCharacterUIParent;
+    public SingleCharacterUIPanel SingleCharacterUIPanel;
 
     private void Awake()
     {
@@ -48,6 +50,11 @@ public class DataManager : MonoBehaviour, IProvidable
         Snow.tilePositions.Clear();
         Taiga.tilePositions.Clear();
         Water.tilePositions.Clear();
-        
+    }
+
+    public SingleCharacterUIPanel InstantiateSingleCharacterPanel()
+    {
+        var singleCharacterUIPanel = Instantiate(SingleCharacterUIPanel, SingleCharacterUIParent);
+        return singleCharacterUIPanel;
     }
 }

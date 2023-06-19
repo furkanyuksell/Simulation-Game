@@ -13,7 +13,12 @@ public class VillagerManager : MonoBehaviour
     {
         Instance = this;
     }
-    
+
+    private void Start()
+    {
+        
+    }
+
     public void AddVillager(VillagerBase villager, ulong clientId)
     {
         if (clientId != NetworkManager.Singleton.LocalClientId)
@@ -21,12 +26,22 @@ public class VillagerManager : MonoBehaviour
         villagerList.Add(villager);
     }
 
-    private void Update()
+    private void InitVillagers()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        foreach (var villagerSo in ServiceProvider.GetDataManager.VillagerListSO.villagerList)
         {
-            MultiplayerManager.Instance.TellWannaSpawnToServer(ServiceProvider.GetDataManager.VillagerListSO.villagerList[0], NetworkManager.Singleton.LocalClientId);
+            MultiplayerManager.Instance.TellWannaSpawnToServer(villagerSo, NetworkManager.Singleton.LocalClientId);
         }
+    }
+
+    private void OnEnable()
+    {
+        LoaderUI.OnLoaderUIFinished += InitVillagers;
+    }
+
+    private void OnDestroy()
+    {
+        LoaderUI.OnLoaderUIFinished -= InitVillagers;    
     }
 }
 

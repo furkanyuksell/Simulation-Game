@@ -96,6 +96,7 @@ MonoBehaviour:
   _nameText: {fileID: 3229075950448933937}
   _jobText: {fileID: 3229075950627059582}
   _taskText: {fileID: 3229075950059173005}
+  _image: {fileID: 3229075950395951043}
 --- !u!1 &3229075949994161527
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,5 +15,6 @@ MonoBehaviour:
   villagerName: JackMiner
   job: job
   task: task
-  sprite: {fileID: -1483287635, guid: e48ddf4fb7304ce4ab48711eb6617a57, type: 3}
+  sprite: {fileID: -1975050468, guid: e48ddf4fb7304ce4ab48711eb6617a57, type: 3}
   prefab: {fileID: 5407926756239923099, guid: 34ba42a3b957ef541ae4a318cdc58070, type: 3}
+  selectableTypes: 00000000

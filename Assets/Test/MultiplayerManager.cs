@@ -25,27 +25,30 @@ public class MultiplayerManager : NetworkBehaviour
     [ServerRpc (RequireOwnership = false)]
     private void SpawnRequestVillagerServerRpc(int villagerIndex, ulong clientId)
     {
-        Debug.Log("SpawnRequestVillagerServerRpc");
         VillagerSO villagerSo = GetVillagerFromIndex(villagerIndex);
         VillagerBase villagerBase = Instantiate(villagerSo.prefab);
         NetworkObject networkObject = villagerBase.GetComponent<NetworkObject>();
         networkObject.Spawn();
         networkObject.ChangeOwnership(clientId);
-        villagerBase.SetVillagerToManagerClientRpc();
-        //villagerBase.PlayerNameText.text = NetworkConnection.Instance.GetPlayerDataFromClientId(clientId).playerName.ToString();
+        villagerBase.SetVillagerToManagerClientRpc(villagerIndex);
     }
    
     
     public void TellWannaSpawnToServer(VillagerSO villager, ulong clientId)
     {
-        Debug.Log("tellWannaSpawnToServer");
+        if (clientId != NetworkManager.Singleton.LocalClientId)
+        {
+            Debug.Log("not local client");
+            return;
+        }
+        
         SpawnRequestVillagerServerRpc(GetVillagerIndex(villager), clientId);
     }
 
     private int GetVillagerIndex(VillagerSO villager)
     {
-        var indexOfVillger = ServiceProvider.GetDataManager.VillagerListSO.villagerList.IndexOf(villager);
-        return indexOfVillger;
+        var indexOfVillager = ServiceProvider.GetDataManager.VillagerListSO.villagerList.IndexOf(villager);
+        return indexOfVillager;
     }
 
     private VillagerSO GetVillagerFromIndex(int index)

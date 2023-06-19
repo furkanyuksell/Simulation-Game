@@ -37,11 +37,25 @@ public abstract class VillagerBase : NetworkBehaviour
         hasTask = false;
     }
 
+    string _characterName;
+    string _job;
+    Sprite _photo;
+
     [ClientRpc]
-    public void SetVillagerToManagerClientRpc()
+    public void SetVillagerToManagerClientRpc(int villiagerIndex)
     {
         PlayerNameText.text = NetworkConnection.Instance.GetPlayerDataFromClientId(OwnerClientId).playerName.ToString();
+        transform.position = new Vector3(UnityEngine.Random.Range(0,25), UnityEngine.Random.Range(0,25), 0);
         VillagerManager.Instance.AddVillager(this, OwnerClientId);
+        
+        if (OwnerClientId != NetworkManager.Singleton.LocalClientId)
+            return;
+        
+        VillagerSO villagerSo = ServiceProvider.GetDataManager.VillagerListSO.villagerList[villiagerIndex];
+        
+        SingleCharacterUIPanel singleCharacterUiPanel = ServiceProvider.GetDataManager.InstantiateSingleCharacterPanel();
+        singleCharacterUiPanel.SetCharacterInfo(PlayerNameText.text, selectableTypes[0].ToString(),"Unkown", villagerSo.sprite);
+        
     }
 
     private void Update()

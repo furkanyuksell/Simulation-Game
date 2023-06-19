@@ -5,30 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0723e4-cdcf-405f-80a9-4ceebd35c50b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Test/MultiplayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Simulation-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Simulation-Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/2D Arts/Tasty_Characters - Village Pack/Assets/Textures/PackVillage01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Arts/Tasty_Characters - Village Pack/Assets/Textures/PackVillage01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/GoldMine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/GoldMine.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WorldScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStarPathfinding/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStarPathfinding/Pathfinding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragSelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragSelectionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Regions/Region.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Regions/Region.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Miner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Miner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/NetworkServer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/NetworkServer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/NetworkServerManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/NetworkServerManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/MultiplayerManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/TaskManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/TaskManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SingleCharacterUIPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SingleCharacterUIPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/MinerSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/MinerSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/MultiplayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/MultiplayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/SingleCharacterUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/SingleCharacterUI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Test/VillagerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/VillagerBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Test/VillagerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/VillagerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Woodsman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Woodsman.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/VillagerSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/VillagerSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/WoodsmanSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/WoodsmanSO.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RightPanelController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/EmptyParentObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Test/LoaderUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/LogHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/Miner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/TaskManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Messaging/Messages/RpcMessages.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Messaging/MessagingSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/SceneManagement/NetworkSceneManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -179,7 +171,7 @@
       <workItem from="1686422542212" duration="7877000" />
       <workItem from="1686490196779" duration="16760000" />
       <workItem from="1686649438827" duration="1207000" />
-      <workItem from="1686825957908" duration="31580000" />
+      <workItem from="1686825957908" duration="41478000" />
     </task>
     <servers />
   </component>
