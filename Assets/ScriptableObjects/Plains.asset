@@ -57873,7 +57873,14 @@ MonoBehaviour:
   - {x: 180, y: 249, z: 0}
   - {x: 181, y: 249, z: 0}
   - {x: 182, y: 249, z: 0}
-  animalList: []
+  animalList:
+  - animalName: Sheep
+    animal: {fileID: -4365358687367484308, guid: 751e68b3b6f76cb4dbcbad04612f418e, type: 3}
+    spawnChance: 15
+    spawnTime: 50
+    cooldown: 0
+    maxSpawnCount: 300
+    activeCount: 0
   rawMaterialList:
   - rawMaterialName: Tree
     rawMaterial: {fileID: 8434640379915208143, guid: 5f2556b0cbb07b6409572e8e5946f677, type: 3}

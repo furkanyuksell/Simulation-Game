@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 635305102, guid: 45f0df5e4cd498249aaa16c1758f452f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -319,6 +319,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8434640379915208142}
     m_Modifications:
+    - target: {fileID: 4575321923791082520, guid: 033200c9bb084c149a0710d7cdfa25e2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 4575321923791082522, guid: 033200c9bb084c149a0710d7cdfa25e2, type: 3}
       propertyPath: m_Name
       value: Selected
