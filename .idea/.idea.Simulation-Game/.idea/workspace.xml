@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0723e4-cdcf-405f-80a9-4ceebd35c50b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Simulation-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Simulation-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Arts/Animals/Pasturing Sheep/PasturingSheepIdleSide.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Arts/Animals/Pasturing Sheep/PasturingSheepIdleSide.gif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ImportedPackages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ImportedPackages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/GoldMine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/GoldMine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RawMaterialPrefabs/Tree.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WorldScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Plains.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Plains.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Miner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Miner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Construction/Duvar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Construction/Duvar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Construction/Kapı.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Construction/Kapı.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Construction/Şömine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Construction/Şömine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Furniture/Halı.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Furniture/Halı.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Furniture/Koltuk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Furniture/Koltuk.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Furniture/Yatak.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Furniture/Yatak.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Workshop/Dolap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Workshop/Dolap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Workshop/Masa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Workshop/Masa.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Workshop/Sandık.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Craftables/Workshop/Sandık.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -168,7 +170,7 @@
       <workItem from="1686490196779" duration="16760000" />
       <workItem from="1686649438827" duration="1207000" />
       <workItem from="1686825957908" duration="47237000" />
-      <workItem from="1687337449892" duration="651000" />
+      <workItem from="1687337449892" duration="1256000" />
     </task>
     <servers />
   </component>
